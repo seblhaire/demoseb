@@ -5,4 +5,8 @@ return [
         'title' => 'Home',
         'target' => "/",
     ],
+    'paginator' => [
+        'title' => 'Paginator',
+        'target' => '/paginator',
+    ],
 ];

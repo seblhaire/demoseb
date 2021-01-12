@@ -58,6 +58,7 @@ class PaginatorController extends Controller
                 $paginator2 = BootstrapPaginator::init($initial, $route, $optionalpha);
                 $title = "Bootstrap Paginator combi";
                 $title2 = 'Page ' . $param1 . ' ' . $param2;
+                break;
         }
         // Simply send paginator(s) that you have inited before to your view
         return view('paginator', [

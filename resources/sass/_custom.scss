@@ -1,0 +1,39 @@
+$sebborder: #e9ebee;
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+address{
+    margin-top:8px;
+    border-top: 1px $sebborder solid;
+    padding-top:10px;
+    text-align: center;
+}
+hr{
+	border-top: 1px $sebborder solid;
+    padding-top:10px;
+}
+.container {
+  width:90%;
+  max-width: 1500px;
+}
+@include media-breakpoint-up(xs) {
+//@media (max-width: $screen-xs-max) {
+    body {
+        min-height: 100%;
+        padding-top: 45px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+//@media (min-width: $screen-sm-min)
+    body {
+        min-height: 100%;
+        padding-top: 80px;
+    }
+
+}

@@ -5,4 +5,5 @@ window.$ = $;
 window.jQuery = jQuery;
 require('bootstrap');
 import './custom.js';
-require('jquery.scrollto');
+global.moment = require('moment');
+require('daterangepicker');

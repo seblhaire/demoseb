@@ -9,4 +9,8 @@ return [
         'title' => 'Paginator',
         'target' => '/paginator',
     ],
+    'daterangepicker' => [
+        'title' => 'Daterangepicker Helper',
+        'target' => '/daterangepicker',
+    ],
 ];

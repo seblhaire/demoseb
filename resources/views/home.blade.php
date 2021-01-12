@@ -15,9 +15,8 @@
       <div class="col-md-7">
         <h2>Bootstrap Paginator</h2>
         <h3>Generate paginators.</h3>
-
         <p class="lead">Two different pagnators:
-		a classical paginator with page numbers and previous and next button. paginator image and an alphabetical paginator with letters </p>
+		a classical paginator with page numbers and previous and next button. paginator image and an alphabetical paginator with letters.</p>
 		<p><a class="btn btn-secondary" href="{{ route('paginator') }}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-5">
@@ -26,4 +25,16 @@
       </div>
 </div>
 <hr />
+<div class="row">
+    <div class="col-md-5">
+      <img src="/img/double-open.png" />
+    </div>
+    <div class="col-md-7">
+      <h2>DateRangePickerHelper</h2>
+      <h3>Builds a calendar to set a date or a date range</h3>
+      <p class="lead"><a target="_blank" href="https://www.daterangepicker.com/"><em>DateRangePicker</em></a> is a great Javascript library to build
+        a calendar and select a date or date range. This package provides helpers to facilitate calendar settings and date retrieval.</p>
+      <p><a class="btn btn-secondary" href="{{ route('daterangepicker') }}" role="button">View details &raquo;</a></p>
+    </div>
+</div>
 @endsection

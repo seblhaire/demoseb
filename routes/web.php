@@ -15,4 +15,5 @@ use \App\Http\Controllers\PaginatorController;
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorController::class, 'index'])->name('paginator'); 
+Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorController::class, 'index'])->name('paginator');
+Route::get('/daterangepicker/{type?}/{lang?}', [DaterangepickerController::class, 'index'])->name('daterangepicker');

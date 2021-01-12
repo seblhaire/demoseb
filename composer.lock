@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f399d38cf09b7396dc39d1d18ff64e7",
+    "content-hash": "d44f95a7546094d28dbbf066af2d62c9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2549,6 +2549,60 @@
                 "source": "https://github.com/seblhaire/bootstrappaginator/tree/1.0.3"
             },
             "time": "2021-01-09T10:03:38+00:00"
+        },
+        {
+            "name": "seblhaire/daterangepickerhelper",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/seblhaire/daterangepickerhelper.git",
+                "reference": "525ae39f4012024f442fe1f91316803e44c63892"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seblhaire/daterangepickerhelper/zipball/525ae39f4012024f442fe1f91316803e44c63892",
+                "reference": "525ae39f4012024f442fe1f91316803e44c63892",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "nesbot/carbon": "^2.0",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Seblhaire\\DateRangePickerHelper\\DateRangePickerHelperServiceProvider"
+                    ],
+                    "aliases": {
+                        "DateRangePickerHelper": "Seblhaire\\DateRangePickerHelper\\DateRangePickerHelper"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seblhaire\\DateRangePickerHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sébastien L'haire",
+                    "email": "sebastien@lhaire.org",
+                    "homepage": "http://sebastien.lhaire.org/"
+                }
+            ],
+            "description": "Laravel library to provide an helper to initialize a single or double DateRangePicker calendar",
+            "homepage": "https://github.com/seblhaire/daterangepickerhelper",
+            "support": {
+                "issues": "https://github.com/seblhaire/daterangepickerhelper/issues",
+                "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.4"
+            },
+            "time": "2021-01-11T21:40:41+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

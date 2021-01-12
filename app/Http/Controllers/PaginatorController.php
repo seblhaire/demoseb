@@ -17,7 +17,6 @@ class PaginatorController extends Controller
     * @return View                [description]
     */
     public function index($paginatortype = 'classic', $param1 = null, $param2 = null){
-        $paginatortype = 'classic', $param1 = null, $param2 = null) {
         $route = 'paginator'; //route to be used in paginators
         switch($paginatortype){
             case 'classic' :

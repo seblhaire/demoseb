@@ -8,7 +8,15 @@ use Seblhaire\BootstrapPaginator\BootstrapPaginator;
 
 class PaginatorController extends Controller
 {
-    public function index(){
+
+      /**
+    * Demo page for BootstrapPaginator. Outputs a classical paginator (type classic), alphabetical (type alpha) or both paginators (type combi)
+    * @param  string $paginatortype either classic|alpha|combi default classic
+    * @param  string|integer $param1        route parameter: page number or initial letter : default null, equals 1 or 'all' depending on paginator type
+    * @param  [type] $param2        second route parameter. default null, equals 1 for combi, not use in other cases
+    * @return View                [description]
+    */
+    public function index($paginatortype = 'classic', $param1 = null, $param2 = null){
         $paginatortype = 'classic', $param1 = null, $param2 = null) {
         $route = 'paginator'; //route to be used in paginators
         switch($paginatortype){

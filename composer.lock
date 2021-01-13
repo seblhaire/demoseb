@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d44f95a7546094d28dbbf066af2d62c9",
+    "content-hash": "3d87a25f6606ec8f476c3fb13687644c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2603,6 +2603,59 @@
                 "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.5"
             },
             "time": "2021-01-13T19:39:00+00:00"
+        },
+        {
+            "name": "seblhaire/tablebuilder",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/seblhaire/tablebuilder.git",
+                "reference": "e7ae7da8037e9857b6512bed947f8d4486c93280"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/e7ae7da8037e9857b6512bed947f8d4486c93280",
+                "reference": "e7ae7da8037e9857b6512bed947f8d4486c93280",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Seblhaire\\TableBuilder\\TableBuilderHelperServiceProvider"
+                    ],
+                    "aliases": {
+                        "TableBuilderHelper": "Seblhaire\\TableBuilder\\TableBuilderHelper"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seblhaire\\TableBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sébastien L'haire",
+                    "email": "sebastien@lhaire.org",
+                    "homepage": "http://sebastien.lhaire.org/"
+                }
+            ],
+            "description": "A Laravel library to build tables easily, which interacts with a lightweight js builder and builds data from Eloquent Object-Relational Mapping with database tables, or can be used with static data.",
+            "homepage": "https://github.com/seblhaire/tablebuilder",
+            "support": {
+                "issues": "https://github.com/seblhaire/tablebuilder/issues",
+                "source": "https://github.com/seblhaire/tablebuilder/tree/1.0.2"
+            },
+            "time": "2020-11-28T13:27:43+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

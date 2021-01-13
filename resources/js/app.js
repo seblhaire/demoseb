@@ -7,3 +7,4 @@ require('bootstrap');
 import './custom.js';
 global.moment = require('moment');
 require('daterangepicker');
+require('../../vendor/seblhaire/tablebuilder/resources/js/tablebuilder.js');

@@ -9,7 +9,15 @@ use Seblhaire\DateRangePickerHelper\DateRangePickerHelper;
 
 class DaterangepickerController extends Controller
 {
+
+  /**
+   * Demo page for DateRangePickerHelper
+   * @param  string $type calendar type
+   * @param  string $lang calendar language
+   * @return View
+   */
   public function index($type = 'simple', $lang = 'en'){
+    // sets application language, here calendar language
     \App::setLocale($lang);
     $title = "DateRangePickerHelper";
     $cal = null;
@@ -17,26 +25,29 @@ class DaterangepickerController extends Controller
     $initsingle = null;
     $initstart = null;
     $initend = null;
+    // function content to display date returned by single calendar
     $applysimple = "\$('#datesingle').val(picker.startDate.format('" . config('daterangepickerhelper.default.momentinputdate') . "'));";
+    // function content to display date returned by single calendar with time
     $applysimpletime = "\$('#datesingle').val(picker.startDate.format('" . config('daterangepickerhelper.default.momentinputdatetime') . "'));";
+    // function content to display date returned by double calendar
     $applydouble = "\$('#datestart').val(picker.startDate.format('" . config('daterangepickerhelper.default.momentinputdate')
       . "'));\n\$('#dateend').val(picker.endDate.format('" . config('daterangepickerhelper.default.momentinputdate') . "'));";
+    // function content to display date returned by double calendar with time
     $applydoubletime = "\$('#datestart').val(picker.startDate.format('" . config('daterangepickerhelper.default.momentinputdatetime')
         . "'));\n\$('#dateend').val(picker.endDate.format('" . config('daterangepickerhelper.default.momentinputdatetime') . "'));";
     switch($type){
-      case 'simple' :
-          $today = new Carbon;
+      case 'simple' :// single calendar
           $calId = 'numCal';
-          $initsingle = $today->format(config('daterangepickerhelper.default.carboninputdate'));
+          $initsingle = $today->format(config('daterangepickerhelper.default.carboninputdate')); // init date for input where result is displayed
           $cal = DateRangePickerHelper::init($calId, $today, $today, null, null, [
             'singleDatePicker' => true,
-            'drops' => 'down',
+            'drops' => 'down', // calendat opens below
             'formlabel' => 'Date:',
-            'usehiddeninputs' => false,
-            'apply.daterangepicker' => $applysimple
+            'usehiddeninputs' => false, // no hidden inputs
+            'apply.daterangepicker' => $applysimple // cf above
           ]);
           break;
-      case 'simpletime' :
+      case 'simpletime' : // single calendar with time
           $today = new Carbon;
           $calId = 'numCal2';
           $formatsimple = config('daterangepickerhelper.default.momentinputdatetime');
@@ -45,12 +56,12 @@ class DaterangepickerController extends Controller
             'singleDatePicker' => true,
             'drops' => 'down',
             'formlabel' => 'Date:',
-            'timePicker' => true,
+            'timePicker' => true, // hour + minutes
             'usehiddeninputs' => false,
             'apply.daterangepicker' => $applysimpletime
           ]);
           break;
-      case 'double' :
+      case 'double' : // double calendar
           $start = new Carbon('6 days ago');
           $end = new Carbon;
           $max = $end;
@@ -65,7 +76,7 @@ class DaterangepickerController extends Controller
             'apply.daterangepicker' => $applydouble
           ]);
           break;
-      case 'doubletime' :
+      case 'doubletime' : // double calendar with time + second
           $start = new Carbon('6 days ago');
           $end = new Carbon;
           $max = $end;
@@ -81,7 +92,7 @@ class DaterangepickerController extends Controller
             'apply.daterangepicker' => $applydoubletime
           ]);
           break;
-      case 'twocals' :
+      case 'twocals' : // two calendars on same page
           $start = new Carbon('6 days ago');
           $end = new Carbon;
           $max = $end;
@@ -106,6 +117,18 @@ class DaterangepickerController extends Controller
           $initstart = $start->format(config('daterangepickerhelper.default.carboninputdatetime'));;
           $initend = $end->format(config('daterangepickerhelper.default.carboninputdatetime'));;
           break;
+      case 'hidden' : // calendar standard use
+          $start = new Carbon('2 month ago');
+          $end = new Carbon;
+          $calId = 'numCal2';
+          $cal2 = DateRangePickerHelper::init($calId, $start, $end, null, null, [
+            'drops' => 'down',
+            'formlabel' => 'Dates:',
+            'timePicker' => true,
+            "timePickerSeconds" => true,
+            'apply.daterangepicker' => "displayhiddeninputs();"
+          ]);
+          break;
     }
     return view('daterangepicker', [
         'title' => $title,
@@ -121,6 +144,7 @@ class DaterangepickerController extends Controller
         'initsingle' => $initsingle,
         'initstart' => $initstart,
         'initend' => $initend,
+        'type' => $type,
     ]);
   }
 }

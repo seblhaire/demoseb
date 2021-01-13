@@ -10,6 +10,7 @@
     <li><a href="{{ route('daterangepicker', ['type' => 'double']) }}">Date range</a></li>
     <li><a href="{{ route('daterangepicker', ['type' => 'doubletime']) }}">Date range + time</a></li>
     <li><a href="{{ route('daterangepicker', ['type' => 'twocals']) }}">Two calendars on same page</a></li>
+    <li><a href="{{ route('daterangepicker', ['type' => 'hidden']) }}">Hidden inputs</a></li>
 </ul>
     </div>
     <div class="col-sm-8">
@@ -24,11 +25,11 @@
         <label class="control-label" for="curlang">Change language:</label>
         <select class="form-control" id="curlang" name="curlang">
         @foreach ($languages as $lang => $language)
-              @if ($lang == $currentlang)
+            @if ($lang == $currentlang)
               <option value="{!! $lang !!}" selected="selected">
-              @else
+            @else
               <option value="{!! $lang !!}">
-              @endif
+            @endif
             {{ $language }}</option>
         @endforeach
         </select>
@@ -41,18 +42,25 @@
       </div>
       @endif
       @if (!is_null($cal2))
-      {!! $cal2->output() !!}
-      <div class="form-group">
-        <label class="control-label" for="datestart">Selected start date:</label>
-        <input class="form-control" id="datestart" name="datestart" value="{{ $initstart }}">
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="dateend">Selected end date:</label>
-        <input class="form-control" id="dateend" name="dateend" value="{{ $initend }}">
-      </div>
+        {!! $cal2->output() !!}
+        @if ($type != 'hidden')
+          <div class="form-group">
+            <label class="control-label" for="datestart">Selected start date:</label>
+            <input class="form-control" id="datestart" name="datestart" value="{{ $initstart }}">
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="dateend">Selected end date:</label>
+            <input class="form-control" id="dateend" name="dateend" value="{{ $initend }}">
+          </div>
+        @endif
       @endif
     </form>
     <script>
+    @if ($type == 'hidden')
+      function displayhiddeninputs(){ //function to display hidden inputs
+        alert('input startdate ' + {!! $cal2->getStartDate() !!} + '. input enddate  ' +  {!! $cal2->getEndDate() !!});
+      }
+    @endif
       $(document).ready(function(){
           $('#curlang').on('change', function(e){
               window.location.href = '{{route($menu, ["type" => $currenttype])}}/' + $(this).val();

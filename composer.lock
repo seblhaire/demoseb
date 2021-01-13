@@ -2552,16 +2552,16 @@
         },
         {
             "name": "seblhaire/daterangepickerhelper",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/daterangepickerhelper.git",
-                "reference": "525ae39f4012024f442fe1f91316803e44c63892"
+                "reference": "8cf82e03fcb15ef0ac6b3a9ab6fc9cc2d4cc37d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/daterangepickerhelper/zipball/525ae39f4012024f442fe1f91316803e44c63892",
-                "reference": "525ae39f4012024f442fe1f91316803e44c63892",
+                "url": "https://api.github.com/repos/seblhaire/daterangepickerhelper/zipball/8cf82e03fcb15ef0ac6b3a9ab6fc9cc2d4cc37d7",
+                "reference": "8cf82e03fcb15ef0ac6b3a9ab6fc9cc2d4cc37d7",
                 "shasum": ""
             },
             "require": {
@@ -2600,9 +2600,9 @@
             "homepage": "https://github.com/seblhaire/daterangepickerhelper",
             "support": {
                 "issues": "https://github.com/seblhaire/daterangepickerhelper/issues",
-                "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.4"
+                "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.5"
             },
-            "time": "2021-01-11T21:40:41+00:00"
+            "time": "2021-01-13T19:39:00+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

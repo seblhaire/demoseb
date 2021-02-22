@@ -37,6 +37,7 @@ class DaterangepickerController extends Controller
         . "'));\n\$('#dateend').val(picker.endDate.format('" . config('daterangepickerhelper.default.momentinputdatetime') . "'));";
     switch($type){
       case 'simple' :// single calendar
+          $today = new Carbon;
           $calId = 'numCal';
           $initsingle = $today->format(config('daterangepickerhelper.default.carboninputdate')); // init date for input where result is displayed
           $cal = DateRangePickerHelper::init($calId, $today, $today, null, null, [

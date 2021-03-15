@@ -37,4 +37,17 @@
       <p><a class="btn btn-secondary" href="{{ route('daterangepicker') }}" role="button">View details &raquo;</a></p>
     </div>
 </div>
+<hr />
+<div class="row">
+      <div class="col-md-7">
+        <h2>TableBuilder</h2>
+        <h3>Retrieves data from database and displays it in a table with a Javascript library.</h3>
+        <p class="lead">A Laravel library to build tables easily, which interacts with a lightweight js builder and builds data from Eloquent Object-Relational Mapping
+          with database tables. Table can also load static data.</p>
+		<p><a class="btn btn-secondary" href="{{ route('tablebuilder') }}" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img style="max-width:100%" src="/img/tablebuilder.png" />
+      </div>
+</div>
 @endsection

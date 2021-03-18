@@ -16,7 +16,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "seblhaire/bootstrappaginator": "^1.0",
-        "seblhaire/daterangepickerhelper": "^1.1"
+        "seblhaire/daterangepickerhelper": "^1.1",
+        "seblhaire/tablebuilder": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

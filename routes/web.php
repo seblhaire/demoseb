@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\PaginatorController;
 use \App\Http\Controllers\DaterangepickerController;
+use \App\Http\Controllers\TablebuilderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,10 @@ use \App\Http\Controllers\DaterangepickerController;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorController::class, 'index'])->name('paginator');
 Route::get('/daterangepicker/{type?}/{lang?}', [DaterangepickerController::class, 'index'])->name('daterangepicker');
+Route::get('/tablebuilder', [TablebuilderController::class, 'index'])->name('tablebuilder');
+Route::post('/tablebuilder/loadtab', [TablebuilderController::class, 'loadTable'])->name('tableload');
+Route::post('/tablebuilder/loadtab2', [TablebuilderController::class, 'loadTable2'])->name('tableload2');
+
+Route::get('/refresh-csrf', function(){
+    return csrf_token();
+})->name('refreshcsrf');

@@ -3,11 +3,10 @@
 @section('title', 'Home')
 @section('content')
 <div class="jumbotron">
-  <h1 class="display-4">Seb's Laravel Package Demo Site</h1>
-  <p class="lead">My name is <a href="https://sebastien.lhaire.org">Sébastien L'haire</a>. I work as web developper.
-  I developp <a target="_blank" href="https://laravel.com">Laravel packages</a>
-  for the personal sites I build.</p>
-  <p>These packages are freely available for the web community on <a target="_blank" href="https://packagist.org/packages/seblhaire/">Packagist</a>.
+  <h1 class="display-4">Sébastien L'HAIRE</h1>
+  <p class="lead">I'm a web developper and I work for a web hosting company. I have developped some packages for my personal websites.</p>
+    <p>These packages are freely available for the web community on <a target="_blank" href="https://packagist.org/packages/seblhaire/">Packagist</a>.
+      This site's sources are <a target=":blank" href="https://github.com/seblhaire/demoseb">here</a>.
   Source files are available on <a target="_blank" href="https://github.com/seblhaire/">GitHub</a>. You can fork the projects to adapt them to your needs,
   notify bugs or propose merge requests. Translation files in your own language are very welcome.</p>
 </div>
@@ -50,4 +49,7 @@
         <img style="max-width:100%" src="/img/tablebuilder.png" />
       </div>
 </div>
+<hr />
+<h3 class="scto">Contact:</h3>
+<p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
 @endsection

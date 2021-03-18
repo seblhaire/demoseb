@@ -1,16 +1,28 @@
 <?php
 return [
-    'home' => [
-        'icon' => '<i class="fas fa-home fa-lg"></i>',
-        'title' => 'Home',
-        'target' => "/",
-    ],
-    'paginator' => [
-        'title' => 'Paginator',
-        'target' => '/paginator',
-    ],
-    'daterangepicker' => [
-        'title' => 'Daterangepicker Helper',
-        'target' => '/daterangepicker',
-    ],
+  'home' => [
+    'icon' => '<i class="fas fa-home fa-lg"></i>',
+    'title' => 'Home',
+    'target' => "/",
+  ],
+  'cv' => [
+      'title' => 'CV / Resumé',
+      'target' => "/cv",
+  ],
+  'publis' => [
+      'title' => 'Publications',
+      'target' => "/publis",
+  ],
+  'paginator' => [
+      'title' => 'Paginator',
+      'target' => '/paginator',
+  ],
+  'daterangepicker' => [
+      'title' => 'Daterangepicker Helper',
+      'target' => '/daterangepicker',
+  ],
+  'tablebuilder' => [
+      'title' => 'Table builder',
+      'target' => '/tablebuilder',
+  ],
 ];

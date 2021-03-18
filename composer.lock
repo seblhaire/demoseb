@@ -2553,16 +2553,16 @@
         },
         {
             "name": "seblhaire/daterangepickerhelper",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/daterangepickerhelper.git",
-                "reference": "70741ee0a8379164e248eb47a947c53661a863ab"
+                "reference": "7f2cb426a2d93fc833af072fe41d011398e08ed1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/daterangepickerhelper/zipball/70741ee0a8379164e248eb47a947c53661a863ab",
-                "reference": "70741ee0a8379164e248eb47a947c53661a863ab",
+                "url": "https://api.github.com/repos/seblhaire/daterangepickerhelper/zipball/7f2cb426a2d93fc833af072fe41d011398e08ed1",
+                "reference": "7f2cb426a2d93fc833af072fe41d011398e08ed1",
                 "shasum": ""
             },
             "require": {
@@ -2601,9 +2601,9 @@
             "homepage": "https://github.com/seblhaire/daterangepickerhelper",
             "support": {
                 "issues": "https://github.com/seblhaire/daterangepickerhelper/issues",
-                "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.6"
+                "source": "https://github.com/seblhaire/daterangepickerhelper/tree/1.1.7"
             },
-            "time": "2021-03-17T21:29:50+00:00"
+            "time": "2021-03-18T21:25:08+00:00"
         },
         {
             "name": "seblhaire/tablebuilder",

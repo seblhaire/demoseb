@@ -19,7 +19,7 @@
       a calendar and select a date or date range. This package provides helpers to facilitate calendar settings and date retrieval.
       <a target="_blank" href="https://github.com/seblhaire/daterangepickerhelper">Project on GitHub</a>.
       <a target="_blank" href="https://packagist.org/packages/seblhaire/daterangepickerhelper">Project on Packagist</a>.
-      This demosite sources available <a target="_blank" href="https://sebastien.lhaire.org/paginator">here</a>.
+      This demosite sources available <a target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
     </p>
     <form id="daterangepicker" action="return false;">
       <div class="form-group">

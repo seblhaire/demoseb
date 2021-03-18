@@ -25,4 +25,8 @@ return [
       'title' => 'Table builder',
       'target' => '/tablebuilder',
   ],
+  'corpus' => [
+    'title' => 'Corpus',
+    'target' => 'https://corpus.lhaire.org/'
+  ],
 ];

@@ -7,7 +7,7 @@
   with database tables. Table can also load static data.
   <a target="_blank" href="https://github.com/seblhaire/tablebuilder">Project on GitHub</a>.
   <a target="_blank" href="https://packagist.org/packages/seblhaire/tablebuilder">Project on Packagist</a>.
-  This demosite sources available <a target="_blank" href="https://sebastien.lhaire.org/paginator">here</a>.
+  This demosite sources available <a target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
 </p>
 <h4>Complete dynamic example</h4>
   {!! $oTable->output() !!}

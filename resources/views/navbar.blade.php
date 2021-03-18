@@ -5,7 +5,9 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       @foreach (config('menu') as $idx => $item)
-        <li id="{!! $idx !!}" class="nav-item{!! $idx == $menu ? ' active' : '' !!}"><a class="nav-link" href="{!! $item['target'] !!}" title="{{ isset($item['icon']) ? $item['title'] : '' }}">
+        <li id="{!! $idx !!}" class="nav-item{!! $idx == $menu ? ' active' : '' !!}"><a class="nav-link"
+          {!! (strpos($item['target'], 'https') !== false) ? 'target="_blank"' : '' !!}
+          href="{!! $item['target'] !!}" title="{{ isset($item['icon']) ? $item['title'] : '' }}">
         @if (isset($item['icon']))
           {!! $item['icon'] !!}
         @else

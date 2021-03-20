@@ -3,25 +3,23 @@
 @section('title', 'Home')
 @section('content')
 <div class="jumbotron">
-  <table width="100%">
-  <tr>
-    <td>
-      <h2>Dr. Sébastien L'HAIRE</h2>
-      <h4>Développeur web - Ingénieur en Traitement du Langage</h4>
-      <p><img src="/img/seb.jpg"/></p>
-    </td>
-    <td>
-      21, r. Balcon de l'Aire<br />
-      F - 74160 Saint-Julien-en-Genevois<br />
-      <strong>Mob&nbsp;:</strong> ++41 78 773 66 48
-    </td>
-    <td>
-      Né le 28 avril 1972.<br />
-      Marié - lié par partenariat<br />
-      Nationalité suisse
-    </td>
-  </tr>
-</table>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p><img src="/img/seb.jpg"/></p>
+      </div>
+      <div class="col">
+        <h2>Dr. Sébastien L'HAIRE</h2>
+        <h4>Développeur web - Ingénieur en Traitement du Langage</h4>
+        <p>21, r. Balcon de l'Aire<br />
+        F - 74160 Saint-Julien-en-Genevois<br />
+        <strong>Mob&nbsp;:</strong> ++41 78 773 66 48</p>
+        <p>Né le 28 avril 1972.<br />
+        Marié - lié par partenariat<br />
+        Nationalité suisse</p>
+      </div>
+    </div>
+  </div>
 </div>
 <h3><a href="docs/cv.pdf" target="_blank">CV détaillé</a> <a href="docs/resume_en.pdf" target="_blank">English</a></h3>
 <h3 class="scto">Compétences-clé:</h3>

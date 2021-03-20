@@ -2607,16 +2607,16 @@
         },
         {
             "name": "seblhaire/tablebuilder",
-            "version": "1.0.6",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tablebuilder.git",
-                "reference": "cdcea71e3abd3f9092ea80560efc16a63cd42dbd"
+                "reference": "da5b2a5e28ff2f741aba7359694a5558b6fd647a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/cdcea71e3abd3f9092ea80560efc16a63cd42dbd",
-                "reference": "cdcea71e3abd3f9092ea80560efc16a63cd42dbd",
+                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/da5b2a5e28ff2f741aba7359694a5558b6fd647a",
+                "reference": "da5b2a5e28ff2f741aba7359694a5558b6fd647a",
                 "shasum": ""
             },
             "require": {
@@ -2654,9 +2654,9 @@
             "homepage": "https://github.com/seblhaire/tablebuilder",
             "support": {
                 "issues": "https://github.com/seblhaire/tablebuilder/issues",
-                "source": "https://github.com/seblhaire/tablebuilder/tree/1.0.6"
+                "source": "https://github.com/seblhaire/tablebuilder/tree/1.0.8"
             },
-            "time": "2021-03-19T18:25:42+00:00"
+            "time": "2021-03-20T16:19:15+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5559,16 +5559,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.10.0",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "6ecda5217bf048088b891f7403b262906be5a957"
+                "reference": "f6e14679f948d8a5cfb866fa7065a30c66bd64d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/6ecda5217bf048088b891f7403b262906be5a957",
-                "reference": "6ecda5217bf048088b891f7403b262906be5a957",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/f6e14679f948d8a5cfb866fa7065a30c66bd64d3",
+                "reference": "f6e14679f948d8a5cfb866fa7065a30c66bd64d3",
                 "shasum": ""
             },
             "require": {
@@ -5618,7 +5618,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.10.0"
+                "source": "https://github.com/filp/whoops/tree/2.11.0"
             },
             "funding": [
                 {
@@ -5626,7 +5626,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-16T12:00:00+00:00"
+            "time": "2021-03-19T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",

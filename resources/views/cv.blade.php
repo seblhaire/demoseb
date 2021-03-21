@@ -13,7 +13,9 @@
         <h4>Développeur web - Ingénieur en Traitement du Langage</h4>
         <p>21, r. Balcon de l'Aire<br />
         F - 74160 Saint-Julien-en-Genevois<br />
-        <strong>Mob&nbsp;:</strong> ++41 78 773 66 48</p>
+        <strong>Tel&nbsp;:</strong> ++41 78 773 66 48<br/>
+        <a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a>
+        </p>
         <p>Né le 28 avril 1972.<br />
         Marié - lié par partenariat<br />
         Nationalité suisse</p>

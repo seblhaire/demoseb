@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Seblhaire\Uploader\UploaderHelper;
+use Illuminate\Support\Facades\Storage;
 
 class UploaderController extends Controller
 {

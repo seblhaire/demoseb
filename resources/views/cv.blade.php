@@ -23,7 +23,8 @@
     </div>
   </div>
 </div>
-<h3><a href="docs/cv.pdf" target="_blank">CV détaillé</a> <a href="docs/resume_en.pdf" target="_blank">English</a></h3>
+<h3><a href="docs/cv.pdf" target="_blank">CV détaillé</a> -
+  <a href="docs/resume_en.pdf" target="_blank">Resumé in English</a></h3>
 <h3 class="scto">Compétences-clé:</h3>
 <p>Excellentes connaissances en réalisation de sites Internet. Bonne expérience en ingénierie des langues. Méticuleux, soucieux de la qualité du travail rendu. Autonome.</p>
 <h3 class="scto">Diplômes:</h3>

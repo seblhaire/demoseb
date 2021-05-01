@@ -50,6 +50,20 @@
       </div>
 </div>
 <hr />
+<div class="row">
+    <div class="col-md-5">
+      <img style="max-width:100%" src="/img/uploader.png" />
+    </div>
+    <div class="col-md-7">
+      <h2>Uploader</h2>
+      <h3>File upload package</h3>
+      <p class="lead">A Laravel library to provide file upload utilities. A Javascript library builds a
+        complete file upload widget with upload button, drag-and-drop zone, progress bar
+        and result builder. A controller is available to manage uploaded files.</p>
+      <p><a class="btn btn-secondary" href="{{ route('uploader') }}" role="button">View details &raquo;</a></p>
+    </div>
+</div>
+<hr />
 <h3 class="scto">Contact:</h3>
 <p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
 @endsection

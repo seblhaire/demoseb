@@ -25,6 +25,10 @@ return [
       'title' => 'Table builder',
       'target' => '/tablebuilder',
   ],
+  'uploader' => [
+      'title' => 'Uploader',
+      'target' => '/uploader',
+  ],
   'corpus' => [
     'title' => 'Corpus',
     'target' => 'https://corpus.lhaire.org/'

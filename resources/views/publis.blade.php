@@ -52,9 +52,9 @@ Conferences and talks</h2>
   Université Stendhal, Grenoble, France, 30 septembre 2011 <a href="docs/publications/grenoble2.pdf" target="_blank">Slides (pdf)</a></li>
 </ul>
 <h4>2006</h4>
-<ul>docs/publications/
+<ul>
   <li>L'haire, S. (2006). "FipsOrtho: A Spell Checker for Learners of French". Eurocall 2006. (<i>Show & Tell</i>),
-    Granada, Spain, September 5-7, 2006. <a href="docs/publications/eurocall06.pdf" target="_blank">Slides (pdf)</a></li>$
+    Granada, Spain, September 5-7, 2006. <a href="docs/publications/eurocall06.pdf" target="_blank">Slides (pdf)</a></li>
 </ul>
 <h4>2005</h4>
 <ul>

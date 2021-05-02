@@ -25,7 +25,7 @@ Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorControll
 Route::get('/daterangepicker/{type?}/{lang?}', [DaterangepickerController::class, 'index'])->name('daterangepicker');
 Route::get('/tablebuilder', [TablebuilderController::class, 'index'])->name('tablebuilder');
 Route::get('/uploader', [UploaderController::class, 'index'])->name('uploader');
-Route::get('/deletefiles', [UploaderController::class, 'deleteFiles'])->name('uploader');
+Route::get('/' . env('UPLOAD_DEL_URL'), [UploaderController::class, 'deleteFiles'])->name('uploader');
 
 
 

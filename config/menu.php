@@ -29,6 +29,10 @@ return [
       'title' => 'Uploader',
       'target' => '/uploader',
   ],
+  'autocompleter' => [
+      'title' => 'Autocompleter',
+      'target' => '/autocompleter',
+  ],
   'corpus' => [
     'title' => 'Corpus',
     'target' => 'https://corpus.lhaire.org/'

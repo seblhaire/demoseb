@@ -6,6 +6,7 @@ use \App\Http\Controllers\PaginatorController;
 use \App\Http\Controllers\DaterangepickerController;
 use \App\Http\Controllers\TablebuilderController;
 use \App\Http\Controllers\UploaderController;
+use \App\Http\Controllers\AutocompleterController;
 use Seblhaire\Uploader\FileuploadController;
 
 /*
@@ -25,6 +26,7 @@ Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorControll
 Route::get('/daterangepicker/{type?}/{lang?}', [DaterangepickerController::class, 'index'])->name('daterangepicker');
 Route::get('/tablebuilder', [TablebuilderController::class, 'index'])->name('tablebuilder');
 Route::get('/uploader', [UploaderController::class, 'index'])->name('uploader');
+Route::get('/autocompleter', [AutocompleterController::class, 'index'])->name('autocompleter');
 Route::get('/' . env('UPLOAD_DEL_URL'), [UploaderController::class, 'deleteFiles'])->name('uploader');
 
 

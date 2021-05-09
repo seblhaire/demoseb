@@ -64,6 +64,18 @@
     </div>
 </div>
 <hr />
+<div class="row">
+      <div class="col-md-7">
+        <h2>Tags input</h2>
+        <h3>Humm.</h3>
+        <p class="lead">Kapouee</p>
+		<p><a class="btn btn-secondary" href="{{ route('tagsinput') }}" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <!--<img style="max-width:100%" src="/img/tablebuilder.png" />-->
+      </div>
+</div>
+<hr />
 <h3 class="scto">Contact:</h3>
 <p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
 @endsection

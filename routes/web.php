@@ -7,7 +7,7 @@ use \App\Http\Controllers\DaterangepickerController;
 use \App\Http\Controllers\TablebuilderController;
 use \App\Http\Controllers\UploaderController;
 use Seblhaire\Uploader\FileuploadController;
-
+use \App\Http\Controllers\TagsinputController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +26,7 @@ Route::get('/daterangepicker/{type?}/{lang?}', [DaterangepickerController::class
 Route::get('/tablebuilder', [TablebuilderController::class, 'index'])->name('tablebuilder');
 Route::get('/uploader', [UploaderController::class, 'index'])->name('uploader');
 Route::get('/' . env('UPLOAD_DEL_URL'), [UploaderController::class, 'deleteFiles'])->name('uploader');
-
+Route::get('/tagsinput', [TagsinputController::class, 'index'])->name('tagsinput');
 
 
 Route::post('/tablebuilder/loadtab', [TablebuilderController::class, 'loadTable'])->name('tableload');

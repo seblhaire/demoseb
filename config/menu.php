@@ -29,6 +29,10 @@ return [
       'title' => 'Uploader',
       'target' => '/uploader',
   ],
+  'tagsinput' => [
+      'title' => 'Tags input',
+      'target' => '/tagsinput',
+  ],
   'corpus' => [
     'title' => 'Corpus',
     'target' => 'https://corpus.lhaire.org/'

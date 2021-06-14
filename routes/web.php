@@ -35,6 +35,7 @@ Route::post('/tablebuilder/loadtab', [TablebuilderController::class, 'loadTable'
 Route::post('/tablebuilder/loadtab2', [TablebuilderController::class, 'loadTable2'])->name('tableload2');
 Route::post('/processfile', [UploaderController::class, 'processFile'])->name('processfile');
 Route::post('/fileupload', [FileuploadController::class, 'index'])->name('fileupload');
+Route::post('/autocompleter/search', [AutocompleterController::class, 'search'])->name('autocompletesearch');
 Route::get('/refresh-csrf', function(){
     return csrf_token();
 })->name('refreshcsrf');

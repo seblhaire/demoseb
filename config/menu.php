@@ -29,6 +29,10 @@ return [
       'title' => 'Uploader',
       'target' => '/uploader',
   ],
+  'autocompleter' => [
+      'title' => 'Autocompleter',
+      'target' => '/autocompleter',
+  ],
   'tagsinput' => [
       'title' => 'Tags input',
       'target' => '/tagsinput',

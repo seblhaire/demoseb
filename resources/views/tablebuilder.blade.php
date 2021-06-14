@@ -5,9 +5,9 @@
 <h3>{{ $title }}</h3>
 <p>A Laravel library to build tables easily, which interacts with a lightweight js builder and builds data from Eloquent Object-Relational Mapping
   with database tables. Table can also load static data.
-  <a target="_blank" href="https://github.com/seblhaire/tablebuilder">Project on GitHub</a>.
-  <a target="_blank" href="https://packagist.org/packages/seblhaire/tablebuilder">Project on Packagist</a>.
-  This demosite sources available <a target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
+  <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/tablebuilder">Project on GitHub</a>.
+  <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/tablebuilder">Project on Packagist</a>.
+  This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
 </p>
 <h4>Complete dynamic example</h4>
   {!! $oTable->output() !!}

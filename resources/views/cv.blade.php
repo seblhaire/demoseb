@@ -23,15 +23,15 @@
     </div>
   </div>
 </div>
-<h3><a href="docs/cv.pdf" target="_blank">CV détaillé</a> -
-  <a href="docs/resume_en.pdf" target="_blank">Resumé in English</a></h3>
+<h3><a href="docs/cv.pdf" target="_blank" rel="noopener noreferrer">CV détaillé</a> -
+  <a href="docs/resume_en.pdf" target="_blank" rel="noopener noreferrer">Resumé in English</a></h3>
 <h3 class="scto">Compétences-clé:</h3>
 <p>Excellentes connaissances en réalisation de sites Internet. Bonne expérience en ingénierie des langues. Méticuleux, soucieux de la qualité du travail rendu. Autonome.</p>
 <h3 class="scto">Diplômes:</h3>
 <ul>
-	<li><strong>Thèse de doctorat en linguistique,</strong> Université de Genève, Faculté des Lettres. Titre: <a href="http://archive-ouverte.unige.ch/unige:16552" target="_blank">&laquo;Traitement Automatique des Langues et Apprentissage des Langues Assisté par Ordinateur : bilan,
-    résultats et perspectives&raquo;</a>, mention très  honorable <a target="_blank" href="docs/publications/these.pdf">pdf</a>
-    <a target="_blank" href="docs/publications/soutenanceV2.pdf">présentation de soutenance</a></li>
+	<li><strong>Thèse de doctorat en linguistique,</strong> Université de Genève, Faculté des Lettres. Titre: <a href="http://archive-ouverte.unige.ch/unige:16552" rel="noopener noreferrer" target="_blank">&laquo;Traitement Automatique des Langues et Apprentissage des Langues Assisté par Ordinateur : bilan,
+    résultats et perspectives&raquo;</a>, mention très  honorable <a rel="noopener noreferrer" target="_blank" href="docs/publications/these.pdf">pdf</a>
+    <a target="_blank" href="docs/publications/soutenanceV2.pdf" rel="noopener noreferrer">présentation de soutenance</a></li>
 <li><strong>Diplôme d'études Supérieures </strong>&laquo;Génie Linguistique&raquo;, Faculté des Lettres.</li>
 <li> <strong>Diplôme d'Etudes Approfondies </strong> &laquo;Information Scientifique et Technique&raquo;, Université de Marne-la-Vallée. </li>
 <li><strong>Licence ès Lettres, </strong>de l'Université de Genève, Grec ancien, Histoire de l'Antiquité et Informatique.</li>

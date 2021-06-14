@@ -13,9 +13,9 @@
     <div class="col-sm-8">
     <h3>{{ $title }}</h3>
     <p>Bootstrap Paginator builds a classical paginator with page numbers and previous and next button and/or an alphabetical paginator with letters.
-      <a target="_blank" href="https://github.com/seblhaire/bootstrappaginator">Project on GitHub</a>.
-      <a target="_blank" href="https://packagist.org/packages/seblhaire/bootstrappaginator">Project on Packagist</a>.
-      This demosite sources available <a target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/seblhaire/bootstrappaginator">Project on GitHub</a>.
+      <a target="_blank" rel="noopener noreferrer" href="https://packagist.org/packages/seblhaire/bootstrappaginator">Project on Packagist</a>.
+      This demosite sources available <a target="_blank" rel="noopener noreferrer" href="https://github.com/seblhaire/demoseb">here</a>.
     </p>
     @isset($paginator2)
     {!! $paginator2 !!}

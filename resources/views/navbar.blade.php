@@ -10,7 +10,7 @@
     <ul class="navbar-nav mr-auto">
       @foreach (config('menu') as $idx => $item)
         <li id="{!! $idx !!}" class="nav-item{!! $idx == $menu ? ' active' : '' !!}"><a class="nav-link"
-          {!! (strpos($item['target'], 'https') !== false) ? 'target="_blank"' : '' !!}
+          {!! (strpos($item['target'], 'https') !== false) ? 'target="_blank" rel="noopener noreferrer"' : '' !!}
           href="{!! $item['target'] !!}" title="{{ isset($item['icon']) ? $item['title'] : '' }}">
         @if (isset($item['icon']))
           {!! $item['icon'] !!}

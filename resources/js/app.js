@@ -9,5 +9,6 @@ global.moment = require('moment');
 global.Clipboard = require('clipboard');
 require('daterangepicker');
 require('../../vendor/seblhaire/tablebuilder/resources/js/tablebuilder.js');
-
 require('../../vendor/seblhaire/uploader/resources/js/upload.js');
+require('../../packages/seblhaire/autocompleter/resources/js/autocompleter.js');
+require('../../packages/seblhaire/tagsinput/resources/js/tagsinput.js');

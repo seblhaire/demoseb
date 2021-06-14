@@ -5,9 +5,9 @@
 <div class="jumbotron">
   <h1 class="display-4">Sébastien L'HAIRE</h1>
   <p class="lead">I'm a web developper and I work for a web hosting company. I have developped some packages for my personal websites.</p>
-    <p>These packages are freely available for the web community on <a target="_blank" href="https://packagist.org/packages/seblhaire/">Packagist</a>.
-      This site's sources are <a target=":blank" href="https://github.com/seblhaire/demoseb">here</a>.
-  Source files are available on <a target="_blank" href="https://github.com/seblhaire/">GitHub</a>. You can fork the projects to adapt them to your needs,
+    <p>These packages are freely available for the web community on <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/">Packagist</a>.
+      This site's sources are <a rel="noopener noreferrer" target=":blank" href="https://github.com/seblhaire/demoseb">here</a>.
+  Source files are available on <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/">GitHub</a>. You can fork the projects to adapt them to your needs,
   notify bugs or propose merge requests. Translation files in your own language are very welcome.</p>
 </div>
 <div class="row">

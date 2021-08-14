@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Seblhaire\BootstrapPaginator\BootstrapPaginator;
 
+use Barryvdh\Debugbar\Facade as Debugbar;
+
 class PaginatorController extends Controller
 {
 
@@ -40,7 +42,7 @@ class PaginatorController extends Controller
                       $param1;
                 $paginator2 = null;
                 $title = "Bootstrap Paginator classical";
-                $title2 = 'Page ' . $param1;
+                $title2 = 'Page ' . $initial;
                 $optionalpha = [
                   'type' => 'alpha', // sets paginator type
                   'initialparam' => 'param1', // parameter used by paginator. If you use  config('bootstrappaginator.initialparam) ('initial'), no need to use parameter
@@ -57,7 +59,7 @@ class PaginatorController extends Controller
                 $paginator = BootstrapPaginator::init($page, $route, $options);
                 $paginator2 = BootstrapPaginator::init($initial, $route, $optionalpha);
                 $title = "Bootstrap Paginator combi";
-                $title2 = 'Page ' . $param1 . ' ' . $param2;
+                $title2 = 'Page ' . $initial . ' ' . $page;
                 break;
         }
         // Simply send paginator(s) that you have inited before to your view

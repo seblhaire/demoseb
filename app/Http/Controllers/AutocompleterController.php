@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Seblhaire\Autocompleter\AutocompleterHelper;
 use App\Models\Tablecontent;
 use \Seblhaire\Autocompleter\Utils;
+use App\Utils\Countries;
 
 
 // https://www.tutorialspoint.com/how-to-create-an-autocomplete-with-javascript
@@ -13,42 +14,54 @@ use \Seblhaire\Autocompleter\Utils;
 
 class AutocompleterController extends Controller
 {
+    public $options;
+
+    public function __construct(){
+      $this->options = array_replace(config('autocompleter'), [
+        'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+        'callback' => 'output', // js callback called after selecting element
+        'id_included' => false, // id column not added in item list
+      ]);
+    }
+
     public function index(){
       $ac = AutocompleterHelper::init(
         'autocompleter1',
-        route('autocompletesearch'),
-        [
-          'csrfrefreshroute' => route('refreshcsrf'),
-          'callback' => 'output',
-          'label' => 'Employee'
-        ]
+        'Countries',
+        route('autocompletesearch'), // route called when typing in input
+        $this->options
       );
       return view('autocompleter', [
           'title' => 'Autocompleter',
           'menu' => 'autocompleter',
           'ac' => $ac,
+          'options' => $this->options
         ]);
     }
 
+    /**
+    * builds autocompleter results list
+    */
     public function search(Request $request){
       $validated = $request->validate([
         'search' => 'required|string',
         'maxresults' => 'required|numeric|min:3'
       ]);
-      $users = Tablecontent::where('lastname', 'like', '%' . $request->input('search') . '%')
-          ->orwhere('firstname', 'like', '%' . $request->input('search') . '%')
-          ->take($request->input('maxresults'))
-          ->select('id', 'firstname', 'lastname')
-          ->get();
+      $search = $request->input('search');
+      $countries = collect(Countries::getList())->filter(function($data) use ($search){ //search in country list
+        return (mb_stripos($data['code'], $search) !== false) || (mb_stripos($data['country'], $search) !== false);
+      })->take($request->input('maxresults'));
       $res = [];
-      if (count($users) > 0){
+      if (count($countries) > 0){
         //var_dump($lowersrch);
-        foreach  ($users as $user){
+        foreach  ($countries as $country){
           $res[] = [
-            'id' => $user->id,
-            'lastname' => $user->lastname,
-            'firstname' => $user->firstname,
-            'display' => Utils::highlite($user->lastname . ' '. $user->firstname, $request->input('search'), config('autocompleter.highliteclasses'))
+            $this->options['id_field'] => $country['code'], // unique value of autocompleter choice
+            'country' => $country['country'], // other value available
+            // value displayed in choice list, with html tags
+            $this->options['list_field'] => Utils::highlite($country['code'] . ' : ' .$country['country'], $request->input('search'), config('autocompleter.highliteclasses')),
+            // value to be used for tag label (see controller TagsinputController and js package seblhaire/tagsinput)
+            config('tagsinput.taglabelelement') => $country['code'] . ' : ' . $country['country']
           ];
         }
       }

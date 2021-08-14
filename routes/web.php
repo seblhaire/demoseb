@@ -36,6 +36,8 @@ Route::post('/tablebuilder/loadtab2', [TablebuilderController::class, 'loadTable
 Route::post('/processfile', [UploaderController::class, 'processFile'])->name('processfile');
 Route::post('/fileupload', [FileuploadController::class, 'index'])->name('fileupload');
 Route::post('/autocompleter/search', [AutocompleterController::class, 'search'])->name('autocompletesearch');
+Route::post('/tagsinput/search', [TagsinputController::class, 'search'])->name('tagsinputsearch');
+Route::post('/tagsinput/addemployee', [TagsinputController::class, 'addEmployee'])->name('tagsinputaddemployee');
 Route::get('/refresh-csrf', function(){
     return csrf_token();
 })->name('refreshcsrf');

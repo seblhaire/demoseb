@@ -175,7 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Seblhaire\Autocompleter\AutocompleterServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class
 
     ],
 
@@ -229,7 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'AutocompleterHelper' => Seblhaire\Autocompleter\AutocompleterHelper::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

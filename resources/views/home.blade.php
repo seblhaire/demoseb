@@ -2,14 +2,17 @@
 
 @section('title', 'Home')
 @section('content')
-<div class="jumbotron">
-  <h1 class="display-4">Sébastien L'HAIRE</h1>
+<div class="h-100 p-5 bg-light border rounded-3">
+      <h1 class="display-5 fw-bold">Sébastien L'HAIRE</h1>
   <p class="lead">I'm a web developper and I work for a web hosting company. I have developped some packages for my personal websites.</p>
     <p>These packages are freely available for the web community on <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/">Packagist</a>.
       This site's sources are <a rel="noopener noreferrer" target=":blank" href="https://github.com/seblhaire/demoseb">here</a>.
   Source files are available on <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/">GitHub</a>. You can fork the projects to adapt them to your needs,
   notify bugs or propose merge requests. Translation files in your own language are very welcome.</p>
+  <h3 class="scto">Contact:</h3>
+  <p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
 </div>
+<br/><br/>
 <div class="row">
       <div class="col-md-7">
         <h2>Bootstrap Paginator</h2>
@@ -23,8 +26,7 @@
         <img style="max-width:100%" src="/img/paginatoralpha.png" />
       </div>
 </div>
-<hr />
-<div class="row">
+<div class="row projectdescr">
     <div class="col-md-5">
       <img src="/img/double-open.png" />
     </div>
@@ -36,8 +38,7 @@
       <p><a class="btn btn-secondary" href="{{ route('daterangepicker') }}" role="button">View details &raquo;</a></p>
     </div>
 </div>
-<hr />
-<div class="row">
+<div class="row projectdescr">
       <div class="col-md-7">
         <h2>TableBuilder</h2>
         <h3>Retrieves data from database and displays it in a table with a Javascript library.</h3>
@@ -49,8 +50,7 @@
         <img style="max-width:100%" src="/img/tablebuilder.png" />
       </div>
 </div>
-<hr />
-<div class="row">
+<div class="row projectdescr">
     <div class="col-md-5">
       <img style="max-width:100%" src="/img/uploader.png" />
     </div>
@@ -63,19 +63,28 @@
       <p><a class="btn btn-secondary" href="{{ route('uploader') }}" role="button">View details &raquo;</a></p>
     </div>
 </div>
-<hr />
-<div class="row">
+<div class="row projectdescr">
       <div class="col-md-7">
-        <h2>Tags input</h2>
-        <h3>Humm.</h3>
-        <p class="lead">Kapouee</p>
-		<p><a class="btn btn-secondary" href="{{ route('tagsinput') }}" role="button">View details &raquo;</a></p>
+        <h2>Autocompleter</h2>
+        <h3>Add auto-completion to your input</h3>
+        <p class="lead">A Laravel library with Javascript JQuery script to add input with auto-completer.</p>
+		<p><a class="btn btn-secondary" href="{{ route('autocompleter') }}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-5">
-        <!--<img style="max-width:100%" src="/img/tablebuilder.png" />-->
+        <img style="max-width:100%" src="/img/autocompleter1.png" />
       </div>
 </div>
-<hr />
-<h3 class="scto">Contact:</h3>
-<p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
+<div class="row projectdescr">
+    <div class="col-md-5">
+      <img style="max-width:100%" src="/img/tagsinput.png" />
+    </div>
+    <div class="col-md-7">
+      <h2>TagsInput</h2>
+      <h3>Select items from a list and put them in a tag list</h3>
+<p>A Laravel library with jQuery add on to add tags input field with auto-completer.</p>
+      <p><a class="btn btn-secondary" href="{{ route('tagsinput') }}" role="button">View details &raquo;</a></p>
+    </div>
+</div>
+</div>
+</div>
 @endsection

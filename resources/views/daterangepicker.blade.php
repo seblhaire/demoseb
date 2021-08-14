@@ -15,7 +15,7 @@
     </div>
     <div class="col-sm-8">
     <h3>{{ $title }}</h3>
-    <p><a rel="noopener noreferrer" target="_blank" href="https://www.daterangepicker.com/"><em>DateRangePicker</em></a> is a great Javascript library to build
+    <p class="lead"><a rel="noopener noreferrer" target="_blank" href="https://www.daterangepicker.com/"><em>DateRangePicker</em></a> is a great Javascript library to build
       a calendar and select a date or date range. This package provides helpers to facilitate calendar settings and date retrieval.
       <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/daterangepickerhelper">Project on GitHub</a>.
       <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/daterangepickerhelper">Project on Packagist</a>.

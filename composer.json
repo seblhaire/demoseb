@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "barryvdh/laravel-debugbar": "^3.5",
         "danielstjules/stringy": "^3.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -19,9 +18,11 @@
         "seblhaire/bootstrappaginator": "^1.0",
         "seblhaire/daterangepickerhelper": "^1.1",
         "seblhaire/tablebuilder": "^1.0",
-        "seblhaire/uploader": "^1.0"
+        "seblhaire/tagsinput": "^2.0",
+        "seblhaire/uploader": "^2.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
@@ -43,9 +44,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Seblhaire\\Autocompleter\\" : "packages/seblhaire/autocompleter/src",
-            "Seblhaire\\Tags\\": "packages/seblhaire/tags"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {

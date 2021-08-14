@@ -3,7 +3,7 @@
 @section('title', $title)
 @section('content')
 <h1>Uploader</h1>
-<p>A Laravel library to provide file upload utilities. A Javascript library builds a
+<p class="lead">A Laravel library to provide file upload utilities. A Javascript library builds a
   complete file upload widget with upload button, drag-and-drop zone, progress bar
   and result builder. A controller is available to manage uploaded files.
   <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/uploader">Project on GitHub</a>.

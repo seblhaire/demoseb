@@ -22,7 +22,7 @@
       This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
     </p>
     <form id="daterangepicker" action="return false;">
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label" for="curlang">Change language:</label>
         <select class="form-control" id="curlang" name="curlang">
         @foreach ($languages as $lang => $language)
@@ -37,7 +37,7 @@
       </div>
       @if (!is_null($cal))
       {!! $cal->output() !!}
-      <div class="form-group">
+      <div class="mb-3">
         <label class="control-label" for="datesingle">Selected date:</label>
         <input class="form-control" id="datesingle" name="datesingle" value="{{ $initsingle }}">
       </div>
@@ -45,11 +45,11 @@
       @if (!is_null($cal2))
         {!! $cal2->output() !!}
         @if ($type != 'hidden')
-          <div class="form-group">
+          <div class="mb-3">
             <label class="control-label" for="datestart">Selected start date:</label>
             <input class="form-control" id="datestart" name="datestart" value="{{ $initstart }}">
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label class="control-label" for="dateend">Selected end date:</label>
             <input class="form-control" id="dateend" name="dateend" value="{{ $initend }}">
           </div>

@@ -16,7 +16,7 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "seblhaire/bootstrappaginator": "^1.0",
-        "seblhaire/daterangepickerhelper": "^1.1",
+        "seblhaire/daterangepickerhelper": "^2.0",
         "seblhaire/tablebuilder": "^1.0",
         "seblhaire/tagsinput": "^2.0",
         "seblhaire/uploader": "^2.0"

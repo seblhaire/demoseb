@@ -4,7 +4,7 @@
 @section('content')
 <h1>Tags input</h1>
 <p class="lead">
-A Laravel library with jQuery add on to add tags input field with auto-completer. <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/tagsinput">Project on GitHub</a>.
+A Laravel library with jQuery add-on to add tags (Boostrap badges) selected by an auto-completer. <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/tagsinput">Project on GitHub</a>.
 <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/tagsinput">Project on Packagist</a>.
 This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.</p>
 <form>

@@ -23,8 +23,14 @@
         @yield('content')
     </main> <!-- /container -->
     <div class="container">
+      <br/><br/>
       <address>
-              Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+              Last modified: {!! config('versions.lastmodif') !!}.<br/>
+              Laravel v{{ Illuminate\Foundation\Application::VERSION }}
+              (PHP v{{ PHP_VERSION }}).
+              jQuery: v. {!! config('versions.jquery') !!}.
+              Bootstrap: v. {!! config('versions.bootstrap') !!}.
+              FontAwesome: v. {!! config('versions.fontawesome') !!}.
       </address>
       <br/><br/>
     </div>

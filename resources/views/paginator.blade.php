@@ -4,19 +4,61 @@
 @section('content')
 <div class="row">
     <div class="col-sm-4">
-<ul>
-    <li><a href="{{ route('paginator') }}">Classical paginator</a></li>
-    <li><a href="{{ route('paginator', ['paginatortype' => 'alpha']) }}">Alphabetic paginator</a></li>
-    <li><a href="{{ route('paginator', ['paginatortype' => 'combi']) }}">Combination</a></li>
-</ul>
+      {!! $sidemenu !!}
     </div>
     <div class="col-sm-8">
     <h3>{{ $title }}</h3>
-    <p class="lead">Bootstrap Paginator builds a classical paginator with page numbers and previous and next button and/or an alphabetical paginator with letters.
+    <p class="lead">Bootstrap Paginator builds a classical paginator with page numbers
+      and previous and next button and/or an alphabetical paginator with letters.
+      Current version: {{ config('versions.bootstrappaginator')}}.
       <a target="_blank" rel="noopener noreferrer" href="https://github.com/seblhaire/bootstrappaginator">Project on GitHub</a>.
       <a target="_blank" rel="noopener noreferrer" href="https://packagist.org/packages/seblhaire/bootstrappaginator">Project on Packagist</a>.
       This demosite sources available <a target="_blank" rel="noopener noreferrer" href="https://github.com/seblhaire/demoseb">here</a>.
     </p>
+    <p>In your controller assign a paginator to a variable and pass it to the view.</p>
+<pre>
+<code>
+@switch($type)
+@case('alpha')
+$paginator = BootstrapPaginator::init(
+  $alpha, // current character ('A', 'B', 'C' etc. or 'all' for all values)
+  'paginator', // route name to be used
+  [
+    'type' => 'alpha', // sets paginator type
+    'initialparam' => 'alpha', // parameter used by paginator.
+            //If you use  config('bootstrappaginator.initialparam) ('initial'), no need to use parameter
+    'params' => ['paginatortype' => 'alpha'] // additional parameter to build route
+  ]
+);
+return view('mytemplate', ['paginator' => $paginator]);
+@break
+@case('combi')
+$optionalpha = ['type' => 'alpha', 'initialparam' => 'param1', 'params' => ['paginatortype' => 'combi']];
+$options = ['nbpages' => 4, 'pageparam' => 'param2', 'params' => ['paginatortype' => 'combi', 'param1' => $initial]];
+$paginator = BootstrapPaginator::init($page, $route, $options);
+$paginator2 = BootstrapPaginator::init($initial, $route, $optionalpha);
+return view('mytemplate', ['paginator' => $paginator, 'paginator2' => $paginator2]);
+@break
+@default
+$paginator = BootstrapPaginator::init(
+  $page, // current page number
+  'paginator', // route name to be used
+  [
+    'nbpages' => 11, // page numbers to be used in paginator (usually given by datase query)
+    'pageparam' => 'param1', // parameter name to use in route for page number
+          // If your route uses config('bootstrappaginator.pageparam) ('page'), you dont need to set this value
+    'params' => [  // additional parameter to be used to build route
+      'paginatortype' => 'classic'
+    ]
+  ];
+);
+return view('mytemplate', ['paginator' => $paginator]);
+@break
+@endswitch
+</code>
+</pre>
+    <p>Then print your paginator by inserting <code>@{!! $paginator !!}</code> in your template.</p>
+    <h4>Demo</h4>
     @isset($paginator2)
     {!! $paginator2 !!}
     @endisset

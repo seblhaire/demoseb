@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <p><img src="/img/seb.jpg"/></p>
+        <p><img src="/img/seb.png"/></p>
       </div>
       <div class="col">
         <h2>Dr. Sébastien L'HAIRE</h2>

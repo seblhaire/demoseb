@@ -85,6 +85,28 @@
       <p><a class="btn btn-secondary" href="{{ route('tagsinput') }}" role="button">View details &raquo;</a></p>
     </div>
 </div>
+<div class="row projectdescr">
+      <div class="col-md-7">
+        <h2>FormsBoostrap</h2>
+        <h3>Easily insert a form into your pages with Boostrap style</h3>
+        <p class="lead">A Laravel library to generate forms based on
+    			Laravel Collective Forms
+    			& HTML, Boostrap 5 CSS Framework, RichText editor, and Icons provided by FontAwesome. Includes form management and validation.</p>
+		<p><a class="btn btn-secondary" href="{{ route('formsbootstrap') }}" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img style="max-width:100%" src="/img/formsbs.png" />
+      </div>
 </div>
+<div class="row projectdescr">
+  <div class="col-md-5">
+    <img style="max-width:100%" src="/img/menutabutils.png" />
+  </div>
+  <div class="col-md-7">
+    <h2>Menu and Tabs Utils</h2>
+    <h3></h3>
+    <p class="lead">A Laravel library to to build menus and tabs navigation utilities, based on Boostrap 5 CSS Framework.</p>
+<p><a class="btn btn-secondary" href="{{ route('menuutils') }}" role="button">View details &raquo;</a></p>
+  </div>
 </div>
 @endsection

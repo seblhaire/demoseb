@@ -7,7 +7,7 @@
 <ul>
     <li>L'haire S. (2012). "Traitement automatique et apprentissage des langues par ordinateur: bilan, résultats et perspectives",
       Saarbrücken, Presses Académiques Francophones. ISBN: 978-3-8381-7067-1. Tiré de la thèse de doctorat.
-      <a rel="noopener noreferrer" target="_blank"href="https://www.morebooks.de/store/fr/book/traitement-automatique-et-apprentissage-des-langues-par-ordinateur/isbn/978-3-8381-7067-1">Résumé</a></li>
+      <a rel="noopener noreferrer" target="_blank" href="https://www.morebooks.de/store/fr/book/traitement-automatique-et-apprentissage-des-langues-par-ordinateur/isbn/978-3-8381-7067-1">Résumé</a></li>
 </ul>
 <h4>2011</h4>
 <ul><li>L'haire, S. (2011). "Traitement automatique des langues et apprentissage des langues assisté par ordinateur : bilan, résultats et perspectives".

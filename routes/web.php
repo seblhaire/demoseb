@@ -21,7 +21,7 @@ use \App\Http\Controllers\MenuUtilsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('', [HomeController::class, 'index'])->name('home');
 Route::get('/cv', [HomeController::class, 'cv'])->name('cv');
 Route::get('/publis', [HomeController::class, 'publis'])->name('publis');
 Route::get('/paginator/{paginatortype?}/{param1?}/{param2?}', [PaginatorController::class, 'index'])->name('paginator');

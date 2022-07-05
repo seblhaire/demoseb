@@ -1,5 +1,19 @@
 $sebborder: #e9ebee;
-
+#header{
+  font-size:18px;
+  background-color: $blue-400;
+}
+.navbar-brand{
+  font-size:21px;
+}
+.sidemenu li a{
+  font-size:18px;
+  color: black;
+  font-weight: lighter;
+}
+.sidemenu li a.active{
+  font-weight: bolder;
+}
 .back-to-top {
     cursor: pointer;
     position: fixed;
@@ -21,6 +35,10 @@ address{
 .container {
   width:90%;
   max-width: 1500px;
+}
+.uploaderresultbtn{
+  margin-left:4px;
+  cursor:pointer;
 }
 @include media-breakpoint-up(xs) {
 //@media (max-width: $screen-xs-max) {

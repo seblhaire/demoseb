@@ -7,7 +7,7 @@ return [
   "bootstrappaginator" => "1.1.3",
   "daterangepickerhelper" => "2.1.9",
   "formsbootstrap" => "1.0.7",
-  "menuandtabutils" => "1.0.2",
+  "menuandtabutils" => "1.0.3",
   "tablebuilder" => "2.0.0",
   "tagsinput" => "3.0.1",
   "uploader" => "3.0.4",

@@ -2953,16 +2953,16 @@
         },
         {
             "name": "seblhaire/menuandtabutils",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/menuandtabutils.git",
-                "reference": "6d3524a5470c8bc71a5139ee89ddcfa8772deb71"
+                "reference": "e78849ea6a03991e9ab66038055fbe2df995832b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/menuandtabutils/zipball/6d3524a5470c8bc71a5139ee89ddcfa8772deb71",
-                "reference": "6d3524a5470c8bc71a5139ee89ddcfa8772deb71",
+                "url": "https://api.github.com/repos/seblhaire/menuandtabutils/zipball/e78849ea6a03991e9ab66038055fbe2df995832b",
+                "reference": "e78849ea6a03991e9ab66038055fbe2df995832b",
                 "shasum": ""
             },
             "require": {
@@ -2999,9 +2999,9 @@
             "description": "A Laravel library to to build menus and tabs navigation utilities, based on Boostrap 5 CSS Framework.",
             "support": {
                 "issues": "https://github.com/seblhaire/menuandtabutils/issues",
-                "source": "https://github.com/seblhaire/menuandtabutils/tree/1.0.2"
+                "source": "https://github.com/seblhaire/menuandtabutils/tree/1.0.3"
             },
-            "time": "2022-06-25T15:46:29+00:00"
+            "time": "2022-07-05T21:20:08+00:00"
         },
         {
             "name": "seblhaire/tablebuilder",

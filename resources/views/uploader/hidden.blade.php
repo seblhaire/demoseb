@@ -173,6 +173,6 @@ jQuery(document).ready(function(){
   // insert an exampla file in hidden uploader result div
     var proc = {!! $uploader->getresultprocessor() !!}
     proc.baseurl = '{{ asset("img")}}/';
-    proc.preparedisplay({filename: "seb.jpg", ext: "jpg"}, 1);
+    proc.preparedisplay({filename: "seb.png", ext: "png"}, 1);
 });
 </script>

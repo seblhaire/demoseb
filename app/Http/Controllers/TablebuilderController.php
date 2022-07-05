@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Seblhaire\TableBuilder\TableBuilderHelper;
+use Seblhaire\MenuAndTabUtils\MenuUtils;
+
 use App\Models\Tablecontent;
 use App\Utils\Countries;
 
@@ -14,8 +16,9 @@ class TablebuilderController extends Controller
    *
    * @return View
    */
-  public function index()
+  public function index($type = 'dynamic')
   {
+    if ($type == 'dynamic'){
       // Fist table: contains every column type. Retrieves data from a database contained in memory
       $oTable = TableBuilderHelper::initTable('tabtest', route("tableload"), array(
           'buttons' => [ //buttons below table
@@ -100,41 +103,65 @@ class TablebuilderController extends Controller
               [
                   'em' => 'far fa-edit',
                   'text' => 'Edit',
-                  'js' => "edit(#{id}, #{lastname},#{firstname})"
+                  'js' => "edit"
               ]
           )
       )));
+    }
+    else if ($type == 'static'){
       // Second table. Gets static data that can be sorted, paginated and filtered by search criteria
-      $oTable2 = TableBuilderHelper::initTable('tabtest2', route("tableload2"));
-      $oTable2->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
+      $oTable = TableBuilderHelper::initTable('tabtest2', route("tableload2"));
+      $oTable->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
           'title' => 'Country',
           'sortable' => true,
           'defaultOrder' => 'asc',
           'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       )));
-      $oTable2->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
+      $oTable->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
           'title' => 'Code',
           'sortable' => true
       )));
+    }
+    else if ($type == 'staticsimple'){
       // Second table. Gets all static data without search criteria nor paginations
-      $oTable3 = TableBuilderHelper::initTable('tabtest3', route("tableload2"), array(
+      $oTable = TableBuilderHelper::initTable('tabtest3', route("tableload2"), array(
           'itemsperpage' => 0,
           'searchable' => false,
           'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       ));
-      $oTable3->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
+      $oTable->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
           'title' => 'Country'
       )));
-      $oTable3->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
+      $oTable->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
           'title' => 'Code'
       )));
-      return view('tablebuilder', array(
-          'title' => 'Table builder',
-          'menu' => 'tablebuilder',
-          'oTable' => $oTable,
-          'oTable2' => $oTable2,
-          'oTable3' => $oTable3
-      ));
+    }
+    $sidemenu = MenuUtils::init('table-menu', [
+      'ulclass' => 'nav flex-column sidemenu',
+      'menu' => [
+        'dynamic-menu' => [
+          'title' => 'Dynamic data table',
+          'target' => route('tablebuilder', ['type' => 'dynamic'])
+        ],
+        'static-menu' => [
+          'title' => 'Static data table',
+          'target' => route('tablebuilder', ['type' => 'static'])
+        ],
+        'staticsimple-menu' => [
+          'title' => 'Static data simple table',
+          'target' => route('tablebuilder', ['type' => 'staticsimple'])
+        ],
+      ]
+    ]);
+
+    return view('tablebuilder', array(
+        'title' => 'Table builder',
+        'type' => $type,
+        'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+        'rightmenu' => $this->rightmenu,
+        'oTable' => $oTable,
+        'sidemenu' => $sidemenu->setCurrent($type . "-menu")
+    ));
   }
 
   /**
@@ -146,7 +173,7 @@ class TablebuilderController extends Controller
    */
   public function loadTable(Request $request)
   {
-      $test = new Tablecontent(); // inits data
+      $test = new Tablecontent(); // inits database
       $oTable = TableBuilderHelper::initDataBuilder($request); // init table data builder object
       $oTable->setQuery($test); // passes Eloquent table object to data Builder
                                 // builds a search function for search field
@@ -165,6 +192,7 @@ class TablebuilderController extends Controller
           ]); // dummy example function to issue true or false
           return $collection->random();
       });
+      /*
       // adds a field to data to set certain data line in red
       $oTable->addMethodToDisplay(config('tablebuilder.table.rowcontextualtrigger'), function ($user) {
           // set a special color for row where user has a big wage
@@ -172,9 +200,9 @@ class TablebuilderController extends Controller
               return 'table-danger';
           }
           return '';
-      });
+      });*/
       // Adds a footer after table data, for example global figures, totals etc
-      $oTable->setFooter('Footer to be displayed');
+      $oTable->setFooter('Total lines: ' . $test->count());
       // return data for table
       return $oTable->output();
   }

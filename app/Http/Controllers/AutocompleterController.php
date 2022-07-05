@@ -17,6 +17,7 @@ class AutocompleterController extends Controller
     public $options;
 
     public function __construct(){
+      parent::__construct();
       $this->options = array_replace(config('autocompleter'), [
         'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
         'callback' => 'output', // js callback called after selecting element
@@ -26,14 +27,15 @@ class AutocompleterController extends Controller
 
     public function index(){
       $ac = AutocompleterHelper::init(
-        'autocompleter1',
-        'Countries',
+        'autocompleter1', //id
+        'Countries', //label
         route('autocompletesearch'), // route called when typing in input
         $this->options
       );
       return view('autocompleter', [
           'title' => 'Autocompleter',
-          'menu' => 'autocompleter',
+          'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+          'rightmenu' => $this->rightmenu,
           'ac' => $ac,
           'options' => $this->options
         ]);

@@ -3,55 +3,65 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Seblhaire\Tagsinput\TagsinputHelper;
 use App\Models\Tablecontent;
+use Seblhaire\Tagsinput\TagsinputHelper;
 use \Seblhaire\Autocompleter\Utils;
+use Seblhaire\MenuAndTabUtils\MenuUtils;
 
 class TagsinputController extends Controller
 {
-  public function index()
+  public function index($type = 'ex1')
   {
-    $tagszone = TagsinputHelper::init(
-      "tagzone",
-      'Employee',
-      route('tagsinputsearch'),
-      [
-        'resdivstyle' => [ //position autocompleter result list
-          'width' => '430px',
-          'top' => '-18px'
+    if ($type == 'ex1'){
+      $tagszone = TagsinputHelper::init(
+        "tagzone", //id
+        'Employees', // label
+        route('tagsinputsearch'), //autocompleter script
+        [ //Autocompleter parameters
+          'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
         ],
-        'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
-      ],
-      [
-        'tagaddcallback' => 'showlist', // callback functions called after tag is addded
-        'tagremovecallback' => 'showlist'
-      ]
-    );
-    $tagszone2 = TagsinputHelper::init(
-      "tagzone2",
-      'Country',
-      route('autocompletesearch'),
-      [
-        'resdivstyle' => [ //position autocompleter result list
-          'width' => '430px',
-          'top' => '-18px'
+        [ //tagsinput parameters
+          'tagaddcallback' => 'showlist', // callback functions called after tag is addded
+          'tagremovecallback' => 'showlist'
+        ]
+      );
+    }else if ($type == 'ex2'){
+      $tagszone = TagsinputHelper::init(
+        "tagzone2",
+        'Countries',
+        route('autocompletesearch'),
+        [
+          'id_included' => false, // id field is not added in autocompleter list result
+          'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
         ],
-        'id_included' => false, // id field is not added in autocompleter list result
-        'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
-      ],
-      [
-        'field' => 'code', //change id field
-        'tagaddcallback' => 'showlist', // callback functions called after tag is addded
-        'tagremovecallback' => 'showlist',
-        'showaddbutton' => false, // add button not shown
-        'tagclass' => 'bg-success', // change badge style
+        [
+          'tagaddcallback' => 'showlist', // callback functions called after tag is addded
+          'tagremovecallback' => 'showlist',
+          'showaddbutton' => false, // add button not shown
+          'tagclass' => 'bg-success', // change badge style
+        ]
+      );
+    }
+    $sidemenu = $sidemenu = MenuUtils::init('tagsinput-menu', [
+      'ulclass' => 'nav flex-column sidemenu',
+      'menu' => [
+        'ex1-menu' => [
+          'title' => 'Tags input & add button',
+          'target' => route('tagsinput', ['type' => 'ex1'])
+        ],
+        'ex2-menu' => [
+          'title' => 'Tags input with default values',
+          'target' => route('tagsinput', ['type' => 'ex2'])
+        ],
       ]
-    );
+    ]);
     return view('tagsinput', [
       'title' => 'Tags input',
-      'menu' => 'tagsinput',
+      'type' => $type,
+      'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+      'rightmenu' => $this->rightmenu,
       'tagszone' => $tagszone,
-      'tagszone2' => $tagszone2,
+      'sidemenu' => $sidemenu->setCurrent($type . '-menu'),
     ]);
   }
 

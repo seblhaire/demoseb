@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Seblhaire\BootstrapPaginator\BootstrapPaginator;
+use Seblhaire\MenuAndTabUtils\MenuUtils;
 
 use Barryvdh\Debugbar\Facade as Debugbar;
 
@@ -24,7 +25,7 @@ class PaginatorController extends Controller
             case 'classic' :
                 if (is_null($param1)) $param1 = 1; // default value
                 $paginator2 = null; // only one paginator used
-                $title = "Bootstrap Paginator classical";
+                $title = "Bootstrap Paginator (classical)";
                 $title2 = 'Page ' . $param1;
                 $options = [
                   'nbpages' => 11, //usually depends on data retrieved in database
@@ -33,7 +34,11 @@ class PaginatorController extends Controller
                     'paginatortype' => 'classic' // additional parameter to be used to build route
                     ]
                   ];
-                $paginator = BootstrapPaginator::init($param1, $route, $options); //param1 is our page number
+                $paginator = BootstrapPaginator::init(
+                  $param1, // page number
+                  $route, // route name to be used in pagiantor items
+                  $options
+                );
                 break;
             case 'alpha' :
                 // sets default parameter
@@ -41,7 +46,7 @@ class PaginatorController extends Controller
                     config('bootstrappaginator.valueforall') : // this value is translation key paginator.all that you need to modify yourself
                       $param1;
                 $paginator2 = null;
-                $title = "Bootstrap Paginator classical";
+                $title = "Bootstrap Paginator (alpha)";
                 $title2 = 'Page ' . $initial;
                 $optionalpha = [
                   'type' => 'alpha', // sets paginator type
@@ -58,17 +63,37 @@ class PaginatorController extends Controller
                 $options = ['nbpages' => 4, 'pageparam' => 'param2', 'params' => ['paginatortype' => 'combi', 'param1' => $initial]];
                 $paginator = BootstrapPaginator::init($page, $route, $options);
                 $paginator2 = BootstrapPaginator::init($initial, $route, $optionalpha);
-                $title = "Bootstrap Paginator combi";
+                $title = "Bootstrap Paginator (combi)";
                 $title2 = 'Page ' . $initial . ' ' . $page;
                 break;
         }
+        $sidemenu = MenuUtils::init('paginator-menu', [
+          'ulclass' => 'nav flex-column sidemenu',
+          'menu' => [
+            'classic-menu' => [
+                'title' => 'Classical paginator',
+                'target' => route('paginator')
+              ],
+            'alpha-menu' => [
+              'target' => route('paginator', ['paginatortype' => 'alpha']),
+              'title' => 'Alphabetic paginator'
+            ],
+            'combi-menu' => [
+              'target' => route('paginator', ['paginatortype' => 'combi']),
+              'title' => 'Combination'
+            ]
+          ]
+        ]);
         // Simply send paginator(s) that you have inited before to your view
         return view('paginator', [
+            'type' => $paginatortype,
             'title' => $title,
             'title2' => $title2,
             'paginator' => $paginator,
             'paginator2' => $paginator2,
-            'menu' => 'paginator'
+            'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+            'rightmenu' => $this->rightmenu,
+            'sidemenu' => $sidemenu->setCurrent($paginatortype . "-menu")
         ]);
     }
 }

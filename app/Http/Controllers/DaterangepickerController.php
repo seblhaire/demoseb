@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Carbon\Carbon;
 use Seblhaire\DateRangePickerHelper\DateRangePickerHelper;
+use Seblhaire\MenuAndTabUtils\MenuUtils;
 
 class DaterangepickerController extends Controller
 {
@@ -127,10 +128,40 @@ class DaterangepickerController extends Controller
             'formlabel' => 'Dates:',
             'timePicker' => true,
             "timePickerSeconds" => true,
+            'usehiddeninputs' => true,
             'apply.daterangepicker' => "displayhiddeninputs();"
           ]);
           break;
     }
+    $sidemenu = MenuUtils::init('daterangepicker-menu', [ //see MenuUtilsController for details
+      'ulclass' => 'nav flex-column sidemenu',
+      'menu' => [
+        'simple' => [
+            'title' => 'Single date',
+            'target' => route('daterangepicker')
+          ],
+          'simpletime' => [
+              'title' => 'Single date + time',
+              'target' => route('daterangepicker', ['type' => 'simpletime'])
+          ],
+          'double' => [
+              'title' => 'Date range',
+              'target' => route('daterangepicker', ['type' => 'double'])
+          ],
+          'doubletime' => [
+              'title' => 'Date range + time',
+              'target' => route('daterangepicker', ['type' => 'doubletime'])
+          ],
+          'twocals' => [
+              'title' => 'Two calendars on same page',
+              'target' => route('daterangepicker', ['type' => 'twocals'])
+          ],
+          'hidden' => [
+              'title' => 'Hidden inputs',
+              'target' => route('daterangepicker', ['type' => 'hidden'])
+          ]
+        ]
+    ]);
     return view('daterangepicker', [
         'title' => $title,
         'languages' => [
@@ -139,13 +170,15 @@ class DaterangepickerController extends Controller
         ],
         'currentlang' => $lang,
         'currenttype' => $type,
-        'menu' => 'daterangepicker',
+        'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+        'rightmenu' => $this->rightmenu,
         'cal' => $cal,
         'cal2' => $cal2,
         'initsingle' => $initsingle,
         'initstart' => $initstart,
         'initend' => $initend,
         'type' => $type,
+        'sidemenu' => $sidemenu->setCurrent($type)
     ]);
   }
 }

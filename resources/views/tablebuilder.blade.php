@@ -3,10 +3,10 @@
 @section('title', $title)
 @section('content')
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       {!! $sidemenu !!}
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9">
 <h3>{{ $title }}</h3>
 <p class="lead">A Laravel library to build tables easily, which interacts with a lightweight js builder and builds data from Eloquent Object-Relational Mapping
   with database tables. Table can also load static data. Current version: {{ config('versions.tablebuilder')}}.

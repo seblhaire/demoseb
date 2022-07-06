@@ -3,10 +3,10 @@
 @section('title', $title)
 @section('content')
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-3">
 			{!! $sidemenu !!}
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-9">
 <h3>Tags input</h3>
 <p class="lead">
 A Laravel library with jQuery add-on to add tags (Boostrap badges) selected by an

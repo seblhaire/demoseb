@@ -3,10 +3,10 @@
 @section('title', $title)
 @section('content')
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       {!! $sidemenu !!}
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9">
 <h3>Uploader</h3>
 <p class="lead">A Laravel library to provide file upload utilities. A Javascript library builds a
   complete file upload widget with upload button, drag-and-drop zone, progress bar

@@ -3,10 +3,10 @@
 @section('title', $title)
 @section('content')
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-3">
 			{!! $sidemenu !!}
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-9">
       <h3>{{ $title }}</h3>
   		<p class="lead">A Laravel library to generate forms based on
   			<a rel="noopener noreferrer" target="_blank" href="https://laravelcollective.com/">Laravel Collective</a> Forms

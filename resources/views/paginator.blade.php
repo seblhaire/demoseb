@@ -3,10 +3,10 @@
 @section('title', $title)
 @section('content')
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       {!! $sidemenu !!}
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9">
     <h3>{{ $title }}</h3>
     <p class="lead">Bootstrap Paginator builds a classical paginator with page numbers
       and previous and next button and/or an alphabetical paginator with letters.

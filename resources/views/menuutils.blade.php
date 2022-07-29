@@ -17,6 +17,8 @@
   @include('menus.simple')
 @elseif ($type == 'verticalnav')
   @include('menus.vertical')
+@elseif ($type == 'breadcrumbnav')
+    @include('menus.breadcrumb')
 @elseif ($type == 'htmltab')
   @include('tabs.htmltab')
 @elseif ($type == 'viewtab')

@@ -34,4 +34,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
       sockets
 
 WORKDIR /usr/share/nginx/html
-#USER www-data
+USER www-data:www-data

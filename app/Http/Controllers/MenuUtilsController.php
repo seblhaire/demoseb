@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Seblhaire\MenuAndTabUtils\MenuUtils;
+use Seblhaire\MenuAndTabUtils\BreadcrumbUtils;
 use Seblhaire\MenuAndTabUtils\TabUtils;
 
 class MenuUtilsController extends Controller
@@ -18,36 +19,36 @@ class MenuUtilsController extends Controller
         'menu' => [ // defines the menu content
           'link1' => [ // array key is the menu element's id. Be sure to define an id not used elsewhere in doc
             'title' => 'Link 1', // label of menu element
-            'target' => route('menuutils'), // route called in link
+            'target' => route('menuutils', ['type' => 'simplenav']), // route called in link
           ],
           'link2' => [
             'title' => 'Link 2',
-            'target' => route('menuutils'),
+            'target' => route('menuutils', ['type' => 'simplenav']),
           ],
           'link3' => [
             'icon' => '<i class="fa-solid fa-screwdriver-wrench"></i>', // icon displayed instead of text
             'title' => 'Tools', // since an icon is set, "title" is displayed on mouse hover
-            'target' => route('menuutils'),
+            'target' => route('menuutils', ['type' => 'simplenav']),
           ],
           'link4' => [
             'title' => 'Link 4',
             'dropdown' => [ // dropdown menu replaces default target
               'link4-1' => [ // drowpdown items are defined same way as level one items
                 'title' =>'Link 4.1',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'simplenav']),
               ],
               'link4-2' => [
                 'title' =>'Link 4.2',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'simplenav']),
               ],
               'sep' => null, // a separator is drawn if array value is null
               'link4-3' => [
                 'title' =>'Link 4.3',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'simplenav']),
               ],
               'link4-4' => [
                 'title' =>'Link 4.4',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'simplenav']),
               ],
             ]
           ],
@@ -62,36 +63,55 @@ class MenuUtilsController extends Controller
         'menu' => [ // defines the menu content
           'link5' => [  // array key is the menu element's id. Be sure to define an id not used elsewhere in doc
             'title' => 'Link 1', // label of menu element
-            'target' => route('menuutils'), // route called in link
+            'target' => route('menuutils', ['type' => 'verticalnav']), // route called in link
           ],
           'link6' => [
             'title' => 'Link 2',
-            'target' => route('menuutils'),
+            'target' => route('menuutils', ['type' => 'verticalnav']),
           ],
           'link7' => [
             'title' => 'Link 3',
-            'target' => route('menuutils'),
+            'target' => route('menuutils', ['type' => 'verticalnav']),
           ],
           'link8' => [
             'title' => 'Dropdown menu',
             'dropdown' => [ // dropdown menu replaces default target
               'link8-1' => [ // drowpdown items are defined same way as level one items
                 'title' =>'Link 4.1',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'verticalnav']),
               ],
               'link8-2' => [
                 'title' =>'Link 4.2',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'verticalnav']),
               ],
               'link8-3' => [
                 'title' =>'Link 4.3',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'verticalnav']),
               ],
               'link8-4' => [
                 'title' =>'Link 4.4',
-                'target' => route('menuutils'),
+                'target' => route('menuutils', ['type' => 'verticalnav']),
               ],
             ]
+          ],
+        ]
+      ]);
+    }
+    elseif ($type == 'breadcrumbnav'){
+      $element = BreadcrumbUtils::init('breadcrumb-nav', //main nav id
+      [
+        'menu' => [
+          'link-9' => [
+            'icon' => '<i class="fas fa-home fa-lg"></i>',
+            'title' => 'Home',
+            'target' => route('menuutils', ['type' => 'breadcrumbnav'])
+          ],
+          'link-10' => [
+            'title' => 'Second breadcrumb',
+            'target' => route('menuutils', ['type' => 'breadcrumbnav'])
+          ],
+          'link-11' => [
+            'title' => 'Third breadcrumb'
           ],
         ]
       ]);
@@ -212,6 +232,10 @@ class MenuUtilsController extends Controller
         'verticalnav-menu' => [
           'title' => 'Vertical navigation',
           'target' => route('menuutils', ['type' => 'verticalnav'])
+        ],
+        'breadcrumbnav-menu' => [
+          'title' => 'Breadcrumb navigation',
+          'target' => route('menuutils', ['type' => 'breadcrumbnav'])
         ],
         'htmltab-menu' => [
           'title' => 'Tabs with HTML content',

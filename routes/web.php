@@ -38,6 +38,7 @@ Route::post('/tablebuilder/loadtab', [TablebuilderController::class, 'loadTable'
 Route::post('/tablebuilder/loadtab2', [TablebuilderController::class, 'loadTable2'])->name('tableload2');
 Route::post('/fileupload2', [FileUploadController::class, 'processFile'])->name('fileupload2');
 Route::post('/fileupload', [FileUploadController::class, 'index'])->name('fileupload');
+Route::post('/deletefile', [FileUploadController::class, 'delete'])->name('filedelete');
 Route::post('/autocompleter/search', [AutocompleterController::class, 'search'])->name('autocompletesearch');
 Route::post('/tagsinput/search', [TagsinputController::class, 'search'])->name('tagsinputsearch');
 Route::post('/tagsinput/addemployee', [TagsinputController::class, 'addEmployee'])->name('tagsinputaddemployee');

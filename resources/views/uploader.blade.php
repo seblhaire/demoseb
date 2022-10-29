@@ -16,7 +16,7 @@
   <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/uploader">Project on Packagist</a>.
   This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
 </p>
-<p>On this site, you can only upload files up to {{ $maxsize }} and having extensions {{ $extensions }}.
+<p>On this site, you can only upload files up to {{ $maxsize }} and having extensions {{ str_replace(',', ', ', $extensions) }}.
   Files will be destroyed after {{ $filelife }} minutes.</p>
 @switch($type)
   @case('basic')
@@ -31,8 +31,38 @@
   @case('functions')
       @include('uploader.functions')
       @break
+  @case('resultprocessor')
+      @include('uploader.resultprocessor')
+      @break
   @default
     @include('uploader.simple')
+@endswitch
+@switch($type)
+  @case('basic')
+  @case('complete')
+  @case('hidden')
+  @case('simple')
+  <h4>Uploader results</h4>
+  <textarea class="form-control" id="upres" name="result" style="height:500px"></textarea>
+  <script type="text/javascript">
+      var writeinarea = function(str){
+        jQuery('#upres').val(
+          (jQuery('#upres').val().length > 0 ? jQuery('#upres').val()   + "\n"  : '' )
+          + str
+        );
+      }
+      var writeinupres = function(res){
+        var proc = {!! $uploader->getresultprocessor() !!}
+        text = (jQuery('#upres').val().length > 0 ? "\n\n"  : '') +
+          'files uploaded: ' + proc.countFiles() + "\n";
+        for (var i in proc.filelist){
+          text += i + ": " + proc.filelist[i].filename + ' ' + proc.filelist[i].size + ' bytes. id: ' + proc.filelist[i].file_id + "\n";
+        }
+        writeinarea(text);
+      }
+  </script>
+      @break
+  @default
 @endswitch
   </div>
 </div>

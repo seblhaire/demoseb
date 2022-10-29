@@ -14,12 +14,13 @@ $uploader = UploaderHelper::init(
   [
     'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
     'hidden' => true, // uploader is invisible when inited
-    'resultclass' => 'UploaderResult',
-    'acceptable_mimes' => $acceptable,  // comma-separated list of valid extensions
+    'filecontainer' => 'UploadedFileContainerExt',
     'maxfilesizek' => 1024, // max file size
-    'multiple' => true, // multiple files can be uploaded
+    'multiple' => false, // multiple files can be uploaded
     'path' => '/uploads', // folder in storage where files must be uploaded
-    'storagename' => 'public', // file storage name, see Laravel doc
+    'storagename' => 'public', // file storage
+    'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+    'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
 ]);
 return view('template', ['uploader' => $uploader]);
 </code>
@@ -30,74 +31,11 @@ return view('template', ['uploader' => $uploader]);
 <pre>
 <code>
 &lt;script type="text/javascript"&gt;
-  /* extends basic result object*/
-  UploaderResult = {
-    baseurl: null,
-    process: function(result){// sends data to second UploaderResult
-      if (result.ok){
-        var self = this;
-        self.baseurl = result.baseurl; //retrieve base url from ajax result
-        jQuery.each(result.files, function(i, file) {
-          self.preparedisplay(file, i);
-        });
-      } else { // display error
-        this.uploader.notify(
-          this.uploader.options.alerterrorclass,
-          result.message
-        );
-      }
-    },
-    preparedisplay: function(res, i){ //prepares data to diplay in result div
-      var url = this.baseurl + res.filename; // builds complete url.
-      var thumb = this.dothumbnail(res.ext, url); // build image thumbnail or insert file icpm
-      var id = this.uploader.divid;
-      if (res.pseudo_file_id !=  undefined){
-        id += '_' + res.pseudo_file_id;
-      }else{
-        id += '_' + i;
-      }
-      // copy button
-      var cpbtn = jQuery('&lt;i&gt;&lt;/i&gt;')
-         .attr('title', 'Copy')
-         .addClass('far fa-copy uploaderresultbtn copybtn')
-         .attr('id', id + '_copy')
-         .attr('data-clipboard-text', url);
-      //delete button
-      var delbtn = jQuery('&lt;i&gt;&lt;/i&gt;')
-            .attr('title', 'Delete')
-            .addClass('far fa-trash-alt uploaderresultbtn')
-            .attr('id', id + '_del')
-            .on('click', {obj: this}, function(e){
-              e.data.obj.uploader.uploaddiv.show();
-              //here yiu shoud call an ajax script to delete file
-              jQuery(this).parents('div.uploadres').remove();
-            });
-      var p = jQuery('&lt;p&gt;&lt;/p&gt;');
-      if (res.pseudo_file_id !=  undefined){
-        p.html('pseudo file id: ' + res.pseudo_file_id);
-      }
-      p.append(cpbtn)
-          .append(delbtn)
-      var content = jQuery('&lt;div&gt;&lt;/div&gt;')
-          .append(jQuery('&lt;h5&gt;&lt;/h5&gt;').addClass('mt-0 mb-1').html(res.filename))
-          .append(p);
-      this.addfiletolist(thumb, content); // display file in list
-    }
-  }
-  // extend base result object
-  UploaderResult = jQuery.extend({}, UploadresultProcessor, UploaderResult);
-  /* adds copy function to buttons that have copybth class */
-  new Clipboard('.copybtn', {
-      text: function(trigger) {
-          return jQuery(trigger).attr('data-clipboard-text');
-      }
-  });
-
   jQuery(document).ready(function(){
-    // insert an exampla file in hidden uploader result div
+    // insert an example file in hidden uploader result div
       var proc = {!! $uploader->getresultprocessor() !!}
       proc.baseurl = '{{ asset("img")}}/';
-      proc.preparedisplay({filename: "seb.jpg", ext: "jpg"}, 1);
+      proc.process({ok: true, files:[{filename: "seb.png", file_id: 83667, ext: "png"}]});
   });
 &lt;/script&gt;
 </code>
@@ -106,73 +44,10 @@ return view('template', ['uploader' => $uploader]);
 <h4>Demo</h4>
 {!! $uploader !!}
 <script type="text/javascript">
-/* extends basic result object*/
-UploaderResult = {
-  baseurl: null,
-  process: function(result){// sends data to second UploaderResult
-    if (result.ok){
-      var self = this;
-      self.baseurl = result.baseurl; //retrieve base url from ajax result
-      jQuery.each(result.files, function(i, file) {
-        self.preparedisplay(file, i);
-      });
-    } else { // display error
-      this.uploader.notify(
-        this.uploader.options.alerterrorclass,
-        result.message
-      );
-    }
-  },
-  preparedisplay: function(res, i){ //prepares data to diplay in result div
-    var url = this.baseurl + res.filename; // builds complete url.
-    var thumb = this.dothumbnail(res.ext, url); // build image thumbnail or insert file icpm
-    var id = this.uploader.divid;
-    if (res.pseudo_file_id !=  undefined){
-      id += '_' + res.pseudo_file_id;
-    }else{
-      id += '_' + i;
-    }
-    // copy button
-    var cpbtn = jQuery('<i></i>')
-       .attr('title', 'Copy')
-       .addClass('far fa-copy uploaderresultbtn copybtn')
-       .attr('id', id + '_copy')
-       .attr('data-clipboard-text', url);
-    //delete button
-    var delbtn = jQuery('<i></i>')
-          .attr('title', 'Delete')
-          .addClass('far fa-trash-alt uploaderresultbtn')
-          .attr('id', id + '_del')
-          .on('click', {obj: this}, function(e){
-            e.data.obj.uploader.uploaddiv.show();
-            //here yiu shoud call an ajax script to delete file
-            jQuery(this).parents('div.uploadres').remove();
-          });
-    var p = jQuery('<p></p>');
-    if (res.pseudo_file_id !=  undefined){
-      p.html('pseudo file id: ' + res.pseudo_file_id);
-    }
-    p.append(cpbtn)
-        .append(delbtn)
-    var content = jQuery('<div></div>')
-        .append(jQuery('<h5></h5>').addClass('mt-0 mb-1').html(res.filename))
-        .append(p);
-    this.addfiletolist(thumb, content); // display file in list
-  }
-}
-// extend base result object
-UploaderResult = jQuery.extend({}, UploadresultProcessor, UploaderResult);
-/* adds copy function to buttons that have copybth class */
-new Clipboard('.copybtn', {
-    text: function(trigger) {
-        return jQuery(trigger).attr('data-clipboard-text');
-    }
-});
-
 jQuery(document).ready(function(){
   // insert an exampla file in hidden uploader result div
     var proc = {!! $uploader->getresultprocessor() !!}
     proc.baseurl = '{{ asset("img")}}/';
-    proc.preparedisplay({filename: "seb.png", ext: "png"}, 1);
+    proc.process({ok: true, files:[{filename: "seb.png", file_id: 83667, ext: "png"}]});
 });
 </script>

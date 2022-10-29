@@ -62,11 +62,15 @@ class FormsbootstrapController extends Controller
     $uploader = UploaderHelper::init( //see UploaderController for details
       'itempicture',
       'Item picture',
-      route('fileupload2'),
+      route('fileupload'),
       [
-        'resultclass' => 'UploaderResult',
+        'filecontainer' => 'UploadedFileContainerExt',
         'acceptable_mimes' => 'png,jpg,jpeg,gif',
-        'multiple' => false,
+        'multiple' => true,
+        'maxfilesizek' => 1024, // max file size
+        'path' => '/uploads', // folder in storage where files must be uploaded
+        'storagename' => 'public',
+        'delurl' => route('filedelete'),
         'maindiv' =>
             config('uploader.maindiv') . ' ' .
             config('formsbootstrap.classes.requiredspecialclass'),
@@ -149,14 +153,14 @@ class FormsbootstrapController extends Controller
     $date2 = Carbon::today()->subDays(rand(10, 3650));
     $date3 = $date2->copy()->addDays(rand(30,100));
     $files = [
-      ['filename' => asset("img/seb.jpg"), 'ext' => "jpg"],
-      ['filename' => asset("img/autocompleter1.png"), 'ext' => "jpg"],
-      ['filename' => asset("img/formsbs.png"), 'ext' => "png"],
-      ['filename' => asset("img/paginator.png"), 'ext' => "png"],
-      ['filename' => asset("img/paginatoralpha.png"), 'ext' => "png"],
-      ['filename' => asset("img/tablebuilder.png"), 'ext' => "png"],
-      ['filename' => asset("img/tagsinput.png"), 'ext' => "png"],
-      ['filename' => asset("img/uploader.png"), 'ext' => "png"],
+      ['filename' => "seb.jpg", 'ext' => "jpg", 'url' => asset('img/seb.jpg'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "autocompleter1.png", 'ext' => "jpg", 'url' => asset('img/autocompleter1.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "formsbs.png", 'ext' => "png", 'url' => asset('img/formsbs.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "paginator.png", 'ext' => "png", 'url' => asset('img/paginator.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "paginatoralpha.png", 'ext' => "png", 'url' => asset('img/paginatoralpha.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "tablebuilder.png", 'ext' => "png", 'url' => asset('img/tablebuilder.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "tagsinput.png", 'ext' => "png", 'url' => asset('img/tagsinput.png'), 'file_id' => random_int(1, 10000)],
+      ['filename' => "uploader.png", 'ext' => "png", 'url' => asset('img/uploader.png'), 'file_id' => random_int(1, 10000)],
     ];
     return response()->json([
       'ok' => true,
@@ -180,7 +184,7 @@ class FormsbootstrapController extends Controller
         'languages' => collect(['en', 'fr', 'de', 'it', 'es', 'pt'])->random(rand(0,6)),
         'weight' => rand(0,10),
         'range' => rand(0,10),
-        'itempicture' => [collect($files)->random()],
+        'itempicture' => collect($files)->random(rand(1,4)),
         'notes' => 'voici une supernote',
         'color' => '#' . dechex(rand(0, 16777215)),
         'email' => 'example@data.com',

@@ -14,8 +14,8 @@ class Fileupload2Request extends FileuploadRequest
     public function rules()
     {
         return array_merge(parent::rules(), [
-          'article_title' => "required|string",
-          'article_id' => "required|numeric"
+          'type' => "required|string",
+          'time' => "required|string"
         ]);
     }
 }

@@ -21,7 +21,7 @@
         "seblhaire/menuandtabutils": "^2.0",
         "seblhaire/tablebuilder": "^2.0",
         "seblhaire/tagsinput": "^3.0",
-        "seblhaire/uploader": "^3.0"
+        "seblhaire/uploader": "^4.0"
     },
     "require-dev": {
         "laravel/tinker": "^2.5",

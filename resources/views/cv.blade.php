@@ -17,7 +17,7 @@
         <a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a>
         </p>
         <p>Né le 28 avril 1972.<br />
-        Marié - lié par partenariat<br />
+        Marié<br />
         Nationalité suisse</p>
       </div>
     </div>

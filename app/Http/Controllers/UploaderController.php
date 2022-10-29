@@ -11,11 +11,12 @@ class UploaderController extends Controller
 {
   public function index($type = 'simple')
   {
-    $acceptable ='png,jpg,jpeg,gif,txt';
+    $acceptable = config('uploader.acceptable_mimes');
     /*first uoloader with default params*/
     switch($type){
       case 'basic' :// simple uploader
         /* uploader with drag zone disabled*/
+        $acceptable = 'png,jpg,jpeg,gif,txt';
         $uploader = UploaderHelper::init(
           'uploaderdiv2', //uploader id
           'Uploader', //label
@@ -27,6 +28,7 @@ class UploaderController extends Controller
             'maxfilesizek' => 1024, // max file size
             'path' => '/uploads', // folder in storage where files must be uploaded
             'storagename' => 'public', // file storage
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
           ]
         );
         break;
@@ -38,12 +40,16 @@ class UploaderController extends Controller
           route('fileupload2'), // route for file prodessing
           [
             'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
-            'resultclass' => 'UploaderResult', // class of object containing files list
-            'multiple' => true, // multiple files can be uploaded
-            'acceptable_mimes' => $acceptable,  // comma-separated list of valid extensions
+            'filecontainer' => 'UploadedFileContainerExt', // class of object containing files replaces default class
+            'multiple' => true, // multiple files can be uploaded,
+            'maxfilesizek' => 1024, // max file size
+            'path' => '/uploads', // folder in storage where files must be uploaded
+            'storagename' => 'public', // file storage
+            'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+            'additionalparamsfn' => 'getparams', //function to dynamically set additional parameters sent to file upload method
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
           ], [ // additional parameters transmitted to upload script
-            'article_title' => "l'ami",
-            'article_id' => 40
+            'type' => "cover",
         ]);
         break;
       case 'hidden':
@@ -55,12 +61,13 @@ class UploaderController extends Controller
           [
             'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'hidden' => true, // uploader is invisible when inited
-            'resultclass' => 'UploaderResult',
-            'acceptable_mimes' => $acceptable,  // comma-separated list of valid extensions
+            'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
-            'multiple' => true, // multiple files can be uploaded
+            'multiple' => false, // multiple files can be uploaded
             'path' => '/uploads', // folder in storage where files must be uploaded
             'storagename' => 'public', // file storage
+            'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
         ]);
         break;
       case 'simple' :// simple uploader
@@ -74,8 +81,10 @@ class UploaderController extends Controller
             'maxfilesizek' => 1024, // max file size
             'path' => '/uploads', // folder in storage where files must be uploaded
             'storagename' => 'public', // file storage
-            'overwrite' => true, // files can be overwritten, if false, new name is generated
-            'multiple' => true // multiple files can be uploaded
+            'filepattern' => 'test', // pattern to name files
+            'rename' => true, // new name is generated if
+            'multiple' => true, // multiple files can be uploaded
+            'afteruploadfn' => 'writeinupres', //callback after file upload success (here it puts results in above text area)
           ]
         );
         break;
@@ -104,6 +113,10 @@ class UploaderController extends Controller
         'functionsupl-menu' => [
           'title' => 'Upload functions',
           'target' => route('uploader', ['type' => 'functions'])
+        ],
+        'resprocupl-menu' => [
+          'title' => 'Upload result processing',
+          'target' => route('uploader', ['type' => 'resultprocessor'])
         ],
       ]
     ]);

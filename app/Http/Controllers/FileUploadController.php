@@ -6,6 +6,7 @@ use App\Http\Requests\Fileupload2Request;
 use Seblhaire\Uploader\FileuploadRequest;
 use Illuminate\Support\Facades\Storage;
 use Seblhaire\Uploader\UploaderTrait;
+use Illuminate\Http\Request;
 
 class FileUploadController extends Controller
 {
@@ -18,12 +19,11 @@ class FileUploadController extends Controller
       $disk = $this->getDisk($request, $path);
       $files = [];
       // process files
+      $errors = [];
       foreach ($request->file('file') as $file){
         if (!$file->isValid()) { // file upload failed
-          response()->json([
-            'ok' => false,
-            'message' => 'invalid file ' . $file->getClientOriginalName()
-          ]);
+          $errors[] = 'invalid file ' . $file->getClientOriginalName();
+          continue;
         }
         // gets object with file info
         $fileobj = $this->buildFileObj($this->cleanFileName($file->getClientOriginalName()));
@@ -43,29 +43,54 @@ class FileUploadController extends Controller
           $destfile = $fileobj;
         }
         // if file can't be overwitten, build unique file name
-        if (!$request->input('overwrite')){
+        if ($request->input('rename')){
             $filename = $this->buildUniqueFileName($disk, $path, $destfile);
         }else{ // file cam be overwritten
             $filename = $destfile->name . '.' . $destfile->ext;
+            if (Storage::disk($disk)->exists($path . $filename)){
+              $errors[] = 'file exists ' . $filename;
+              continue;
+            }
         }
         // store file in destination directoty
         $filepath = $file->storeAs($path, $filename, $disk);
         $files[] = [
           'filename' => $filename,
+          'filepath' => $filepath,
           'ext' => $fileobj->ext,
           'mimetype' => $file->getMimeType(),
-          'size' =>  $file->getSize()
+          'size' =>  $file->getSize(),
         ];
-        // Here you could store file info in a database table.
       }
-      return response()->json([
-        'ok' => true,
-        'filepath' => $path,
-        'disk' => $disk,
-        'baseurl' => !is_null(config('filesystems.disks.' . $disk . '.url')) ?  (config('filesystems.disks.' . $disk . '.url') . $path) : '',
-        'files' => $files,
-        // other parameters you need can be
-      ]);
+      if (count($errors)){
+        $message = implode(', ',  $errors);
+        if (count($files) > 0){
+          foreach ($files as $file){
+            Storage::disk($disk)->delete($file['filepath']);
+          }
+        }
+        return response()->json([
+          'ok' => false,
+          'message' => $message
+        ]);
+      }else{
+        foreach ($files as $i => $file){
+
+          // Here you could store file info in a database table.
+
+          $files[$i]['file_id'] = random_int(1, 10000);
+        }
+        return response()->json([
+          'ok' => true,
+          'info' => [
+            'filepath' => $path,
+            'disk' => $disk,
+            'baseurl' => !is_null(config('filesystems.disks.' . $disk . '.url')) ?  (config('filesystems.disks.' . $disk . '.url') . $path) : '',
+          ],
+          'files' => $files,
+          // other parameters you need can be
+        ]);
+      }
   }
 
 
@@ -75,12 +100,11 @@ class FileUploadController extends Controller
     $path = $this->getPath($request);
     $disk = $this->getDisk($request, $path);
     $files = [];
+    $errors = [];
     foreach ($request->file('file') as $file){
-      if (!$file->isValid()) {
-        response()->json([
-          'ok' => false,
-          'message' => 'invalid file ' . $file->getClientOriginalName()
-        ]);
+      if (!$file->isValid()) { // file upload failed
+        $errors[] = 'invalid file ' . $file->getClientOriginalName();
+        continue;
       }
       $fileobj = $this->buildFileObj($this->cleanFileName($file->getClientOriginalName()));
       if ($request->has('filepattern') && strlen($request->input('filepattern')) > 0){
@@ -96,30 +120,61 @@ class FileUploadController extends Controller
       }else{
         $destfile = $fileobj;
       }
-      if (!$request->input('overwrite')){
+      if ($request->input('rename')){
           $filename = $this->buildUniqueFileName($disk, $path, $destfile);
-      }else{
+      }else{ // file cam be overwritten
           $filename = $destfile->name . '.' . $destfile->ext;
+          if (Storage::disk($disk)->exists($path . $filename)){
+            $errors[] = 'file exists ' . $filename;
+            continue;
+          }
       }
+      // store file in destination directoty
       $filepath = $file->storeAs($path, $filename, $disk);
-      /*
-      here you could / should register your file into database or whatever you need
-      instead of this dummy function
-      */
       $files[] = [
         'filename' => $filename,
+        'filepath' => $filepath,
         'ext' => $fileobj->ext,
         'mimetype' => $file->getMimeType(),
         'size' =>  $file->getSize(),
-        'pseudo_file_id' => random_int(1, PHP_INT_MAX)
       ];
     }
-    return response()->json([
-      'ok' => true,
-      'filepath' => $path,
-      'files' => $files,
-      'disk' => $disk,
-      'baseurl' => !is_null(config('filesystems.disks.' . $disk . '.url')) ?  (config('filesystems.disks.' . $disk . '.url') . $path) : '',
-    ]);
+    if (count($errors)){
+      $message = implode(', ',  $errors);
+      if (count($files) > 0){
+        foreach ($files as $file){
+          Storage::disk($disk)->delete($file['filepath']);
+        }
+      }
+      return response()->json([
+        'ok' => false,
+        'message' => $message
+      ]);
+    }else{
+      foreach ($files as $i => $file){
+
+        // Here you could store file info in a database table.
+
+        $files[$i]['file_id'] = random_int(1, 10000);
+      }
+      return response()->json([
+        'ok' => true,
+        'info' => [
+          'filepath' => $path,
+          'disk' => $disk,
+          'baseurl' => !is_null(config('filesystems.disks.' . $disk . '.url')) ?  (config('filesystems.disks.' . $disk . '.url') . $path) : '',
+        ],
+        'files' => $files,
+      ]);
+    }
+  }
+
+  public function delete(Request $request){
+    $this->validate($request, ['id' => 'required|numeric']);
+    /*$file = File::find($request->input('id'));
+    if (is_null($file)) throw new Exception('file not found');
+    Storage::disk('public')->delete($file->path);
+    $file->delete();*/
+    return response()->json(['ok' => true]);
   }
 }

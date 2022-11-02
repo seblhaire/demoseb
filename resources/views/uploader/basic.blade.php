@@ -22,6 +22,6 @@ $uploader = UploaderHelper::init(
 return view('template', ['uploader' => $uploader]);
 </code>
 </pre>
-<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
+<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
 <h4>Demo</h4>
 {!! $uploader !!}

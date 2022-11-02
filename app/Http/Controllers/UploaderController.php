@@ -13,6 +13,7 @@ class UploaderController extends Controller
   {
     $acceptable = config('uploader.acceptable_mimes');
     /*first uoloader with default params*/
+    $uploader2 = null;
     switch($type){
       case 'basic' :// simple uploader
         /* uploader with drag zone disabled*/
@@ -52,6 +53,35 @@ class UploaderController extends Controller
             'type' => "cover",
         ]);
         break;
+      case 'displayinit':
+        $uploader = UploaderHelper::init(
+          'uploaderdiv4', //uploader id
+          'Uploader',//label
+          route('fileupload'), // route for file prodessing
+          [
+            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+            'filecontainer' => 'UploadedFileContainerExt',
+            'maxfilesizek' => 1024, // max file size
+            'multiple' => true, // multiple files can be uploaded
+            'path' => '/uploads', // folder in storage where files must be uploaded
+            'storagename' => 'public', // file storage
+            'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
+        ]);
+        $uploader2 = UploaderHelper::init(
+          'uploaderdiv5', //uploader id
+          'Uploader 2',//label
+          route('fileupload'), // route for file prodessing
+          [
+            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+            'filecontainer' => 'UploadedFileContainerExt',
+            'maxfilesizek' => 1024, // max file size
+            'path' => '/uploads', // folder in storage where files must be uploaded
+            'storagename' => 'public', // file storage
+            'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
+        ]);
+        break;
       case 'hidden':
         /*uploader that will be hidden in the beginning*/
         $uploader = UploaderHelper::init(
@@ -63,7 +93,20 @@ class UploaderController extends Controller
             'hidden' => true, // uploader is invisible when inited
             'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
-            'multiple' => false, // multiple files can be uploaded
+            'path' => '/uploads', // folder in storage where files must be uploaded
+            'storagename' => 'public', // file storage
+            'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
+            'afteruploadfn' => 'writeinupres',  //callback after file upload success (here it puts results in above text area)
+        ]);
+        $uploader2 = UploaderHelper::init(
+          'uploaderdiv5', //uploader id
+          'Uploader 2',//label
+          route('fileupload'), // route for file prodessing
+          [
+            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+            'hiddenuploader' => true, // uploader is invisible when inited
+            'filecontainer' => 'UploadedFileContainerExt',
+            'maxfilesizek' => 1024, // max file size
             'path' => '/uploads', // folder in storage where files must be uploaded
             'storagename' => 'public', // file storage
             'delurl' => route('filedelete'), // route to file delete method that will be sent to result processor
@@ -110,6 +153,10 @@ class UploaderController extends Controller
           'title' => 'Hidden uploader',
           'target' => route('uploader', ['type' => 'hidden'])
         ],
+        'displayinitupl-menu' => [
+          'title' => 'Diplay file on init',
+          'target' => route('uploader', ['type' => 'displayinit'])
+        ],
         'functionsupl-menu' => [
           'title' => 'Upload functions',
           'target' => route('uploader', ['type' => 'functions'])
@@ -130,6 +177,7 @@ class UploaderController extends Controller
         'maxsize' => '1MB',
         'filelife' => 10,
         'uploader' => $uploader,
+        'uploader2' => $uploader2,
       ]);
   }
 

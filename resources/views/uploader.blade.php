@@ -28,6 +28,9 @@
   @case('hidden')
     @include('uploader.hidden')
     @break
+  @case('displayinit')
+      @include('uploader.displayinit')
+      @break
   @case('functions')
       @include('uploader.functions')
       @break
@@ -41,6 +44,7 @@
   @case('basic')
   @case('complete')
   @case('hidden')
+  @case('displayinit')
   @case('simple')
   <h4>Uploader results</h4>
   <textarea class="form-control" id="upres" name="result" style="height:500px"></textarea>

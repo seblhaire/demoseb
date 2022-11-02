@@ -42,7 +42,7 @@ return view('template', ['uploader' => $uploader]);
 &lt;/script&gt;
 </code>
 </pre>
-<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
+<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
 <h4>Demo</h4>
 {!! $uploader !!}
 <span id="adddata" style="display:none"><?= date('H:i:s') ?></span>

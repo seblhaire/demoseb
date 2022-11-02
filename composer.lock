@@ -3213,16 +3213,16 @@
         },
         {
             "name": "seblhaire/uploader",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/uploader.git",
-                "reference": "95c31ca6ff3c7c7cca1cbf9944ce0f4548589e7c"
+                "reference": "c6e7297e05102a4b39b0315e66198ebf9bcfafd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/uploader/zipball/95c31ca6ff3c7c7cca1cbf9944ce0f4548589e7c",
-                "reference": "95c31ca6ff3c7c7cca1cbf9944ce0f4548589e7c",
+                "url": "https://api.github.com/repos/seblhaire/uploader/zipball/c6e7297e05102a4b39b0315e66198ebf9bcfafd6",
+                "reference": "c6e7297e05102a4b39b0315e66198ebf9bcfafd6",
                 "shasum": ""
             },
             "require": {
@@ -3261,9 +3261,9 @@
             "homepage": "https://github.com/seblhaire/uploader",
             "support": {
                 "issues": "https://github.com/seblhaire/uploader/issues",
-                "source": "https://github.com/seblhaire/uploader/tree/4.0.0"
+                "source": "https://github.com/seblhaire/uploader/tree/4.0.1"
             },
-            "time": "2022-10-29T16:49:35+00:00"
+            "time": "2022-11-02T18:26:12+00:00"
         },
         {
             "name": "symfony/console",

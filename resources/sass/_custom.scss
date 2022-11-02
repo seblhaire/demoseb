@@ -36,10 +36,7 @@ address{
   width:90%;
   max-width: 1500px;
 }
-.uploaderresultbtn{
-  margin-left:4px;
-  cursor:pointer;
-}
+
 @include media-breakpoint-up(xs) {
 //@media (max-width: $screen-xs-max) {
     body {

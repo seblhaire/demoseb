@@ -16,5 +16,4 @@
   'labeltext' => 'Color',
   'value' => '#ff0000' // value of default color
   ]) !!}
-{!! Form::bsSubmit(['id' => 'send2', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

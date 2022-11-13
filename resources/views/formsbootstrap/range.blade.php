@@ -22,5 +22,4 @@
   'value' => "3", //defaut value
   'required' => true
   ]); !!}
-{!! Form::bsSubmit(['id' => 'send', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

@@ -181,7 +181,7 @@ class FormsbootstrapController extends Controller
         'priority' => collect(['lowest', 'low' ,'medium', 'high' ,'highest'])->random(),
         'publish' => collect(['yes', 'no'])->random(),
         'os' => collect(['mac', 'windows', 'linux', 'vms', 'unix'])->random(rand(1,5)),
-        'languages' => collect(['en', 'fr', 'de', 'it', 'es', 'pt'])->random(rand(0,6)),
+        'languages' => collect(['en', 'fr', 'de', 'it', 'es', 'pt'])->random(rand(1,6)),
         'weight' => rand(0,10),
         'range' => rand(0,10),
         'itempicture' => collect($files)->random(rand(1,4)),
@@ -225,7 +225,10 @@ class FormsbootstrapController extends Controller
       'email' => ['string', 'regex:' . config('formsbootstrap.defaults.email.regex')], // you can also use 'email' => 'required|string|email:rfc'
     ]);
     if ($validator->fails()){
-      return response()->json(['res' => $validator->errors()->all()]);
+      return response()->json([
+        'ok' => false,
+        'message' => $validator->errors()->all()
+      ]);
     }
     $res = '';
     foreach ($request->input() as $key => $value){
@@ -238,18 +241,25 @@ class FormsbootstrapController extends Controller
         $res .= $key . ' : ' . $value . PHP_EOL;
       }
     }
-    return response()->json(['res' => $res]);
+    return response()->json([
+      'ok' => true,
+      'formcontent' => $res,
+      'message' => 'Form processed ' . date(DATE_RFC2822)
+    ]);
   }
 
   public function checkoldpass(Request $request){
     /*you should also validate other fields*/
     $validator = Validator::make($request->all(), [
-      'old_password' => 'required:string'
+      config('formsbootstrap.defaults.password-with-confirm.oldpass.name') => 'required:string'
     ]);
     if ($validator->fails()){
-      return response()->json(['res' => $validator->errors()->all()]);
+      return response()->json(['ok' => false, 'message' => $validator->errors()->all()]);
     }
-    return response()->json(['correct_password' => collect([true, false])->random()]);
+    return response()->json([
+      'ok' => true,
+      'password_ok' => collect([true, false])->random()
+    ]);
   }
 
 }

@@ -36,5 +36,4 @@
 {!! Form::bsText(['id' => 'text2', 'labeltext' => 'Text 2', 'required' => true]); !!}
 {!! Form::bsNumber(['id' => 'number', 'labeltext' => 'Number', 'required' => true]); !!}
 {!! Form::bsNumber(['id' => 'number2', 'labeltext' => 'Number 2', 'value' => 5, 'attributes' => ['min' => 0, 'max' => 10], 'helptext' => 'Please enter a number between 0 and 10','required' => true]); !!}
-{!! Form::bsSubmit(['id' => 'send', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

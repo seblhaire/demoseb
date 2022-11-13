@@ -2,28 +2,36 @@
 <pre><code>
 @{!! Form::bsOpen([
   'id' => 'form_form', //form id
-  'action' => route('formsbootstrap_processform') //url where form is submitted to
+  'ajaxcallback' => 'processform',
+  'action' => route('formsbootstrap_processform'), //url where form is submitted to
+  'additionalbuttons' => [['id' => 'form_form_cancelbtn', 'class' => 'btn btn-secondary', 'value' => 'Cancel']]
 ]) !!}
-&lt;div class="col-auto"&gt;
-@{!! Form::bsSubmit([]) !!}
-@{!! Form::bsButton(['id' => 'cancel', 'action' => 'alert("cancel clicked");', 'label' => 'Cancel']) !!}
-&lt;/div&gt;
 @{!! Form::bsClose() !!}
-&lt;div class="col-auto"&gt;
 </code></pre>
 <p>Output:<br/><code>
-{!! nl2br(htmlspecialchars(Form::bsOpen(['id' => 'form_form', 'action' => route('formsbootstrap_processform')]))) !!}
-&lt;div class="col-auto"&gt;<br/>
-{!! nl2br(htmlspecialchars(Form::bsSubmit([]))) !!}
-{!! nl2br(htmlspecialchars(Form::bsButton(['id' => 'cancel', 'label' => 'Cancel']))) !!}
-&lt;/div&gt;<br/>
-{!! htmlspecialchars(Form::bsClose()) !!}
+{!! nl2br(htmlspecialchars(Form::bsOpen(['id' => 'form_form',   'ajaxcallback' => 'processform', 'action' => route('formsbootstrap_processform'),
+'additionalbuttons' => [['id' => 'form_form_cancelbtn', 'class' => 'btn btn-secondary', 'value' => 'Cancel']]]))) !!}
+{!! htmlspecialchars(Form::bsClose()) !!}<br/>
+&lt;script type="text/javascript"&gt;
+jQuery(document).ready(function(){
+  jQuery('#form_form_cancelbtn').on('click', function(e){ alert("cancel clicked"); });
+});
+&lt;/script&gt;
 </code><br/>
-NB: some attributes are automaticallly added to tag and hidden input with CSRF token is generated.
+In this example, elements are generated and added to form. Hidden input with CSRF token is added automatically. By default, submit button is added. Here we also add
+cancel button. And finally a result zone is added and used to display success message or error messages. See package documentation for details.  
 </p>
 <br/><br/>
-<div class="col-auto">
-{!! Form::bsSubmit([]) !!}&nbsp;
-{!! Form::bsButton(['id' => 'cancel', 'action' => 'alert("cancel clicked");', 'label' => 'Cancel']) !!}
-</div>
+{!! Form::bsOpen([
+  'id' => 'form_form', //form id
+  'action' => route('formsbootstrap_processform'), //url where form is submitted to
+  'ajaxcallback' => 'processform',
+  'additionalbuttons' => [['id' => 'form_form_cancelbtn', 'class' => 'btn btn-secondary', 'value' => 'Cancel']]
+]) !!}
+{!! Form::bsClose() !!}
 <br><br>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery('#form_form_cancelbtn').on('click', function(e){ alert("cancel clicked"); });
+});
+</script>

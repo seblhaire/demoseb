@@ -48,7 +48,6 @@ form.</p>
   'id' => 'pass2',
   'validate' => true // password is both required and validated
   ]) !!}
-{!! Form::bsSubmit(['id' => 'send', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}
 <br/><br/>
 <h4>Password with confirm</h4>
@@ -66,7 +65,6 @@ form.</p>
 <br/><br/>
 {!! Form::bsOpen(['id' => 'form_password2', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
 {!! Form::bsPasswordWithConfirm([
-  'checkoldpassurl' => route('formsbootstrap_checkoldpass') // route used to verify old password
+  'checkoldpassurl' => route('formsbootstrap_checkoldpass'), // route used to verify old password
   ]) !!}
-{!! Form::bsSubmit(['id' => 'send2', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

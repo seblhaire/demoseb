@@ -37,7 +37,7 @@ var editorConfig = {!! FormsBootstrapUtils::validateEditorParams([
   'imageUpload' => false,
   'fileUpload' => false,
   'fonts' => false
-],[ 
+],[
   'linkText' => 'Link content'
 ]) !!};<br/>
 &lt;/script&gt;<br/>
@@ -55,5 +55,4 @@ var editorConfig = {!! FormsBootstrapUtils::validateEditorParams([
   'value' => $content, // default content displayed in editor, html code
   'configvar' => 'editorConfig' // refers to above-defined js variable
   ]); !!}
-{!! Form::bsSubmit(['id' => 'send2', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

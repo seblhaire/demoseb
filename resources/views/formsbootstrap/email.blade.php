@@ -22,5 +22,4 @@
   'labeltext' => 'E-mail 2',
   'required' => true // value will be validated on submit
   ]); !!}
-{!! Form::bsSubmit(['id' => 'send', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

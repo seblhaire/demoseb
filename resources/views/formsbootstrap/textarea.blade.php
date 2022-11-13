@@ -12,5 +12,4 @@
 <br/><br/>
 {!! Form::bsOpen(['id' => 'form_textarea', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
 {!! Form::bsTextarea(['id' => 'text', 'labeltext' => 'Text']); !!}
-{!! Form::bsSubmit(['id' => 'send2', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

@@ -62,5 +62,4 @@
   'required' => true,
   'invalid-feedback' => "You must agree before submitting." // this message will be displayed if no value selected
   ]) !!}
-{!! Form::bsSubmit(['id' => 'send2', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}

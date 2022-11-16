@@ -6,7 +6,7 @@ return [
   "autocompleter" => "1.2.2",
   "bootstrappaginator" => "1.1.3",
   "daterangepickerhelper" => "2.1.9",
-  "formsbootstrap" => "2.1.1",
+  "formsbootstrap" => "2.1.2",
   "menuandtabutils" => "2.0.0",
   "tablebuilder" => "2.0.0",
   "tagsinput" => "3.0.1",

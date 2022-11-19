@@ -3,7 +3,7 @@
 
 return [
   "lastmodif" => "Nov 19, 2022",
-  "autocompleter" => "1.2.2",
+  "autocompleter" => "1.2.3",
   "bootstrappaginator" => "1.1.3",
   "daterangepickerhelper" => "2.1.9",
   "formsbootstrap" => "2.1.4",

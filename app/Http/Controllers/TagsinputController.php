@@ -7,6 +7,7 @@ use App\Models\Tablecontent;
 use Seblhaire\Tagsinput\TagsinputHelper;
 use \Seblhaire\Autocompleter\Utils;
 use Seblhaire\MenuAndTabUtils\MenuUtils;
+use Seblhaire\Autocompleter\AutocompleterRequest;
 
 class TagsinputController extends Controller
 {
@@ -68,11 +69,7 @@ class TagsinputController extends Controller
   /**
   * search employee
   */
-  public function search(Request $request){
-    $validated = $request->validate([
-      'search' => 'required|string',
-      'maxresults' => 'required|numeric|min:3'
-    ]);
+  public function search(AutocompleterRequest $request){
     $search = $request->get('search');
     $employees = Tablecontent::where('lastname', 'like', '%' . $search . '%')
         ->orwhere('firstname', 'like', '%' . $search . '%')

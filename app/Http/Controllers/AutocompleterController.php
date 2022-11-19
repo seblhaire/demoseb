@@ -7,6 +7,7 @@ use Seblhaire\Autocompleter\AutocompleterHelper;
 use App\Models\Tablecontent;
 use \Seblhaire\Autocompleter\Utils;
 use App\Utils\Countries;
+use Seblhaire\Autocompleter\AutocompleterRequest;
 
 
 // https://www.tutorialspoint.com/how-to-create-an-autocomplete-with-javascript
@@ -44,11 +45,7 @@ class AutocompleterController extends Controller
     /**
     * builds autocompleter results list
     */
-    public function search(Request $request){
-      $validated = $request->validate([
-        'search' => 'required|string',
-        'maxresults' => 'required|numeric|min:3'
-      ]);
+    public function search(AutocompleterRequest $request){
       $search = $request->input('search');
       $countries = collect(Countries::getList())->filter(function($data) use ($search){ //search in country list
         return (mb_stripos($data['code'], $search) !== false) || (mb_stripos($data['country'], $search) !== false);

@@ -2838,16 +2838,16 @@
         },
         {
             "name": "seblhaire/autocompleter",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/autocompleter.git",
-                "reference": "ec800f15c248b6f9f2a12a4e8caae488d2735ad5"
+                "reference": "f57684f194e6c401009a79d0f6557d794fddfe04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/ec800f15c248b6f9f2a12a4e8caae488d2735ad5",
-                "reference": "ec800f15c248b6f9f2a12a4e8caae488d2735ad5",
+                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/f57684f194e6c401009a79d0f6557d794fddfe04",
+                "reference": "f57684f194e6c401009a79d0f6557d794fddfe04",
                 "shasum": ""
             },
             "require": {
@@ -2885,9 +2885,9 @@
             "homepage": "https://github.com/seblhaire/autocompleter",
             "support": {
                 "issues": "https://github.com/seblhaire/autocompleter/issues",
-                "source": "https://github.com/seblhaire/autocompleter/tree/1.2.2"
+                "source": "https://github.com/seblhaire/autocompleter/tree/1.2.3"
             },
-            "time": "2022-06-29T09:36:18+00:00"
+            "time": "2022-11-19T18:03:49+00:00"
         },
         {
             "name": "seblhaire/bootstrappaginator",

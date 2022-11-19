@@ -41,11 +41,6 @@ class FormsbootstrapController extends Controller
       'Countries',
       route('autocompletesearch'),
       [
-        //'divclass '=>  config('uploader.divclass') . ' ' . config('formsbootstrap.class-required-special'),
-        'resdivstyle' => [ //position autocompleter result list
-          'width' => '430px',
-          'top' => '-18px'
-        ],
         'id_included' => false, // id field is not added in autocompleter list result
         'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       ],
@@ -53,8 +48,6 @@ class FormsbootstrapController extends Controller
         'maindivclass' =>
           config('tagsinput.maindivclass') . ' ' .
           config('formsbootstrap.classes.requiredspecialclass'),
-        'tagaddcallback' => 'setCountry', // callback functions called after tag is addded
-        'tagremovecallback' => 'setCountry',
         'showaddbutton' => false, // add button not shown
         'tagclass' => 'bg-success', // change badge style
       ]

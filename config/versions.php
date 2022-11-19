@@ -9,7 +9,7 @@ return [
   "formsbootstrap" => "2.1.4",
   "menuandtabutils" => "2.0.0",
   "tablebuilder" => "2.0.0",
-  "tagsinput" => "3.1.0",
+  "tagsinput" => "3.1.1",
   "uploader" => "4.1.0",
   "fontawesome" => "6.2.0",
   "bootstrap" => "5.2.2",

@@ -3158,16 +3158,16 @@
         },
         {
             "name": "seblhaire/tagsinput",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tagsinput.git",
-                "reference": "7b42b3b54572731e9396dcc7134a31194c87c6c2"
+                "reference": "7badff2ea67796433d0df4f865761c273212f45e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tagsinput/zipball/7b42b3b54572731e9396dcc7134a31194c87c6c2",
-                "reference": "7b42b3b54572731e9396dcc7134a31194c87c6c2",
+                "url": "https://api.github.com/repos/seblhaire/tagsinput/zipball/7badff2ea67796433d0df4f865761c273212f45e",
+                "reference": "7badff2ea67796433d0df4f865761c273212f45e",
                 "shasum": ""
             },
             "require": {
@@ -3205,9 +3205,9 @@
             "homepage": "https://github.com/seblhaire/tagsinput",
             "support": {
                 "issues": "https://github.com/seblhaire/tagsinput/issues",
-                "source": "https://github.com/seblhaire/tagsinput/tree/3.1.0"
+                "source": "https://github.com/seblhaire/tagsinput/tree/3.1.1"
             },
-            "time": "2022-11-19T14:27:33+00:00"
+            "time": "2022-11-19T15:07:17+00:00"
         },
         {
             "name": "seblhaire/uploader",

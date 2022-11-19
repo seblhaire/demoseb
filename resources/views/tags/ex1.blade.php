@@ -1,6 +1,7 @@
 <h3>Example 1: tags list with add button</h3>
 <p>In this example, you can search in employee list, or add a new employee by clicking button. If you select an employee that you already have selected before, it will be
-ignored. You can reorder tags by drag and drop. In the above list, we write the different outputs that can be used in your scripts, for intance to add entries to a table.</p>
+ignored. You can reorder tags by drag and drop. In the above list, we write the different outputs that can be used in your scripts, for intance to add entries to a table.
+ But by default, we insert comma-separated result in a hidden input named <code>tagzone-result</code>.</p>
 <p>In your controller create an instance of TagsinputHelper and pass the variable to the view.</p>
 <pre>
 <code>

@@ -36,9 +36,6 @@
 {!! Form::bsClose() !!}
 <br/>
 <script>
-var setCountry = function(tag, data, object){ // callback for tag add and removal
-	jQuery('#countrylist').val(object.getCommaSepValues());
-}
 
 var datafill = function(res){ //callback value when form data is filled with data provided by ajax script, cf below
   console.log(res);

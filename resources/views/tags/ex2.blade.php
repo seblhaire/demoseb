@@ -35,7 +35,7 @@ Here is the result printed in your page:</p>
 &lt;/script&gt;
 </code>
 </pre>
-<form>
+<form id="fakeform">
 {!! $tagszone !!}
 <h3>Results</h3>
 <div class="form-group">
@@ -44,6 +44,7 @@ Here is the result printed in your page:</p>
 </div>
 </form>
 <script type="text/javascript">
+jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
   jQuery(document).ready(function() {
     {!! $tagszone->printAddToList("[{id:'CH', taglabel:'CH: Switzerland'},{id:'FR', taglabel:'FR: France'},{id:'GD', taglabel:'GD: Groland', tagclass:'bg-danger'}]")!!};
   });

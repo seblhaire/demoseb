@@ -20,7 +20,7 @@ return view('template', ['tagszone' => $tagszone]);
 </code></pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $tagszone !!}</code>.
   Callback functions have the following signature: <code>function(tag, data, object)</code>.</p>
-<form>
+<form id="fakeform">
 {!! $tagszone !!}
 <h3>Results</h3>
 <div class="form-group">
@@ -29,7 +29,8 @@ return view('template', ['tagszone' => $tagszone]);
 </div>
 </form>
 <script type="text/javascript">
-jQuery('#tagzone_addbtn').bind('click', function(){
+jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
+jQuery('#tagzone_addbtn').on('click', function(){
   jQuery('#firstname').val('');
   jQuery('#lastname').val('');
   jQuery('#addEmployeeModal').modal('show');

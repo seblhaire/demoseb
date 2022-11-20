@@ -2998,16 +2998,16 @@
         },
         {
             "name": "seblhaire/formsbootstrap",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/formsbootstrap.git",
-                "reference": "c6673936a15ba5b66c0501e57c7cc5cfe1cb6a60"
+                "reference": "00a9e11c8d6561c76336238b488a2e9ed6db4d40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/c6673936a15ba5b66c0501e57c7cc5cfe1cb6a60",
-                "reference": "c6673936a15ba5b66c0501e57c7cc5cfe1cb6a60",
+                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/00a9e11c8d6561c76336238b488a2e9ed6db4d40",
+                "reference": "00a9e11c8d6561c76336238b488a2e9ed6db4d40",
                 "shasum": ""
             },
             "require": {
@@ -3046,9 +3046,9 @@
             "description": "A Laravel library to generate forms based on Laravel Collective Forms & HTML, Boostrap 5 CSS Framework, RichText editor, and Icons provided by FontAwesome. Includes form management and validation.",
             "support": {
                 "issues": "https://github.com/seblhaire/formsbootstrap/issues",
-                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.1.4"
+                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.1.5"
             },
-            "time": "2022-11-18T17:20:06+00:00"
+            "time": "2022-11-20T11:01:23+00:00"
         },
         {
             "name": "seblhaire/menuandtabutils",

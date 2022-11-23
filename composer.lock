@@ -1094,16 +1094,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.40.1",
+            "version": "v9.41.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "9611fdaf2db5759b8299802d7185bcdbee0340bb"
+                "reference": "cc902ce61b4ca08ca7449664cfab2fa96a1d1e28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/9611fdaf2db5759b8299802d7185bcdbee0340bb",
-                "reference": "9611fdaf2db5759b8299802d7185bcdbee0340bb",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cc902ce61b4ca08ca7449664cfab2fa96a1d1e28",
+                "reference": "cc902ce61b4ca08ca7449664cfab2fa96a1d1e28",
                 "shasum": ""
             },
             "require": {
@@ -1276,7 +1276,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-11-15T16:13:22+00:00"
+            "time": "2022-11-22T15:10:46+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2998,16 +2998,16 @@
         },
         {
             "name": "seblhaire/formsbootstrap",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/formsbootstrap.git",
-                "reference": "00a9e11c8d6561c76336238b488a2e9ed6db4d40"
+                "reference": "2abca2acc084f6f814a97ff87c1df99633bbf3cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/00a9e11c8d6561c76336238b488a2e9ed6db4d40",
-                "reference": "00a9e11c8d6561c76336238b488a2e9ed6db4d40",
+                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/2abca2acc084f6f814a97ff87c1df99633bbf3cd",
+                "reference": "2abca2acc084f6f814a97ff87c1df99633bbf3cd",
                 "shasum": ""
             },
             "require": {
@@ -3046,9 +3046,9 @@
             "description": "A Laravel library to generate forms based on Laravel Collective Forms & HTML, Boostrap 5 CSS Framework, RichText editor, and Icons provided by FontAwesome. Includes form management and validation.",
             "support": {
                 "issues": "https://github.com/seblhaire/formsbootstrap/issues",
-                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.1.5"
+                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.1.6"
             },
-            "time": "2022-11-20T11:01:23+00:00"
+            "time": "2022-11-23T19:21:46+00:00"
         },
         {
             "name": "seblhaire/menuandtabutils",
@@ -6139,16 +6139,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.16.2",
+            "version": "v1.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "7d1ed5f856ec8b9708712e3fc0708fcabe114659"
+                "reference": "0dbee8802e17911afbe29a8506316343829b056e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/7d1ed5f856ec8b9708712e3fc0708fcabe114659",
-                "reference": "7d1ed5f856ec8b9708712e3fc0708fcabe114659",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/0dbee8802e17911afbe29a8506316343829b056e",
+                "reference": "0dbee8802e17911afbe29a8506316343829b056e",
                 "shasum": ""
             },
             "require": {
@@ -6195,7 +6195,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-09-28T13:13:22+00:00"
+            "time": "2022-11-21T16:19:18+00:00"
         },
         {
             "name": "laravel/tinker",

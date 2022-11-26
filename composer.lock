@@ -1600,16 +1600,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.10.3",
+            "version": "3.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8013fb046c6a244b2b1b75cc95d732ed6bcdeb8a"
+                "reference": "a7790f3dd1b27af81d380e6b2afa77c16ab7e181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8013fb046c6a244b2b1b75cc95d732ed6bcdeb8a",
-                "reference": "8013fb046c6a244b2b1b75cc95d732ed6bcdeb8a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a7790f3dd1b27af81d380e6b2afa77c16ab7e181",
+                "reference": "a7790f3dd1b27af81d380e6b2afa77c16ab7e181",
                 "shasum": ""
             },
             "require": {
@@ -1671,7 +1671,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.10.3"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.10.4"
             },
             "funding": [
                 {
@@ -1687,7 +1687,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-14T10:42:43+00:00"
+            "time": "2022-11-26T19:48:01+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -3105,16 +3105,16 @@
         },
         {
             "name": "seblhaire/tablebuilder",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tablebuilder.git",
-                "reference": "fc2a583a36c854dba13e8aea6a169f665ac5db2c"
+                "reference": "d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/fc2a583a36c854dba13e8aea6a169f665ac5db2c",
-                "reference": "fc2a583a36c854dba13e8aea6a169f665ac5db2c",
+                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c",
+                "reference": "d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c",
                 "shasum": ""
             },
             "require": {
@@ -3152,9 +3152,9 @@
             "homepage": "https://github.com/seblhaire/tablebuilder",
             "support": {
                 "issues": "https://github.com/seblhaire/tablebuilder/issues",
-                "source": "https://github.com/seblhaire/tablebuilder/tree/2.0.1"
+                "source": "https://github.com/seblhaire/tablebuilder/tree/2.0.2"
             },
-            "time": "2022-11-24T20:07:06+00:00"
+            "time": "2022-11-26T20:55:50+00:00"
         },
         {
             "name": "seblhaire/tagsinput",

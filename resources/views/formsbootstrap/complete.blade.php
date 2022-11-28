@@ -4,6 +4,7 @@
   'csrfrefreshroute' => route('refreshcsrf'),
   'ajaxcallback' => 'processform',
   'filldatacallback' => 'datafill',
+  'resetvalues' => ['main_id' => 0],
   'additionalbuttons' => [
       ['id' => 'cancelBtn', 'class' => 'btn btn-secondary', 'value' => 'Cancel'],
       ['id' => 'filldata', 'class' => 'btn btn-warning', 'value' => 'Fill form with example data']

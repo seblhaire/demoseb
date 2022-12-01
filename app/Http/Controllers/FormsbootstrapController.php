@@ -22,8 +22,8 @@ class FormsbootstrapController extends Controller
       'formlabel' => 'Date:',
       'formdivclass' =>
         config('daterangepickerhelper.default.formdivclass') . ' ' .
-        config('formsbootstrap.classes.requiredspecialclass'),
-
+        config('formsbootstrap.classes.requiredspecialclass') . ' ' .
+        config('formsbootstrap.classes.resetspecialclass')
     ]);
     $start = new Carbon('30 days ago');
     $max = $today;
@@ -34,7 +34,8 @@ class FormsbootstrapController extends Controller
       'formlabel' => 'Publication range:',
       'formdivclass' =>
         config('daterangepickerhelper.default.formdivclass') . ' ' .
-        config('formsbootstrap.classes.requiredspecialclass')
+        config('formsbootstrap.classes.requiredspecialclass') . ' ' .
+        config('formsbootstrap.classes.resetspecialclass')
     ]);
     $countries = TagsinputHelper::init( // see TagsinputController for details
       "countries",
@@ -47,7 +48,8 @@ class FormsbootstrapController extends Controller
       [
         'maindivclass' =>
           config('tagsinput.maindivclass') . ' ' .
-          config('formsbootstrap.classes.requiredspecialclass'),
+          config('formsbootstrap.classes.requiredspecialclass') . ' ' .
+          config('formsbootstrap.classes.resetspecialclass'),
         'showaddbutton' => false, // add button not shown
         'tagclass' => 'bg-success', // change badge style
       ]
@@ -66,7 +68,8 @@ class FormsbootstrapController extends Controller
         'delurl' => route('filedelete'),
         'maindiv' =>
             config('uploader.maindiv') . ' ' .
-            config('formsbootstrap.classes.requiredspecialclass'),
+            config('formsbootstrap.classes.requiredspecialclass') . ' ' .
+            config('formsbootstrap.classes.resetspecialclass'),
     ], [ // additional parameters transmitted to second script
       'article_title' => "blablabla",
       'article_id' => 409

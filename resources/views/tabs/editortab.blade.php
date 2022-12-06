@@ -41,7 +41,6 @@ return view('template', ['element' => $element]);
 </script>
 <br/>
 {!! $element !!}
-{!! Form::bsSubmit(['id' => 'send', 'label' => 'Send', 'attributes' => ['class' => 'btn btn-primary']]) !!}
 {!! Form::bsClose() !!}
 <br/><br/>
 <div id="resdiv">
@@ -54,6 +53,7 @@ return view('template', ['element' => $element]);
 <script>
   var processform = function(data){
     oldres = jQuery('#result').val() + (jQuery('#result').val() != '' ? "\n\n" : "");
-    jQuery('#result').val(oldres + data.res)
-  }
+    jQuery('#result').val(oldres + data.formcontent);
+    return data.message;
+  };
 </script>

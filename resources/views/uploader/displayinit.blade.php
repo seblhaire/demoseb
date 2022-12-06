@@ -12,7 +12,6 @@ $uploader = UploaderHelper::init(
   'Uploader',//label
   route('fileupload'), // route for file prodessing
   [
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
     'filecontainer' => 'UploadedFileContainerExt',
     'maxfilesizek' => 1024, // max file size
     'multiple' => true, // multiple files can be uploaded

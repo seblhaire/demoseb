@@ -1094,16 +1094,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.42.2",
+            "version": "v9.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "607d7867c93706eae20e28e46679f8a66e2a23ec"
+                "reference": "011f2e1d49a11c22519a7899b46ddf3bc5b0f40b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/607d7867c93706eae20e28e46679f8a66e2a23ec",
-                "reference": "607d7867c93706eae20e28e46679f8a66e2a23ec",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/011f2e1d49a11c22519a7899b46ddf3bc5b0f40b",
+                "reference": "011f2e1d49a11c22519a7899b46ddf3bc5b0f40b",
                 "shasum": ""
             },
             "require": {
@@ -1276,7 +1276,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-11-30T16:23:52+00:00"
+            "time": "2022-12-06T14:26:07+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2838,16 +2838,16 @@
         },
         {
             "name": "seblhaire/autocompleter",
-            "version": "1.2.3",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/autocompleter.git",
-                "reference": "f57684f194e6c401009a79d0f6557d794fddfe04"
+                "reference": "b8c8fbb3b2a2bbacc4e483e51206fa32d5d7614e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/f57684f194e6c401009a79d0f6557d794fddfe04",
-                "reference": "f57684f194e6c401009a79d0f6557d794fddfe04",
+                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/b8c8fbb3b2a2bbacc4e483e51206fa32d5d7614e",
+                "reference": "b8c8fbb3b2a2bbacc4e483e51206fa32d5d7614e",
                 "shasum": ""
             },
             "require": {
@@ -2885,9 +2885,9 @@
             "homepage": "https://github.com/seblhaire/autocompleter",
             "support": {
                 "issues": "https://github.com/seblhaire/autocompleter/issues",
-                "source": "https://github.com/seblhaire/autocompleter/tree/1.2.3"
+                "source": "https://github.com/seblhaire/autocompleter/tree/1.3.0"
             },
-            "time": "2022-11-19T18:03:49+00:00"
+            "time": "2022-12-06T19:00:01+00:00"
         },
         {
             "name": "seblhaire/bootstrappaginator",
@@ -2998,16 +2998,16 @@
         },
         {
             "name": "seblhaire/formsbootstrap",
-            "version": "2.2.2",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/formsbootstrap.git",
-                "reference": "29b9194d94259669039224693b54e0fee5235cb5"
+                "reference": "4a6ba0b5c77d6061e2295dd02b2e8e154bf5ad8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/29b9194d94259669039224693b54e0fee5235cb5",
-                "reference": "29b9194d94259669039224693b54e0fee5235cb5",
+                "url": "https://api.github.com/repos/seblhaire/formsbootstrap/zipball/4a6ba0b5c77d6061e2295dd02b2e8e154bf5ad8e",
+                "reference": "4a6ba0b5c77d6061e2295dd02b2e8e154bf5ad8e",
                 "shasum": ""
             },
             "require": {
@@ -3046,9 +3046,9 @@
             "description": "A Laravel library to generate forms based on Laravel Collective Forms & HTML, Boostrap 5 CSS Framework, RichText editor, and Icons provided by FontAwesome. Includes form management and validation.",
             "support": {
                 "issues": "https://github.com/seblhaire/formsbootstrap/issues",
-                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.2.2"
+                "source": "https://github.com/seblhaire/formsbootstrap/tree/2.3.0"
             },
-            "time": "2022-12-05T18:49:54+00:00"
+            "time": "2022-12-06T18:58:39+00:00"
         },
         {
             "name": "seblhaire/menuandtabutils",
@@ -3105,16 +3105,16 @@
         },
         {
             "name": "seblhaire/tablebuilder",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tablebuilder.git",
-                "reference": "d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c"
+                "reference": "1b01840e962438d5f13255eb0bc3dc9269555e91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c",
-                "reference": "d1a23c737ae3bca00fa26e3b2fa52c2f49ee323c",
+                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/1b01840e962438d5f13255eb0bc3dc9269555e91",
+                "reference": "1b01840e962438d5f13255eb0bc3dc9269555e91",
                 "shasum": ""
             },
             "require": {
@@ -3152,22 +3152,22 @@
             "homepage": "https://github.com/seblhaire/tablebuilder",
             "support": {
                 "issues": "https://github.com/seblhaire/tablebuilder/issues",
-                "source": "https://github.com/seblhaire/tablebuilder/tree/2.0.2"
+                "source": "https://github.com/seblhaire/tablebuilder/tree/2.1.0"
             },
-            "time": "2022-11-26T20:55:50+00:00"
+            "time": "2022-12-06T18:55:29+00:00"
         },
         {
             "name": "seblhaire/tagsinput",
-            "version": "3.1.2",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tagsinput.git",
-                "reference": "21c564c24ffecd0ed8f14f2fb95e1ae74d7cc942"
+                "reference": "79914b9948a74055ebc7435b47b8ca5810cb4708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tagsinput/zipball/21c564c24ffecd0ed8f14f2fb95e1ae74d7cc942",
-                "reference": "21c564c24ffecd0ed8f14f2fb95e1ae74d7cc942",
+                "url": "https://api.github.com/repos/seblhaire/tagsinput/zipball/79914b9948a74055ebc7435b47b8ca5810cb4708",
+                "reference": "79914b9948a74055ebc7435b47b8ca5810cb4708",
                 "shasum": ""
             },
             "require": {
@@ -3205,22 +3205,22 @@
             "homepage": "https://github.com/seblhaire/tagsinput",
             "support": {
                 "issues": "https://github.com/seblhaire/tagsinput/issues",
-                "source": "https://github.com/seblhaire/tagsinput/tree/3.1.2"
+                "source": "https://github.com/seblhaire/tagsinput/tree/3.2.0"
             },
-            "time": "2022-11-19T15:32:30+00:00"
+            "time": "2022-12-06T18:53:58+00:00"
         },
         {
             "name": "seblhaire/uploader",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/uploader.git",
-                "reference": "f1196fd75dd5971412724c8d358ee0f6fa8ea60c"
+                "reference": "8c671c278719e06c228de49cbae2e0c42c09d7ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/uploader/zipball/f1196fd75dd5971412724c8d358ee0f6fa8ea60c",
-                "reference": "f1196fd75dd5971412724c8d358ee0f6fa8ea60c",
+                "url": "https://api.github.com/repos/seblhaire/uploader/zipball/8c671c278719e06c228de49cbae2e0c42c09d7ae",
+                "reference": "8c671c278719e06c228de49cbae2e0c42c09d7ae",
                 "shasum": ""
             },
             "require": {
@@ -3259,22 +3259,22 @@
             "homepage": "https://github.com/seblhaire/uploader",
             "support": {
                 "issues": "https://github.com/seblhaire/uploader/issues",
-                "source": "https://github.com/seblhaire/uploader/tree/4.1.0"
+                "source": "https://github.com/seblhaire/uploader/tree/4.2.0"
             },
-            "time": "2022-11-11T21:18:02+00:00"
+            "time": "2022-12-06T18:56:54+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "75d4749d9620a8fa21a2d2847800a84b5c4e7682"
+                "reference": "58f6cef5dc5f641b7bbdbf8b32b44cc926c35f3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/75d4749d9620a8fa21a2d2847800a84b5c4e7682",
-                "reference": "75d4749d9620a8fa21a2d2847800a84b5c4e7682",
+                "url": "https://api.github.com/repos/symfony/console/zipball/58f6cef5dc5f641b7bbdbf8b32b44cc926c35f3f",
+                "reference": "58f6cef5dc5f641b7bbdbf8b32b44cc926c35f3f",
                 "shasum": ""
             },
             "require": {
@@ -3341,7 +3341,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.2.0"
+                "source": "https://github.com/symfony/console/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -3357,7 +3357,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-29T16:44:51+00:00"
+            "time": "2022-12-01T13:44:20+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -3493,16 +3493,16 @@
         },
         {
             "name": "symfony/error-handler",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "d9894724a9d20afd3329e36b36e45835b5c2ab3e"
+                "reference": "b4e41f62c1124378863ff2705158a60da3e4c6b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/d9894724a9d20afd3329e36b36e45835b5c2ab3e",
-                "reference": "d9894724a9d20afd3329e36b36e45835b5c2ab3e",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/b4e41f62c1124378863ff2705158a60da3e4c6b9",
+                "reference": "b4e41f62c1124378863ff2705158a60da3e4c6b9",
                 "shasum": ""
             },
             "require": {
@@ -3544,7 +3544,7 @@
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/error-handler/tree/v6.2.0"
+                "source": "https://github.com/symfony/error-handler/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -3560,7 +3560,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-02T09:08:04+00:00"
+            "time": "2022-12-01T21:07:46+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3790,16 +3790,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "edc56ed49a2955383d59e9b7043fd3bbc26f1854"
+                "reference": "d0bbd5a7e81b38f32504399b9199f265505b7bac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/edc56ed49a2955383d59e9b7043fd3bbc26f1854",
-                "reference": "edc56ed49a2955383d59e9b7043fd3bbc26f1854",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d0bbd5a7e81b38f32504399b9199f265505b7bac",
+                "reference": "d0bbd5a7e81b38f32504399b9199f265505b7bac",
                 "shasum": ""
             },
             "require": {
@@ -3848,7 +3848,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v6.2.0"
+                "source": "https://github.com/symfony/http-foundation/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -3864,20 +3864,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-21T16:03:04+00:00"
+            "time": "2022-12-04T18:26:13+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "e008ce658dbd995b3c3ab3d9be0555ea3b11867e"
+                "reference": "bcbd2ea12fee651a4c8bff4f6f00cce2ac1f8404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/e008ce658dbd995b3c3ab3d9be0555ea3b11867e",
-                "reference": "e008ce658dbd995b3c3ab3d9be0555ea3b11867e",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/bcbd2ea12fee651a4c8bff4f6f00cce2ac1f8404",
+                "reference": "bcbd2ea12fee651a4c8bff4f6f00cce2ac1f8404",
                 "shasum": ""
             },
             "require": {
@@ -3959,7 +3959,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v6.2.0"
+                "source": "https://github.com/symfony/http-kernel/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -3975,20 +3975,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-30T17:37:58+00:00"
+            "time": "2022-12-06T17:28:26+00:00"
         },
         {
             "name": "symfony/mailer",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "7b355fca167fa5302c77bccdfa0af4d7abc6bd8c"
+                "reference": "a18c3dd41cfcf011e3866802e39b9ae9e541deaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/7b355fca167fa5302c77bccdfa0af4d7abc6bd8c",
-                "reference": "7b355fca167fa5302c77bccdfa0af4d7abc6bd8c",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/a18c3dd41cfcf011e3866802e39b9ae9e541deaf",
+                "reference": "a18c3dd41cfcf011e3866802e39b9ae9e541deaf",
                 "shasum": ""
             },
             "require": {
@@ -4003,7 +4003,8 @@
             "conflict": {
                 "symfony/http-kernel": "<5.4",
                 "symfony/messenger": "<6.2",
-                "symfony/mime": "<6.2"
+                "symfony/mime": "<6.2",
+                "symfony/twig-bridge": "<6.2.1"
             },
             "require-dev": {
                 "symfony/console": "^5.4|^6.0",
@@ -4037,7 +4038,7 @@
             "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/mailer/tree/v6.2.0"
+                "source": "https://github.com/symfony/mailer/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -4053,7 +4054,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-28T17:18:31+00:00"
+            "time": "2022-12-06T16:54:23+00:00"
         },
         {
             "name": "symfony/mime",
@@ -5450,16 +5451,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "6228b11059d7b279be699682f164a107ba9a268d"
+                "reference": "1e7544c8698627b908657e5276854d52ab70087a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6228b11059d7b279be699682f164a107ba9a268d",
-                "reference": "6228b11059d7b279be699682f164a107ba9a268d",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/1e7544c8698627b908657e5276854d52ab70087a",
+                "reference": "1e7544c8698627b908657e5276854d52ab70087a",
                 "shasum": ""
             },
             "require": {
@@ -5518,7 +5519,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v6.2.0"
+                "source": "https://github.com/symfony/var-dumper/tree/v6.2.1"
             },
             "funding": [
                 {
@@ -5534,7 +5535,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-28T13:41:56+00:00"
+            "time": "2022-12-03T22:32:58+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

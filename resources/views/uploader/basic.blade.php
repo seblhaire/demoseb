@@ -10,7 +10,6 @@ $uploader = UploaderHelper::init(
   'Uploader', //label
   route('fileupload'), // route for file prodessing
   [
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
     'draggable' => false, // drag and drop disabled
     'acceptable_mimes' => $acceptable, // comma-separated list of valid extensions
     'maxfilesizek' => 1024, // max file size

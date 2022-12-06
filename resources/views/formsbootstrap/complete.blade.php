@@ -1,7 +1,6 @@
 {!! Form::bsOpen([
   'id' => 'form_complete',
   'action' => route('formsbootstrap_processform'),
-  'csrfrefreshroute' => route('refreshcsrf'),
   'ajaxcallback' => 'processform',
   'filldatacallback' => 'datafill',
   'resetvalues' => ['main_id' => 0],

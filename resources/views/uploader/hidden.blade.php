@@ -8,7 +8,6 @@
     'Uploader',//label
     route('fileupload'), // route for file prodessing
     [
-      'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       'hidden' => true, // uploader is invisible when inited
       'filecontainer' => 'UploadedFileContainerExt',
       'maxfilesizek' => 1024, // max file size

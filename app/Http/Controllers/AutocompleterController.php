@@ -20,7 +20,6 @@ class AutocompleterController extends Controller
     public function __construct(){
       parent::__construct();
       $this->options = array_replace(config('autocompleter'), [
-        'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
         'callback' => 'output', // js callback called after selecting element
         'id_included' => false, // id column not added in item list
       ]);

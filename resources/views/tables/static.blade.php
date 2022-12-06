@@ -7,8 +7,7 @@ $oTable = TableBuilderHelper::initTable('tabtest2', route("tableload2"));
 $oTable->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
     'title' => 'Country',
     'sortable' => true,
-    'defaultOrder' => 'asc',
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+    'defaultOrder' => 'asc'
 )));
 $oTable->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
     'title' => 'Code',

@@ -43,7 +43,6 @@ class FormsbootstrapController extends Controller
       route('autocompletesearch'),
       [
         'id_included' => false, // id field is not added in autocompleter list result
-        'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       ],
       [
         'maindivclass' =>

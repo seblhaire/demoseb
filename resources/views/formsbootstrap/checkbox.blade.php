@@ -37,7 +37,7 @@
 {!! nl2br(htmlspecialchars(Form::bsCheckbox(['name' => 'conditions', 'values' => ['accepted' => 'I agree to terms and conditions'], 'required' => true, 'invalid-feedback' => "You must agree before submitting."]))) !!}
 </code></p>
 <br/><br/>
-{!! Form::bsOpen(['id' => 'form_checkbox', 'action' => route('formsbootstrap_processform'), 'csrfrefreshroute' => route('refreshcsrf'), 'ajaxcallback' => 'processform']) !!}
+{!! Form::bsOpen(['id' => 'form_checkbox', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
 {!! Form::bsCheckbox([
   'name' => 'os', //name of checkboxes
   'values' => ['mac' => 'MacOs','windows' => 'Windows', 'linux' => 'Linux', 'vms' => 'Vms','unix' => 'Unix'], //values of checkboxes

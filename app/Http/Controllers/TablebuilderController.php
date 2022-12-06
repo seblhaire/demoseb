@@ -32,7 +32,6 @@ class TablebuilderController extends Controller
           'itemsperpage' => 20,
           'eltsPerPageChngCallback' => 'eltspagechanged', // js function triggered when elements per page changed
           'aftertableload' => 'aftertableload', // js function: callback after table load
-          'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       ));
       // add columns
       $oTable->addColumn(TableBuilderHelper::initColumn('numeric', 'id', array(
@@ -115,7 +114,6 @@ class TablebuilderController extends Controller
           'title' => 'Country',
           'sortable' => true,
           'defaultOrder' => 'asc',
-          'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
       )));
       $oTable->addColumn(TableBuilderHelper::initColumn('data', 'code', array(
           'title' => 'Code',
@@ -126,8 +124,7 @@ class TablebuilderController extends Controller
       // Second table. Gets all static data without search criteria nor paginations
       $oTable = TableBuilderHelper::initTable('tabtest3', route("tableload2"), array(
           'itemsperpage' => 0,
-          'searchable' => false,
-          'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+          'searchable' => false
       ));
       $oTable->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
           'title' => 'Country'

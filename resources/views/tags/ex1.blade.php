@@ -9,9 +9,7 @@ $tagszone = TagsinputHelper::init(
   "tagzone", //id
   'Employees', // label
   route('tagsinputsearch'), //autocompleter script
-  [ //Autocompleter parameters
-    'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
-  ],
+  [],
   [ //tagsinput parameters
     'tagaddcallback' => 'showlist', // callback functions called after tag is addded
     'tagremovecallback' => 'showlist'
@@ -85,8 +83,7 @@ jQuery('#tagzone_addbtn').on('click', function(){
         {!! $tagszone->printAddToList('content')!!}
       }).fail(function(jqXHR, textStatus, errorThrown) {
         if (jqXHR.status == 419){
-          self.refreshToken();
-          jQuery('#addEmployeeBtn').trigger( "click" );
+          location.refresh();
         }
       });
   });

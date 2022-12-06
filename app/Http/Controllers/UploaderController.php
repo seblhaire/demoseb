@@ -23,7 +23,6 @@ class UploaderController extends Controller
           'Uploader', //label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'draggable' => false, // drag and drop disabled
             'acceptable_mimes' => $acceptable, // comma-separated list of valid extensions
             'maxfilesizek' => 1024, // max file size
@@ -40,7 +39,6 @@ class UploaderController extends Controller
           'Uploader',//label
           route('fileupload2'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'filecontainer' => 'UploadedFileContainerExt', // class of object containing files replaces default class
             'multiple' => true, // multiple files can be uploaded,
             'maxfilesizek' => 1024, // max file size
@@ -59,7 +57,6 @@ class UploaderController extends Controller
           'Uploader',//label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
             'multiple' => true, // multiple files can be uploaded
@@ -73,7 +70,6 @@ class UploaderController extends Controller
           'Uploader 2',//label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
             'path' => '/uploads', // folder in storage where files must be uploaded
@@ -89,7 +85,6 @@ class UploaderController extends Controller
           'Uploader',//label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'hidden' => true, // uploader is invisible when inited
             'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
@@ -103,7 +98,6 @@ class UploaderController extends Controller
           'Uploader 2',//label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'hiddenuploader' => true, // uploader is invisible when inited
             'filecontainer' => 'UploadedFileContainerExt',
             'maxfilesizek' => 1024, // max file size
@@ -119,7 +113,6 @@ class UploaderController extends Controller
           'Uploader', //label
           route('fileupload'), // route for file prodessing
           [
-            'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
             'acceptable_mimes' => $acceptable,  // comma-separated list of valid extensions
             'maxfilesizek' => 1024, // max file size
             'path' => '/uploads', // folder in storage where files must be uploaded

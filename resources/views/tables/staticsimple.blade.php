@@ -5,8 +5,7 @@
 <code>
 $oTable = TableBuilderHelper::initTable('tabtest3', route("tableload2"), array(
     'itemsperpage' => 0,
-    'searchable' => false,
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
+    'searchable' => false
 ));
 $oTable->addColumn(TableBuilderHelper::initColumn('data', 'country', array(
     'title' => 'Country'

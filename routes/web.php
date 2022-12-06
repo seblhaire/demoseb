@@ -45,8 +45,5 @@ Route::post('/tagsinput/addemployee', [TagsinputController::class, 'addEmployee'
 Route::post('/formsbootstrap/processform', [FormsbootstrapController::class, 'processform'])->name('formsbootstrap_processform');
 Route::post('/formsbootstrap/filldata', [FormsbootstrapController::class, 'filldata'])->name('formsbootstrap_filldata');
 Route::post('/formsbootstrap/checkoldpass', [FormsbootstrapController::class, 'checkoldpass'])->name('formsbootstrap_checkoldpass');
-Route::get('/refresh-csrf', function(){
-    return csrf_token();
-})->name('refreshcsrf');
 
 Route::redirect('/sebastien', '/');

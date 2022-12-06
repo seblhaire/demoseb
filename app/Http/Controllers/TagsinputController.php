@@ -18,9 +18,7 @@ class TagsinputController extends Controller
         "tagzone", //id
         'Employees', // label
         route('tagsinputsearch'), //autocompleter script
-        [ //Autocompleter parameters
-          'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
-        ],
+        [],
         [ //tagsinput parameters
           'tagaddcallback' => 'showlist', // callback functions called after tag is addded
           'tagremovecallback' => 'showlist'
@@ -33,7 +31,6 @@ class TagsinputController extends Controller
         route('autocompletesearch'),
         [
           'id_included' => false, // id field is not added in autocompleter list result
-          'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
         ],
         [
           'tagaddcallback' => 'showlist', // callback functions called after tag is addded

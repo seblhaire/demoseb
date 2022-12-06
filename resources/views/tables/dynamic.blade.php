@@ -19,7 +19,6 @@ $oTable = TableBuilderHelper::initTable(
     'itemsperpage' => 20, //default elements per page
     'eltsPerPageChngCallback' => 'eltspagechanged', // js function triggered when elements per page changed
     'aftertableload' => 'aftertableload', // js function: callback after table load
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
 ));
 // add columns
 $oTable->addColumn(TableBuilderHelper::initColumn('numeric', 'id', array(

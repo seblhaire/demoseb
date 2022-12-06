@@ -15,7 +15,6 @@ $ac = AutocompleterHelper::init(
   'Countries', //label
   route('autocompletesearch'), // route called when typing in input
   [
-    'csrfrefreshroute' => route('refreshcsrf'), // route called if csrf token must be reloaded
     'callback' => 'output', // js callback called after selecting element
     'id_included' => false, // id column not added in item list
   ]

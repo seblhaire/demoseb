@@ -120,6 +120,18 @@ class DaterangepickerController extends Controller
           $initend = $end->format(config('daterangepickerhelper.default.carboninputdatetime'));;
           break;
       case 'hidden' : // calendar standard use
+          $start = new Carbon('6 days ago');
+          $end = new Carbon;
+          $max = $end;
+          $min = null;
+          $calId = 'logCal';
+          $cal = DateRangePickerHelper::init($calId, $end, $end, $min, $max, [
+            'singleDatePicker' => true,
+            'drops' => 'down',
+            'formlabel' => 'Date:',
+            'usehiddeninputs' => true,
+            'apply.daterangepicker' => "displayhiddeninputs();"
+          ]);
           $start = new Carbon('2 month ago');
           $end = new Carbon;
           $calId = 'numCal2';

@@ -146,12 +146,14 @@ return view('mytemplate', ['cal' => $cal])
         </select>
       </div>
       @if (!is_null($cal))
-      {!! $cal !!}
-      <div class="mb-3">
-        <label class="control-label" for="datesingle">Selected date:</label>
-        <input class="form-control" id="datesingle" name="datesingle" value="{{ $initsingle }}">
-      </div>
-      <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
+        {!! $cal !!}
+        @if ($type != 'hidden')
+          <div class="mb-3">
+            <label class="control-label" for="datesingle">Selected date:</label>
+            <input class="form-control" id="datesingle" name="datesingle" value="{{ $initsingle }}">
+          </div>
+          <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
+        @endif
       @endif
       @if (!is_null($cal2))
         {!! $cal2->output() !!}
@@ -173,7 +175,7 @@ return view('mytemplate', ['cal' => $cal])
     <script>
     @if ($type == 'hidden')
       function displayhiddeninputs(){ //function to display hidden inputs
-        alert('input startdate ' + {!! $cal2->getStartDate() !!} + '. input enddate  ' +  {!! $cal2->getEndDate() !!});
+        alert('single calendar: ' + {!! $cal->getStartDate() !!} + '. double calendar: input startdate ' + {!! $cal2->getStartDate() !!} + '. input enddate  ' +  {!! $cal2->getEndDate() !!});
       }
     @endif
       jQuery(document).ready(function(){

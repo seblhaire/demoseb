@@ -147,7 +147,7 @@ class UploaderController extends Controller
           'target' => route('uploader', ['type' => 'hidden'])
         ],
         'displayinitupl-menu' => [
-          'title' => 'Diplay file on init',
+          'title' => 'Display file on init',
           'target' => route('uploader', ['type' => 'displayinit'])
         ],
         'functionsupl-menu' => [

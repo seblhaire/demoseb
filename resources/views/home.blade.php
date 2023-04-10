@@ -109,4 +109,17 @@
 <p><a class="btn btn-secondary" href="{{ route('menuutils') }}" role="button">View details &raquo;</a></p>
   </div>
 </div>
+<div class="row projectdescr">
+  <div class="col-md-7">
+    <h2>Specialauth</h2>
+    <h3>Alternative authentication library</h3>
+<p class="lead">Library based on Laravel authentication libraries (login, logout, password reset procedure) provided in
+  <a rel="noopener noreferrer" target="_blank" href="https://laravel.com/docs/master/starter-kits#laravel-breeze">Laravel Breeze</a>
+  but does not contain registration process.</p>
+  <p><a class="btn btn-secondary" href="{{ route('specialauth') }}" role="button">View details &raquo;</a></p>
+  </div>
+  <div class="col-md-5">
+    <img style="max-width:100%; max-height:200px" src="/img/specialauth_login.png" />
+  </div>
+</div>
 @endsection

@@ -67,6 +67,10 @@ class Controller extends BaseController
                   'title' => 'Menu and Tab Utils',
                   'target' => route('menuutils'),
               ],
+              'specialauth-topmenu' => [
+                  'title' => 'Specialauth',
+                  'target' => route('specialauth'),
+              ]
             ]
           ]
         ]

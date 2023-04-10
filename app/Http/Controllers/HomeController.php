@@ -26,4 +26,11 @@ class HomeController extends Controller
           'rightmenu' => $this->rightmenu,
       ]);
     }
+
+    public function specialauth(){
+      return view('specialauth', [
+          'mainmenu' => $this->mainmenu->setCurrent('packages-topmenu'),
+          'rightmenu' => $this->rightmenu,
+      ]);
+    }
 }

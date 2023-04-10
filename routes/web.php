@@ -33,6 +33,7 @@ Route::get('/formsbootstrap/{type?}', [FormsbootstrapController::class, 'index']
 Route::get('/' . env('UPLOAD_DEL_URL'), [UploaderController::class, 'deleteFiles'])->name('deletefiles');
 Route::get('/tagsinput/{type?}', [TagsinputController::class, 'index'])->name('tagsinput');
 Route::get('/menuutils/{type?}', [MenuUtilsController::class, 'index'])->name('menuutils');
+Route::get('/specialauth', [HomeController::class, 'specialauth'])->name('specialauth');
 
 Route::post('/tablebuilder/loadtab', [TablebuilderController::class, 'loadTable'])->name('tableload');
 Route::post('/tablebuilder/loadtab2', [TablebuilderController::class, 'loadTable2'])->name('tableload2');

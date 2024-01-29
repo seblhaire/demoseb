@@ -3317,16 +3317,16 @@
         },
         {
             "name": "seblhaire/tablebuilder",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/tablebuilder.git",
-                "reference": "127f30ed91b1f598a1670a26d4ae436a5ce20932"
+                "reference": "8bee979a434910376fed102c3fa76adfab875264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/127f30ed91b1f598a1670a26d4ae436a5ce20932",
-                "reference": "127f30ed91b1f598a1670a26d4ae436a5ce20932",
+                "url": "https://api.github.com/repos/seblhaire/tablebuilder/zipball/8bee979a434910376fed102c3fa76adfab875264",
+                "reference": "8bee979a434910376fed102c3fa76adfab875264",
                 "shasum": ""
             },
             "require": {
@@ -3364,9 +3364,9 @@
             "homepage": "https://github.com/seblhaire/tablebuilder",
             "support": {
                 "issues": "https://github.com/seblhaire/tablebuilder/issues",
-                "source": "https://github.com/seblhaire/tablebuilder/tree/2.2.2"
+                "source": "https://github.com/seblhaire/tablebuilder/tree/2.2.3"
             },
-            "time": "2024-01-29T17:34:06+00:00"
+            "time": "2024-01-29T21:59:28+00:00"
         },
         {
             "name": "seblhaire/tagsinput",

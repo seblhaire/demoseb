@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('title', 'Home')
+@section('description', "Brief curriculum of Sébastien L'haire")
 @section('content')
 <div class="jumbotron">
   <div class="container">
@@ -10,8 +11,8 @@
       </div>
       <div class="col">
         <h2>Dr. Sébastien L'HAIRE</h2>
-        <h4>Développeur web - Ingénieur en Traitement du Langage</h4>
-        <p>21, r. Balcon de l'Aire<br />
+        <h4>Développeur web - Ingénieur QA - Ingénieur en Traitement du Langage</h4>
+        <p>21 Balcon de l'Aire<br />
         F - 74160 Saint-Julien-en-Genevois<br />
         <strong>Tel&nbsp;:</strong> ++41 78 773 66 48<br/>
         <a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a>

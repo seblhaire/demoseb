@@ -57,10 +57,10 @@ form.</p>
   You can also disable password generation
   and/or diplay password option.</p>
 <pre><code>
-@{!! Form::bsPasswordWithConfirm() !!}
+@{!! Form::bsPasswordWithConfirm(['checkoldpassurl' => route('formsbootstrap_checkoldpass')]) !!}
 </code></pre>
 <p>Output:<br/><code>
-{!! nl2br(htmlspecialchars(Form::bsPasswordWithConfirm(['checkoldpassurl' => 'toto']))) !!}
+{!! nl2br(htmlspecialchars(Form::bsPasswordWithConfirm(['checkoldpassurl' => route('formsbootstrap_checkoldpass')]))) !!}
 </code></p>
 <br/><br/>
 {!! Form::bsOpen(['id' => 'form_password2', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}

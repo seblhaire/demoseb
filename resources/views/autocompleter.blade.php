@@ -1,6 +1,6 @@
 @extends('layout')
-
 @section('title', 'Autocompleter')
+@section('description', "Demo site of Laravel package Autocompleter, developped by Sébastien L'haire")
 @section('content')
 <h3>Autocompleter</h3>
 <p class="lead">A Laravel library with Javascript JQuery script to add input

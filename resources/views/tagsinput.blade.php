@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('title', $title)
+@section('description', "Demo site of Laravel package Tagsinput, developped by Sébastien L'haire")
 @section('content')
 <div class="row">
   <div class="col-sm-3">

@@ -18,6 +18,7 @@
   'name' => 'languages',
   'values' => ['en' => 'English', 'fr' => 'Français', 'de' => 'Deutsch', 'it' => 'Italiano',
         'es' => 'Español', 'pt' => 'Português'],
+  'checkedvalues' => ['fr'],
   'mainlabel' => 'Languages',
   'switch' => true, // Bootstrap switch values
   'required' => true // at least one value must be selected
@@ -33,7 +34,7 @@
 <p>Output:<br/><code>
 {!! nl2br(htmlspecialchars(Form::bsCheckbox(['name' => 'os', 'values' => ['mac' => 'MacOs','windows' => 'Windows', 'linux' => 'Linux', 'vms' => 'Vms','unix' => 'Unix'], 'checkedvalues' => ['vms', 'mac'],'mainlabel' => 'Operating system']))) !!}
 {!! nl2br(htmlspecialchars(Form::bsRadio(['name' => 'priority', 'values' => ['lowest' => 'Lowest','low' => 'Low', 'medium' => 'Medium', 'high' => 'High','highest' => 'Highest'], 'checkedvalue' => 'medium', 'mainlabel' => 'Priority']))) !!}
-{!! nl2br(htmlspecialchars(Form::bsCheckbox(['name' => 'languages', 'values' => ['en' => 'English', 'fr' => 'Français', 'de' => 'Deutsch', 'it' => 'Italiano', 'es' => 'Español', 'pt' => 'Português'], 'mainlabel' => 'Languages', 'switch' => true, 'required' => true]))) !!}
+{!! nl2br(htmlspecialchars(Form::bsCheckbox(['name' => 'languages', 'checkedvalues' => ['fr'], 'values' => ['en' => 'English', 'fr' => 'Français', 'de' => 'Deutsch', 'it' => 'Italiano', 'es' => 'Español', 'pt' => 'Português'], 'mainlabel' => 'Languages', 'switch' => true, 'required' => true]))) !!}
 {!! nl2br(htmlspecialchars(Form::bsCheckbox(['name' => 'conditions', 'values' => ['accepted' => 'I agree to terms and conditions'], 'required' => true, 'invalid-feedback' => "You must agree before submitting."]))) !!}
 </code></p>
 <br/><br/>
@@ -53,6 +54,7 @@
   'name' => 'languages',
   'values' => ['en' => 'English', 'fr' => 'Français', 'de' => 'Deutsch', 'it' => 'Italiano', 'es' => 'Español', 'pt' => 'Português'],
   'mainlabel' => 'Languages',
+  'checkedvalues' => ['fr'],
   'switch' => true, // Bootstrap switch values
   'required' => true // at least one value must be selected
   ]) !!}

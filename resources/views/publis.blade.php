@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('title', 'Publications')
+@section('description', "Publications list of Sébastien L'haire")
 @section('content')
 <h1>Publications</h1>
 <h4>2012</h4>
@@ -101,10 +102,10 @@ error detection". Eurocall 2001 (Poster <a rel="noopener noreferrer" href="docs/
 <h2>Relecture d'articles et chapitres<br/>
 Articles and book chapters reviewing</h2>
 <ul>
-<li><a target="_blank" rel="noopener noreferrer" href="http://www.springerlink.com/content/m217446x26l3/">Language Resources and Evaluation</a></li>
-<li>Calico Journal, 26, 3 (2009) <a rel="noopener noreferrer" href="https://calico.org/memberBrowse.php?action=issue&id=90"   target="_blank">Special Issue on the
+<li><a target="_blank" rel="noopener noreferrer" href="https://link.springer.com/journal/10579">Language Resources and Evaluation</a></li>
+<li>Calico Journal, 26, 3 (2009) <a rel="noopener noreferrer" href="https://journal.equinoxpub.com/Calico/issue/view/1706"   target="_blank">Special Issue on the
   Automatic Analysis of Learner Language</a></li>
-<li>Ayoun, D. (2007)(Ed.). <a rel="noopener noreferrer" href="http://www.benjamins.com/cgi-bin/t_bookview.cgi?bookid=LL%26LT%2016"  target="_blank">French Applied Linguistics</a>.
+<li>Ayoun, D. (2007)(Ed.). <a rel="noopener noreferrer" href="https://www.benjamins.com/catalog/lllt.16"  target="_blank">French Applied Linguistics</a>.
   Amsterdam: John Benjamins</li>
 </ul>
 @endsection

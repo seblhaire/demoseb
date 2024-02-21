@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('title', 'Home')
+@section('description', "Personal website of Sébastien L'haire. Curriculum Vitae. Publications list. Description of Laravel packages useful to web development")
 @section('content')
 <div class="h-100 p-5 bg-light border rounded-3">
       <h1 class="display-5 fw-bold">Sébastien L'HAIRE</h1>

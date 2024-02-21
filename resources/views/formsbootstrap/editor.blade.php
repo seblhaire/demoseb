@@ -1,28 +1,25 @@
-<?php
-use Seblhaire\Formsbootstrap\FormsBootstrapUtils;
-?>
 <h3>Editor</h3>
 <script type="text/javascript">
   // assigns default init values for editor
-  var editorConfig = {!! FormsBootstrapUtils::validateEditorParams([ //RichtextEdito values
+  var editorConfig = {!! Form::validateEditorParams([ //RichtextEdito values
 	  'imageUpload' => false,
 	  'fileUpload' => false,
 	  'fonts' => false
   ],[ // replaces default editor labels
 	  'linkText' => 'Link content'
-  ]) !!};
+  ]); !!};
 </script>
 <br/>
 <pre><code>
 &lt;script type="text/javascript"&gt;
 // assigns default init values for editor
-var editorConfig = FormsBootstrapUtils::validateEditorParams([ //RichtextEditor values
+var editorConfig = Form::validateEditorParams([ //RichtextEditor values
 	  'imageUpload' => false,
 	  'fileUpload' => false,
 	  'fonts' => false
   ],[ // replaces default editor labels
 	  'linkText' => 'Link content'
-])
+]);
 &lt;/script&gt;
 @{!! Form::bsEditor([
   'id' => 'text', //id of field submitted by form
@@ -33,7 +30,7 @@ var editorConfig = FormsBootstrapUtils::validateEditorParams([ //RichtextEditor 
 </code></pre>
 <p>Output:<br/><code>
 &lt;script type="text/javascript"&gt;<br/>
-var editorConfig = {!! FormsBootstrapUtils::validateEditorParams([
+var editorConfig = {!! Form::validateEditorParams([
   'imageUpload' => false,
   'fileUpload' => false,
   'fonts' => false

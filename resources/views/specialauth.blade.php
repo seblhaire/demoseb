@@ -1,5 +1,6 @@
 @extends('layout')
 @section('title', 'Specialauth')
+@section('description', "Demo site of Laravel package Specialauth, developped by Sébastien L'haire")
 @section('content')
 <h3>Specialauth</h3>
 <p class="lead">Library based on Laravel authentication libraries (login, logout, password reset procedure) provided in

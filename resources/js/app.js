@@ -4,7 +4,7 @@ var jQuery = global.JQuery;
 window.$ = $;
 window.jQuery = jQuery;
 require('bootstrap');
-//global.Clipboard = require('clipboard');
+global.Clipboard = require('clipboard');
 
 global.moment = require('moment');
 require('daterangepicker');

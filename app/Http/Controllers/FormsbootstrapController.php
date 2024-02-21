@@ -144,7 +144,7 @@ class FormsbootstrapController extends Controller
 * Method to fill form with "random" data. Of course data are usually retrieved from database
 */
   public function filldata(){
-    $date = Carbon::today()->subDays(rand(10, 3650));
+    $date = Carbon::today()->subDays(rand(10, 3650)); // 10 y before
     $date2 = Carbon::today()->subDays(rand(10, 3650));
     $date3 = $date2->copy()->addDays(rand(30,100));
     $files = [
@@ -181,7 +181,7 @@ class FormsbootstrapController extends Controller
         'range' => rand(0,10),
         'itempicture' => collect($files)->random(rand(1,4)),
         'notes' => 'voici une supernote',
-        'color' => '#' . dechex(rand(0, 16777215)),
+        'color' => '#' . dechex(rand(0, 16777215)), //convert decimal to hexa. 16 777 215 = FFFFFF = 2^24
         'email' => 'example@data.com',
       ]
     ]);

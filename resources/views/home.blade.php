@@ -14,7 +14,7 @@
   <p><a href="mailto:sebastien@lhaire.org">sebastien@lhaire.org</a></p>
 </div>
 <br/><br/>
-<div class="row">
+<div class="row projectdescr">
       <div class="col-md-7">
         <h2>Bootstrap Paginator</h2>
         <h3>Generate paginators.</h3>
@@ -24,7 +24,7 @@
       </div>
       <div class="col-md-5">
         <img src="/img/paginator.png" /><br/><br/>
-        <img style="max-width:100%" src="/img/paginatoralpha.png" />
+        <img src="/img/paginatoralpha.png" />
       </div>
 </div>
 <div class="row projectdescr">
@@ -48,12 +48,12 @@
 		<p><a class="btn btn-secondary" href="{{ route('tablebuilder') }}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-5">
-        <img style="max-width:100%" src="/img/tablebuilder.png" />
+        <img src="/img/tablebuilder.png" />
       </div>
 </div>
 <div class="row projectdescr">
     <div class="col-md-5">
-      <img style="max-width:100%" src="/img/uploader.png" />
+      <img src="/img/uploader.png" />
     </div>
     <div class="col-md-7">
       <h2>Uploader</h2>
@@ -72,12 +72,12 @@
 		<p><a class="btn btn-secondary" href="{{ route('autocompleter') }}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-5">
-        <img style="max-width:100%" src="/img/autocompleter1.png" />
+        <img src="/img/autocompleter1.png" />
       </div>
 </div>
 <div class="row projectdescr">
     <div class="col-md-5">
-      <img style="max-width:100%" src="/img/tagsinput.png" />
+      <img src="/img/tagsinput.png" />
     </div>
     <div class="col-md-7">
       <h2>TagsInput</h2>
@@ -96,12 +96,12 @@
 		<p><a class="btn btn-secondary" href="{{ route('formsbootstrap') }}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-5">
-        <img style="max-width:100%" src="/img/formsbs.png" />
+        <img src="/img/formsbs.png" />
       </div>
 </div>
 <div class="row projectdescr">
   <div class="col-md-5">
-    <img style="max-width:100%" src="/img/menutabutils.png" />
+    <img src="/img/menutabutils.png" />
   </div>
   <div class="col-md-7">
     <h2>Menu and Tabs Utils</h2>
@@ -120,7 +120,7 @@
   <p><a class="btn btn-secondary" href="{{ route('specialauth') }}" role="button">View details &raquo;</a></p>
   </div>
   <div class="col-md-5">
-    <img style="max-width:100%; max-height:200px" src="/img/specialauth_login.png" />
+    <img src="/img/specialauth_login.png" />
   </div>
 </div>
 @endsection

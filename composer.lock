@@ -2978,16 +2978,16 @@
         },
         {
             "name": "seblhaire/autocompleter",
-            "version": "1.4.0",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/seblhaire/autocompleter.git",
-                "reference": "b3fbb64315f78fc0bb8aaf92d0c1c1a3db7c0a5d"
+                "reference": "a8cf635e1c61b865e383ebb66e2c744d766a025b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/b3fbb64315f78fc0bb8aaf92d0c1c1a3db7c0a5d",
-                "reference": "b3fbb64315f78fc0bb8aaf92d0c1c1a3db7c0a5d",
+                "url": "https://api.github.com/repos/seblhaire/autocompleter/zipball/a8cf635e1c61b865e383ebb66e2c744d766a025b",
+                "reference": "a8cf635e1c61b865e383ebb66e2c744d766a025b",
                 "shasum": ""
             },
             "require": {
@@ -3025,9 +3025,9 @@
             "homepage": "https://github.com/seblhaire/autocompleter",
             "support": {
                 "issues": "https://github.com/seblhaire/autocompleter/issues",
-                "source": "https://github.com/seblhaire/autocompleter/tree/1.4.0"
+                "source": "https://github.com/seblhaire/autocompleter/tree/1.4.2"
             },
-            "time": "2023-03-28T19:41:34+00:00"
+            "time": "2024-02-22T17:28:00+00:00"
         },
         {
             "name": "seblhaire/bootstrappaginator",
@@ -6508,16 +6508,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.0.0",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "4a21235f7e56e713259a6f76bf4b5ea08502b9dc"
+                "reference": "2218c2252c874a4624ab2f613d86ac32d227bc69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4a21235f7e56e713259a6f76bf4b5ea08502b9dc",
-                "reference": "4a21235f7e56e713259a6f76bf4b5ea08502b9dc",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2218c2252c874a4624ab2f613d86ac32d227bc69",
+                "reference": "2218c2252c874a4624ab2f613d86ac32d227bc69",
                 "shasum": ""
             },
             "require": {
@@ -6560,9 +6560,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.1"
             },
-            "time": "2024-01-07T17:17:35+00:00"
+            "time": "2024-02-21T19:24:10+00:00"
         },
         {
             "name": "nunomaduro/collision",

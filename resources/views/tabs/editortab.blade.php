@@ -37,7 +37,7 @@ return view('template', ['element' => $element]);
 {!! Form::bsOpen(['id' => 'form_textarea', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
 <script type="text/javascript">
 // here we create a variable to set the editors. To be placed outside tabs
-  var editorConfig = {!! FormsBootstrapUtils::validateEditorParams() !!};
+  var editorConfig = {!! Form::validateEditorParams() !!};
 </script>
 <br/>
 {!! $element !!}

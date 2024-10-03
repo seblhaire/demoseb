@@ -178,7 +178,7 @@ class UploaderController extends Controller
   public function deleteFiles(){
     collect(Storage::disk('public')->files('/uploads'))
   	->each(function($file) {
-  		if (Storage::lastModified($file) < \Carbon\Carbon::now('Europe/Zurich')->subMinutes(15)->getTimestamp()) {
+  		if (Storage::disk('public')->lastModified($file) < \Carbon\Carbon::now('Europe/Zurich')->subMinutes(15)->getTimestamp()) {
   			Storage::disk('public')->delete($file);
   		}
   	});

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Seblhaire\BootstrapPaginator\BootstrapPaginator;
 use Seblhaire\MenuAndTabUtils\MenuUtils;
 
-use Barryvdh\Debugbar\Facade as Debugbar;
+//use Barryvdh\Debugbar\Facade as Debugbar;
 
 class PaginatorController extends Controller
 {

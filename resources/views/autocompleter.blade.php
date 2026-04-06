@@ -37,7 +37,6 @@ var output = function(data){ //function called after an element is selected in l
 </pre>
 <h2>Demo</h2>
 <p>Type some characters to select a country. Results will be added to above list.</p>
-<form  action="return false;">
 {!! $ac !!}
 <script type="text/javascript">
 var output = function(data){ //function called after an element is selected in list
@@ -52,6 +51,5 @@ var output = function(data){ //function called after an element is selected in l
   <label>Selected items</label>
   <textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
 </div>
-</form>
 <br/><br/><br/>
 @endsection

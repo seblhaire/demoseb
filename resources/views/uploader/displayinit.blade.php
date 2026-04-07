@@ -4,6 +4,13 @@ In this example, we show a file already uploaded into website. This file could b
 Then you can delete file  - the uploader is shown again - and upload a new file.
 All you need to know about file processing
 available <a href="{{ route('uploader', ['type' => 'functions'])}}">here</a>.</p>
+<p>First example diplays file on init and hides uploader label.</p>
+{!! $uploader !!}
+<br/><br/>
+<p>Second example diplays file on init and keeps label visible.</p>
+{!! $uploader2 !!}
+@include('uploader.results')
+<br/><br/>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -47,12 +54,6 @@ return view('template', ['uploader' => $uploader]);
 </code>
 </pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
-<h4>Demo</h4>
-<p>First example diplays file on init and hides uploader label.</p>
-{!! $uploader !!}
-<br/><br/>
-<p>Second example diplays file on init and keeps label visible.</p>
-{!! $uploader2 !!}
 <script type="text/javascript">
 jQuery(document).ready(function(){
   // insert an exampla file in hidden uploader result div

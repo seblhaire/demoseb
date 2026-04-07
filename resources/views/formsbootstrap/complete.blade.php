@@ -63,3 +63,4 @@ jQuery(document).ready(function(){
   });
 });
 </script>
+@include('formsbootstrap.result')

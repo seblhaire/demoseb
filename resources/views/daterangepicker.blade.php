@@ -19,6 +19,49 @@
       <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/daterangepickerhelper">Project on Packagist</a>.
       This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.
     </p>
+<form id="daterangepicker" action="return false;">
+      <!-- language selection -->
+      <div class="mb-3">
+        <label class="control-label" for="curlang">Change language:</label>
+        <select class="form-control" id="curlang" name="curlang">
+        @foreach ($languages as $lang => $language)
+            @if ($lang == $currentlang)
+              <option value="{!! $lang !!}" selected="selected">
+            @else
+              <option value="{!! $lang !!}">
+            @endif
+            {{ $language }}</option>
+        @endforeach
+        </select>
+      </div>
+      @if (!is_null($cal))
+        {!! $cal !!}
+        @if ($type != 'hidden')
+          <div class="mb-3">
+            <label class="control-label" for="datesingle">Selected date:</label>
+            <input class="form-control" id="datesingle" name="datesingle" value="{{ $initsingle }}">
+          </div>
+          <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
+        @endif
+      @endif
+      @if (!is_null($cal2))
+        {!! $cal2->output() !!}
+        @if ($type != 'hidden')
+          <div class="mb-3">
+            <label class="control-label" for="datestart">Selected start date:</label>
+            <input class="form-control" id="datestart" name="datestart" value="{{ $initstart }}">
+          </div>
+          <div class="mb-3">
+            <label class="control-label" for="dateend">Selected end date:</label>
+            <input class="form-control" id="dateend" name="dateend" value="{{ $initend }}">
+          </div>
+          <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
+        @else
+        <p>Here dates are copied into hidden inputs that are automatically inserted after DateRangePicker widget.</p>
+        @endif
+      @endif
+    </form>
+    <br/><br/>
     <p>In your controller create an instance of DateRangePickerHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -130,49 +173,6 @@ return view('mytemplate', ['cal' => $cal])
 </code>
 </pre>
     <p>Then print your paginator by inserting <code>@{!! cal !!}</code> in your template.</p>
-    <h4>Demo</h4>
-    <form id="daterangepicker" action="return false;">
-      <!-- language selection -->
-      <div class="mb-3">
-        <label class="control-label" for="curlang">Change language:</label>
-        <select class="form-control" id="curlang" name="curlang">
-        @foreach ($languages as $lang => $language)
-            @if ($lang == $currentlang)
-              <option value="{!! $lang !!}" selected="selected">
-            @else
-              <option value="{!! $lang !!}">
-            @endif
-            {{ $language }}</option>
-        @endforeach
-        </select>
-      </div>
-      @if (!is_null($cal))
-        {!! $cal !!}
-        @if ($type != 'hidden')
-          <div class="mb-3">
-            <label class="control-label" for="datesingle">Selected date:</label>
-            <input class="form-control" id="datesingle" name="datesingle" value="{{ $initsingle }}">
-          </div>
-          <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
-        @endif
-      @endif
-      @if (!is_null($cal2))
-        {!! $cal2->output() !!}
-        @if ($type != 'hidden')
-          <div class="mb-3">
-            <label class="control-label" for="datestart">Selected start date:</label>
-            <input class="form-control" id="datestart" name="datestart" value="{{ $initstart }}">
-          </div>
-          <div class="mb-3">
-            <label class="control-label" for="dateend">Selected end date:</label>
-            <input class="form-control" id="dateend" name="dateend" value="{{ $initend }}">
-          </div>
-          <p>Here dates are copied into visible fields defined in `apply.daterangepicker` function.</p>
-        @else
-        <p>Here dates are copied into hidden inputs that are automatically inserted after DateRangePicker widget.</p>
-        @endif
-      @endif
-    </form>
     <script>
     @if ($type == 'hidden')
       function displayhiddeninputs(){ //function to display hidden inputs

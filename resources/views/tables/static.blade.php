@@ -1,4 +1,7 @@
 <h4>Table inited with static data</h4>
+<br/><br/>
+{!! $oTable->output() !!}
+<br/><br/>
 <p>Controller method for view</p>
 <p>In your controller create an instance of TableBuilderHelper and pass the variable to the view.</p>
 <pre>
@@ -41,5 +44,3 @@ public function loadTable2(Request $request)
 }
 </code>
 </pre>
-<h4>Demo</h4>
-{!! $oTable->output() !!}

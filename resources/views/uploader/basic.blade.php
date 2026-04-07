@@ -2,6 +2,10 @@
 <p>This example has drag and drop disabled. Button is hidden after a while
 since users can only upload a single file. All you need to know about file processing
 available <a href="{{ route('uploader', ['type' => 'functions'])}}">here</a>.</p>
+<br/><br/>
+{!! $uploader !!}
+@include('uploader.results')
+<br/><br/>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -22,5 +26,3 @@ return view('template', ['uploader' => $uploader]);
 </code>
 </pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
-<h4>Demo</h4>
-{!! $uploader !!}

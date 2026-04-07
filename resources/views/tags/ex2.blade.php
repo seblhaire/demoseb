@@ -1,6 +1,21 @@
 <h3>Example 2: tags list with pre-existing tags</h3>
 <p>In this example, we pre-add elements in tag list. This will be useful to update existing entries in tables. We also change default tag style by
   inserting a class name in a special field 'tagclass'.</p>
+<form id="fakeform">
+{!! $tagszone !!}
+<h3>Results</h3>
+<div class="form-group">
+<label>List outputs</label>
+<textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
+</div>
+</form>
+<script type="text/javascript">
+jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
+  jQuery(document).ready(function() {
+    {!! $tagszone->printAddToList("[{id:'CH', taglabel:'CH: Switzerland'},{id:'FR', taglabel:'FR: France'},{id:'GD', taglabel:'GD: Groland', tagclass:'bg-danger'}]")!!};
+  });
+</script>
+<br/><br/>
 <p>In your controller create an instance of TagsinputHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -34,17 +49,3 @@ Here is the result printed in your page:</p>
 &lt;/script&gt;
 </code>
 </pre>
-<form id="fakeform">
-{!! $tagszone !!}
-<h3>Results</h3>
-<div class="form-group">
-<label>List outputs</label>
-<textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
-</div>
-</form>
-<script type="text/javascript">
-jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
-  jQuery(document).ready(function() {
-    {!! $tagszone->printAddToList("[{id:'CH', taglabel:'CH: Switzerland'},{id:'FR', taglabel:'FR: France'},{id:'GD', taglabel:'GD: Groland', tagclass:'bg-danger'}]")!!};
-  });
-</script>

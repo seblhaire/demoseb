@@ -8,6 +8,23 @@
 <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/autocompleter">Project on GitHub</a>.
 <a rel="noopener noreferrer" target="_blank" href="https://packagist.org/packages/seblhaire/autocompleter">Project on Packagist</a>.
 This demosite sources available <a rel="noopener noreferrer" target="_blank" href="https://github.com/seblhaire/demoseb">here</a>.</p>
+<br/><br/>
+<p>Type some characters to select a country. Results will be added to above list.</p>
+{!! $ac !!}
+<script type="text/javascript">
+var output = function(data){ //function called after an element is selected in list
+  jQuery('#result').val(
+    (jQuery('#result').val().length > 0 ? jQuery('#result').val()   + "\n#"  : '#' )
+    + data.{!! $options['id_field'] !!} + ': ' + data.country
+  );
+}
+</script>
+  <h3>Results</h3>
+<div class="form-group">
+  <label>Selected items</label>
+  <textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
+</div>
+<br/><br/><br/>
 <pre>
 <code>
 $ac = AutocompleterHelper::init(
@@ -35,21 +52,4 @@ var output = function(data){ //function called after an element is selected in l
 &lt;/script&gt;
 </code>
 </pre>
-<h2>Demo</h2>
-<p>Type some characters to select a country. Results will be added to above list.</p>
-{!! $ac !!}
-<script type="text/javascript">
-var output = function(data){ //function called after an element is selected in list
-  jQuery('#result').val(
-    (jQuery('#result').val().length > 0 ? jQuery('#result').val()   + "\n#"  : '#' )
-    + data.{!! $options['id_field'] !!} + ': ' + data.country
-  );
-}
-</script>
-  <h3>Results</h3>
-<div class="form-group">
-  <label>Selected items</label>
-  <textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
-</div>
-<br/><br/><br/>
 @endsection

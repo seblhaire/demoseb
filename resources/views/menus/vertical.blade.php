@@ -1,5 +1,8 @@
 <h4>Vertical navigation</h4>
 <p>Here we build a vertical Bootstrap navigation menu. In your controller, define a variable this way and pass variable to the view parameters:</p>
+{!! $element !!}
+<br/>
+<h4>Code</h4>
 <pre><code>
 $element = MenuUtils::init('vertical-nav', //main nav id
 [
@@ -26,8 +29,3 @@ $element = MenuUtils::init('vertical-nav', //main nav id
 return view('template', ['element' => $element]);
 </code></pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
-<h4>Example</h4>
-<br/>
-<br/>
-{!! $element !!}
-<br/>

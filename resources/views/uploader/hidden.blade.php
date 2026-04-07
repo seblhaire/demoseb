@@ -1,5 +1,10 @@
 <h4>Hidden uploader</h4>
 <p>These examples show uploader that are hidden on init.</p>
+{!! $uploader !!}
+<p>Above uploader is totally hidden. <button class="btn btn-primary btn-sm" id="toggle1">Toggle display</button></p>
+<br/><br/>
+{!! $uploader2 !!}
+<p>For second uploader, uploader is hidden but label is visible. <button class="btn btn-primary btn-sm" id="toggle2">Toggle display</button></p>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -31,12 +36,6 @@ return view('template', ['v' => $uploader, 'uploader2' => $uploader2]);
   <a href="{{ route('uploader', ['type' => 'functions'])}}">file uploade method</a>
   results:</p>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
-<h4>Demo</h4>
-{!! $uploader !!}
-<p>Above uploader is totally hidden. <button class="btn btn-primary btn-sm" id="toggle1">Toggle display</button></p>
-<br/><br/>
-{!! $uploader2 !!}
-<p>For second uploader, uploader is hidden but label is visible. <button class="btn btn-primary btn-sm" id="toggle2">Toggle display</button></p>
 <script type="text/javascript">
 jQuery('#toggle1').on('click', function(){ {!! $uploader->toggleall() !!} });
 jQuery('#toggle2').on('click', function(){ {!! $uploader2->toggleall() !!} });

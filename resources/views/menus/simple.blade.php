@@ -1,5 +1,8 @@
 <h4>Simple navigation</h4>
 <p>Here we build the classical Bootstrap navigation menu. In your controller, define a variable this way and pass variable to the view parameters:</p>
+{!! $element !!}
+<br/>
+<h4>Code</h4>
 <pre>
 <code>
 $element = MenuUtils::init('simple-nav', // main nav id
@@ -35,7 +38,3 @@ return view('template', ['element' => $element]);
 </code>
 </pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
-<h4>Example</h4>
-<br/>
-{!! $element !!}
-<br/>

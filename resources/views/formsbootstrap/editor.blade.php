@@ -1,4 +1,13 @@
 <h3>Editor</h3>
+{!! Form::bsOpen(['id' => 'form_textarea', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
+{!! Form::bsEditor([
+  'id' => 'text', //id of field submitted by form
+  'labeltext' => 'Text', //label
+  'value' => $content, // default content displayed in editor, html code
+  'configvar' => 'editorConfig' // refers to above-defined js variable
+  ]); !!}
+{!! Form::bsClose() !!}
+@include('formsbootstrap.result')
 <script type="text/javascript">
   // assigns default init values for editor
   var editorConfig = {!! Form::validateEditorParams([ //RichtextEdito values
@@ -10,6 +19,7 @@
   ]); !!};
 </script>
 <br/>
+<h4>Code</h4>
 <pre><code>
 &lt;script type="text/javascript"&gt;
 // assigns default init values for editor
@@ -45,11 +55,3 @@ var editorConfig = {!! Form::validateEditorParams([
 <br/>
 <h4>Example</h4>
 <br/>
-{!! Form::bsOpen(['id' => 'form_textarea', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
-{!! Form::bsEditor([
-  'id' => 'text', //id of field submitted by form
-  'labeltext' => 'Text', //label
-  'value' => $content, // default content displayed in editor, html code
-  'configvar' => 'editorConfig' // refers to above-defined js variable
-  ]); !!}
-{!! Form::bsClose() !!}

@@ -68,3 +68,4 @@ form.</p>
   'checkoldpassurl' => route('formsbootstrap_checkoldpass'), // route used to verify old password
   ]) !!}
 {!! Form::bsClose() !!}
+@include('formsbootstrap.result')

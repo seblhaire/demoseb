@@ -1,4 +1,7 @@
 <h4>Dynamic table</h4>
+<br/><br/>
+{!! $oTable->output() !!}
+<br/><br/>
 <p>In the code, some values are printed with Javascript command <code>console.log(data)</code>. Open developper console with <kbd>F12</kbd>, then click tab "Console"</p>
 <p>In your controller create an instance of TableBuilderHelper and pass the variable to the view.</p>
 <pre>
@@ -137,8 +140,6 @@ public function loadTable(Request $request)
 }
 </code>
 </pre>
-<h4>Demo</h4>
-{!! $oTable->output() !!}
 <script>
     var multiselect = function(data){
         console.log(data);

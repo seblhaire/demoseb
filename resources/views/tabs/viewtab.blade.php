@@ -1,6 +1,10 @@
 <!-- page to be inserted in main demo page-->
 <h5>Tabs with view content</h5>
 <p>Here we build tabs, where tab content is defined by Laravel Blade templates. In your controller, define a variable this way and pass variable to the view parameters:</p>
+<br/>
+{!! $element !!}
+<br/>
+<h4>Codd</h4>
 <pre><code>
 $element = TabUtils::init('tabs-2',  // main tab id
 [
@@ -19,8 +23,4 @@ $element = TabUtils::init('tabs-2',  // main tab id
 return view('template', ['element' => $element]);
 </code></pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
-<h4>Example</h4>
-<br/>
-<br/>
-{!! $element !!}
-<br/>
+

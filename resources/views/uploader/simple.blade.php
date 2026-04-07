@@ -1,6 +1,9 @@
 <h4>Simple uploader</h4>
 <p>This uploader simply uploads files and then displays result in a series of <code>&lt;div&gt;</code>. Files are renamed after a file pattern.
   All you need to know about file processing available <a href="{{ route('uploader', ['type' => 'functions'])}}">here</a>.</p>
+{!! $uploader !!}
+@include('uploader.results')
+<br/><br/>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -23,5 +26,3 @@ return view('template', ['uploader' => $uploader]);
 </code>
 </pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $uploader !!}</code></p>
-<h4>Demo</h4>
-{!! $uploader !!}

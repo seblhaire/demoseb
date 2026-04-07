@@ -1,5 +1,14 @@
 <h3>Text input</h3>
 <br/>
+{!! Form::bsOpen(['id' => 'form_text', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
+{!! Form::bsText(['id' => 'text1', 'labeltext' => 'Text 1']); !!}
+{!! Form::bsText(['id' => 'text2', 'labeltext' => 'Text 2', 'required' => true]); !!}
+{!! Form::bsNumber(['id' => 'number', 'labeltext' => 'Number', 'required' => true]); !!}
+{!! Form::bsNumber(['id' => 'number2', 'labeltext' => 'Number 2', 'value' => 5, 'attributes' => ['min' => 0, 'max' => 10], 'helptext' => 'Please enter a number between 0 and 10','required' => true]); !!}
+{!! Form::bsClose() !!}
+@include('formsbootstrap.result')
+<br/><br/>
+<h4>Code</h4>
 <pre><code>
 @{!! Form::bsText([
   'id' => 'text1', //field name and id
@@ -30,10 +39,3 @@
 {!! nl2br(htmlspecialchars(Form::bsNumber(['id' => 'number', 'labeltext' => 'Number', 'required' => true]))) !!}<br/>
 {!! nl2br(htmlspecialchars(Form::bsNumber(['id' => 'number2', 'value' => 5, 'labeltext' => 'Number 2', 'attributes' => ['min' => 0, 'max' => 10], 'helptext' => 'Please enter a number between 0 and 10','required' => true]))) !!}
 </code></p>
-<br/><br/>
-{!! Form::bsOpen(['id' => 'form_text', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
-{!! Form::bsText(['id' => 'text1', 'labeltext' => 'Text 1']); !!}
-{!! Form::bsText(['id' => 'text2', 'labeltext' => 'Text 2', 'required' => true]); !!}
-{!! Form::bsNumber(['id' => 'number', 'labeltext' => 'Number', 'required' => true]); !!}
-{!! Form::bsNumber(['id' => 'number2', 'labeltext' => 'Number 2', 'value' => 5, 'attributes' => ['min' => 0, 'max' => 10], 'helptext' => 'Please enter a number between 0 and 10','required' => true]); !!}
-{!! Form::bsClose() !!}

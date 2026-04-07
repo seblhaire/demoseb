@@ -9,30 +9,6 @@ use Seblhaire\Formsbootstrap\FormsBootstrapUtils;
   to different values for each language.
   In your controller, define a variable this way and pass variable to the view
   parameters:</p>
-<pre><code>
-$element = TabUtils::init('editors',  // main tab id
-[
-  'current' => 'english', // sets current ative element
-  'tabs' => [ // sets tabs elements
-    'english' => [ // array key is the tab element's id. Be sure to define an id not used elsewhere in doc
-      'title' => 'English', // label of tab element
-      'view' => 'tabs.editors', // path of blade template
-      'viewparams' => [ // parameters to be passed to view
-        'titleid' => 'title-english', // title field id
-        'titlefield' => 'title[english]', // title field name
-        'titleval' => 'English Title', // title field content
-        'editorid' => 'text-english', // editor id
-        'editorfield' => 'text[english]', // editor textarea name
-        'editorval' => '... html code', // content inited in editor
-      ],
-    ],
-    ...
-  ]
-]);
-return view('template', ['element' => $element]);
-</code></pre>
-<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>
-<h4>Example</h4>
 <br/>
 {!! Form::bsOpen(['id' => 'form_textarea', 'action' => route('formsbootstrap_processform'), 'ajaxcallback' => 'processform']) !!}
 <script type="text/javascript">
@@ -57,3 +33,28 @@ return view('template', ['element' => $element]);
     return data.message;
   };
 </script>
+<br/><br/>
+<h4>Code</h4>
+<pre><code>
+$element = TabUtils::init('editors',  // main tab id
+[
+  'current' => 'english', // sets current ative element
+  'tabs' => [ // sets tabs elements
+    'english' => [ // array key is the tab element's id. Be sure to define an id not used elsewhere in doc
+      'title' => 'English', // label of tab element
+      'view' => 'tabs.editors', // path of blade template
+      'viewparams' => [ // parameters to be passed to view
+        'titleid' => 'title-english', // title field id
+        'titlefield' => 'title[english]', // title field name
+        'titleval' => 'English Title', // title field content
+        'editorid' => 'text-english', // editor id
+        'editorfield' => 'text[english]', // editor textarea name
+        'editorval' => '... html code', // content inited in editor
+      ],
+    ],
+    ...
+  ]
+]);
+return view('template', ['element' => $element]);
+</code></pre>
+<p>Then just insert the variable in the appropriate section in your view: <code>@{!! $element !!}</code></p>

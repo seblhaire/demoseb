@@ -2,6 +2,24 @@
 <p>In this example, you can search in employee list, or add a new employee by clicking button. If you select an employee that you already have selected before, it will be
 ignored. You can reorder tags by drag and drop. In the above list, we write the different outputs that can be used in your scripts, for intance to add entries to a table.
  But by default, we insert comma-separated result in a hidden input named <code>tagzone-result</code>.</p>
+
+<form id="fakeform">
+{!! $tagszone !!}
+<h3>Results</h3>
+<div class="form-group">
+<label>List outputs</label>
+<textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
+</div>
+</form>
+<script type="text/javascript">
+jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
+jQuery('#tagzone_addbtn').on('click', function(){
+  jQuery('#firstname').val('');
+  jQuery('#lastname').val('');
+  jQuery('#addEmployeeModal').modal('show');
+});
+</script>
+<br/><br/>
 <p>In your controller create an instance of TagsinputHelper and pass the variable to the view.</p>
 <pre>
 <code>
@@ -19,22 +37,6 @@ return view('template', ['tagszone' => $tagszone]);
 </code></pre>
 <p>Then just insert the variable in the appropriate section in your view: <code>@{!! $tagszone !!}</code>.
   Callback functions have the following signature: <code>function(tag, data, object)</code>.</p>
-<form id="fakeform">
-{!! $tagszone !!}
-<h3>Results</h3>
-<div class="form-group">
-<label>List outputs</label>
-<textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
-</div>
-</form>
-<script type="text/javascript">
-jQuery('#fakeform').on('submit', function(e){ e.preventDefault();});
-jQuery('#tagzone_addbtn').on('click', function(){
-  jQuery('#firstname').val('');
-  jQuery('#lastname').val('');
-  jQuery('#addEmployeeModal').modal('show');
-});
-</script>
 <div class="modal fade" id="addEmployeeModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addEmployeeLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

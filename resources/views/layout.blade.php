@@ -39,13 +39,15 @@
     <footer>
         <div class="container">
           <br/><br/>
-          <address>
-                  Last modified: {!! config('versions.lastmodif') !!}.<br/>
-                  Laravel v{{ Illuminate\Foundation\Application::VERSION }}
-                  (PHP v{{ PHP_VERSION }}).
-                  jQuery: v. {!! config('versions.jquery') !!}.
-                  Bootstrap: v. {!! config('versions.bootstrap') !!}.
-                  FontAwesome: v. {!! config('versions.fontawesome') !!}.
+          <address>Last modified: {!! config('versions.lastmodif') !!}.
+          @env('development')
+              <br/>
+              Laravel v. {{ Illuminate\Foundation\Application::VERSION }}
+              (PHP v. {{ PHP_VERSION }}).
+              jQuery: v. {!! config('versions.jquery') !!}.
+              Bootstrap: v. {!! config('versions.bootstrap') !!}.
+              FontAwesome: v. {!! config('versions.fontawesome') !!}.
+          @endenv
           </address>
           <br/><br/>
         </div>

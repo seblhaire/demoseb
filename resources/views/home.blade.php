@@ -82,7 +82,7 @@
     <div class="col-md-7">
       <h2>TagsInput</h2>
       <h3>Select items from a list and put them in a tag list</h3>
-<p>A Laravel library with jQuery add-on to add tags (Boostrap badges) selected by an auto-completer.</p>
+<p class="lead">A Laravel library with jQuery add-on to add tags (Boostrap badges) selected by an auto-completer.</p>
       <p><a class="btn btn-secondary" href="{{ route('tagsinput') }}" role="button">View details &raquo;</a></p>
     </div>
 </div>

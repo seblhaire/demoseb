@@ -20,6 +20,7 @@ jQuery('#tagzone_addbtn').on('click', function(){
 });
 </script>
 <br/><br/>
+<h4>Implementation</h4>
 <p>In your controller create an instance of TagsinputHelper and pass the variable to the view.</p>
 <pre>
 <code>

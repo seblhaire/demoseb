@@ -5,6 +5,8 @@
 <br/><br/>
 {!! $uploader2 !!}
 <p>For second uploader, uploader is hidden but label is visible. <button class="btn btn-primary btn-sm" id="toggle2">Toggle display</button></p>
+<br/><br/>
+<h4>Implementation</h4>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>

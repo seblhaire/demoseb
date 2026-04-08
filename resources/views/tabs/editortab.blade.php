@@ -34,7 +34,7 @@ use Seblhaire\Formsbootstrap\FormsBootstrapUtils;
   };
 </script>
 <br/><br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre><code>
 $element = TabUtils::init('editors',  // main tab id
 [

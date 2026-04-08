@@ -2,6 +2,7 @@
 <br/><br/>
 {!! $oTable->output() !!}
 <br/><br/>
+<h4>Implementation</h4>
 <p>Controller method for view</p>
 <p>In your controller create an instance of TableBuilderHelper and pass the variable to the view.</p>
 <pre>

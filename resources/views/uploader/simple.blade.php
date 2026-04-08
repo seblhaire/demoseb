@@ -4,6 +4,7 @@
 {!! $uploader !!}
 @include('uploader.results')
 <br/><br/>
+<h4>Implementation</h4>
 <p>In your controller create an instance of UploaderHelper and pass the variable to the view.</p>
 <pre>
 <code>

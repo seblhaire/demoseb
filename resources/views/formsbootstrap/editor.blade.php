@@ -19,7 +19,7 @@
   ]); !!};
 </script>
 <br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre><code>
 &lt;script type="text/javascript"&gt;
 // assigns default init values for editor

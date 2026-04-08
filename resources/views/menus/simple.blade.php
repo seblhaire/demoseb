@@ -2,7 +2,7 @@
 <p>Here we build the classical Bootstrap navigation menu. In your controller, define a variable this way and pass variable to the view parameters:</p>
 {!! $element !!}
 <br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre>
 <code>
 $element = MenuUtils::init('simple-nav', // main nav id

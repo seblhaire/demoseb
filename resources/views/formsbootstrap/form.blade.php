@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 </script>
 @include('formsbootstrap.result')
 <br/><br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre><code>
 @{!! Form::bsOpen([
   'id' => 'form_form', //form id

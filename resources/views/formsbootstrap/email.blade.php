@@ -10,7 +10,7 @@
 {!! Form::bsClose() !!}
 @include('formsbootstrap.result')
 <br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre><code>
 @{!! Form::email(); !!}
 @{!! Form::bsEmail([

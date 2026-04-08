@@ -25,7 +25,7 @@ var output = function(data){ //function called after an element is selected in l
   <textarea class="form-control" id="result" name="result" style="height:500px"></textarea>
 </div>
 <br/><br/><br/>
-<pre>
+<h4>Implementation</h4>
 <code>
 $ac = AutocompleterHelper::init(
   'autocompleter1', //id

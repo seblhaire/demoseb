@@ -4,7 +4,7 @@
 <br/>
 {!! $element !!}
 <br/>
-<h4>Code</h4>
+<h4>Implementation</h4>
 <pre><code>
 $element = TabUtils::init('tabs-1', // main tab id
 [

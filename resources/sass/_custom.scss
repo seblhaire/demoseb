@@ -1,10 +1,19 @@
 $sebborder: #e9ebee;
 #header{
   font-size:18px;
-  background-color: $teal-500;
+  background: linear-gradient(to bottom right, $teal-600, $teal-100);
+}
+body{
+  background: linear-gradient(to bottom right, $gray-300, $white);
 }
 .navbar-brand{
   font-size:21px;
+}
+#mainblock{
+    background-color: $gray-300;
+}
+#projects{
+    margin-top:10px;
 }
 .sidemenu li a{
   font-size:18px;
@@ -29,6 +38,15 @@ $sebborder: #e9ebee;
 .projectdescr img{
     max-width:100%;
     max-height:200px;
+}
+#projects > div:nth-child(3n) {
+    background: linear-gradient(to bottom right, $teal-300, $teal-100);
+}
+#projects > div:nth-child(3n+1) {
+    background: linear-gradient(to bottom right, $gray-400, $white);
+}
+#projects > div:nth-child(3n+2) {
+    background: linear-gradient(to bottom right, $red-200, $white);
 }
 address{
     margin-top:8px;

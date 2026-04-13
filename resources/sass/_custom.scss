@@ -10,6 +10,7 @@ body{
   font-size:21px;
 }
 #mainblock{
+    padding: 20px;
     background-color: $gray-300;
 }
 #projects{
@@ -31,11 +32,19 @@ body{
     display:none;
 }
 .projectdescr{
+    padding: 20px;
+}
+#projects > div {
   margin-top:20px;
   border-top: 1px $sebborder solid;
   padding-top:20px;
 }
-.projectdescr img{
+.descrimg{
+    display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.descrimg img{
     max-width:100%;
     max-height:200px;
 }

@@ -71,7 +71,7 @@
   		<p><a class="btn btn-secondary" href="{{ route('autocompleter') }}" role="button">View details &raquo;</a></p>
         </div>
         <div class="descrimg col-md-5">
-          <img src="/img/descrimg utocompleter1.png" />
+          <img src="/img/autocompleter1.png" />
         </div>
   </div>
   <div class="row">
